@@ -2,7 +2,7 @@ import React from "react";
 import Popup from "reactjs-popup";
 import Details from "./../../containers/Details/Details.js"
 import Gender from "./../../components/Gender/Gender.js"
-import { ModalStyle } from "./ModalStyles";
+import  ModalStyle  from "./ModalStyles";
 export default ({label, gnomes, to}) => {
 
   return(

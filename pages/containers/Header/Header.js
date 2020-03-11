@@ -6,7 +6,7 @@ const Header = () => (
   <HeaderComponent>
     <div className="row">
       <h1>
-         gnomo-matic-search
+         gnomo-matic-gender-search
       </h1>
     </div>
   </HeaderComponent>

@@ -25605,10 +25605,10 @@ module.exports = {
 
 /***/ }),
 
-/***/ "./pages/components/AutoComplete/AutoComplete.jsx":
-/*!********************************************************!*\
-  !*** ./pages/components/AutoComplete/AutoComplete.jsx ***!
-  \********************************************************/
+/***/ "./pages/components/AutoComplete/AutoComplete.js":
+/*!*******************************************************!*\
+  !*** ./pages/components/AutoComplete/AutoComplete.js ***!
+  \*******************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -25627,7 +25627,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
 /* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(react_dom__WEBPACK_IMPORTED_MODULE_9__);
 /* harmony import */ var _Suggestions_Suggestions__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./Suggestions/Suggestions */ "./pages/components/AutoComplete/Suggestions/Suggestions.jsx");
-/* harmony import */ var _AutoCompleteStyles__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./AutoCompleteStyles */ "./pages/components/AutoComplete/AutoCompleteStyles.jsx");
+/* harmony import */ var _ContainerInputStyles__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./ContainerInputStyles */ "./pages/components/AutoComplete/ContainerInputStyles.jsx");
+/* harmony import */ var _InputSearchStyles__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./InputSearchStyles */ "./pages/components/AutoComplete/InputSearchStyles.jsx");
 
 
 
@@ -25636,8 +25637,9 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-var _jsxFileName = "/Users/nicolasfbergues/Desktop/Nico/Trabajo/FrontEnd/nextJsGnomeSearch/pages/components/AutoComplete/AutoComplete.jsx";
+var _jsxFileName = "/Users/nicolasfbergues/Desktop/Nico/Trabajo/FrontEnd/nextJsGnomeSearch/pages/components/AutoComplete/AutoComplete.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_8___default.a.createElement;
+
 
 
 
@@ -25703,23 +25705,23 @@ var AutoComplete = /*#__PURE__*/function (_Component) {
       var _this$state = this.state,
           searchTerm = _this$state.searchTerm,
           open = _this$state.open;
-      return __jsx(_AutoCompleteStyles__WEBPACK_IMPORTED_MODULE_11__["ContainerInput"], {
+      return __jsx(_ContainerInputStyles__WEBPACK_IMPORTED_MODULE_11__["default"], {
         className: "autocomplete",
         showLabel: this.props.showLabel,
         htmlFor: this.props.stateName,
         maxWidth: this.props.maxWidth,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 51
+          lineNumber: 52
         },
         __self: this
       }, this.props.labelName.length > 0 && __jsx("span", {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 58
+          lineNumber: 59
         },
         __self: this
-      }, " ", this.props.labelName, " "), __jsx(_AutoCompleteStyles__WEBPACK_IMPORTED_MODULE_11__["InputSearch"], {
+      }, " ", this.props.labelName, " "), __jsx(_InputSearchStyles__WEBPACK_IMPORTED_MODULE_12__["default"], {
         autoComplete: "off",
         type: "text",
         id: this.props.stateName,
@@ -25731,7 +25733,7 @@ var AutoComplete = /*#__PURE__*/function (_Component) {
         open: open && searchTerm.length > 0 ? open : false,
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 60
+          lineNumber: 61
         },
         __self: this
       }), __jsx(_Suggestions_Suggestions__WEBPACK_IMPORTED_MODULE_10__["default"], Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_0__["default"])({
@@ -25742,7 +25744,7 @@ var AutoComplete = /*#__PURE__*/function (_Component) {
       }, this.state, this.props, {
         __source: {
           fileName: _jsxFileName,
-          lineNumber: 87
+          lineNumber: 88
         },
         __self: this
       })));
@@ -25838,33 +25840,21 @@ AutoComplete.handleCloseAutoComplete = function (updateLocalState, state, update
 
 /***/ }),
 
-/***/ "./pages/components/AutoComplete/AutoCompleteStyles.jsx":
-/*!**************************************************************!*\
-  !*** ./pages/components/AutoComplete/AutoCompleteStyles.jsx ***!
-  \**************************************************************/
-/*! exports provided: ContainerInput, InputSearch */
+/***/ "./pages/components/AutoComplete/ContainerInputStyles.jsx":
+/*!****************************************************************!*\
+  !*** ./pages/components/AutoComplete/ContainerInputStyles.jsx ***!
+  \****************************************************************/
+/*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ContainerInput", function() { return ContainerInput; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "InputSearch", function() { return InputSearch; });
 /* harmony import */ var _babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/taggedTemplateLiteral */ "./node_modules/@babel/runtime-corejs2/helpers/esm/taggedTemplateLiteral.js");
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
 
 
-function _templateObject2() {
-  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n  border: 1px solid #e6e6e6;\n  border-radius: ", ";\n  box-sizing: border-box;\n  font-family: Helvetica, sans-serif;\n  font-size: 0.85rem;\n  padding: 10px 15px;\n\n  align: center;\n  width: 95%;\n"]);
-
-  _templateObject2 = function _templateObject2() {
-    return data;
-  };
-
-  return data;
-}
-
 function _templateObject() {
-  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n  box-sizing: border-box;\n  border: 0;\n  margin: 0;\n  padding: 0;\n  position: relative;\n  width: ", ";\n\n  & > span {\n    display: ", ";\n  }\n  option:hover{\n    background-color:#298838;\n  }\n\n  ::-moz-selection { \n  color: green !important;;\n  background: light-blue !important;\n  }\n\n  ::selection {\n    color: green !important;;\n    background: light-blue !important;\n  }\n"]);
+  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n  box-sizing: border-box;\n  border: 0;\n  margin: 0;\n  padding: 0;\n  position: relative;\n  width: ", ";\n\n  & > span {\n    display: ", ";\n  }\n  option:hover{\n    background-color:#298838;\n  }\n\n  ::-moz-selection {\n  color: green !important;;\n  background: light-blue !important;\n  }\n\n  ::selection {\n    color: green !important;;\n    background: light-blue !important;\n  }\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -25879,9 +25869,77 @@ var ContainerInput = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].l
 }, function (props) {
   return props.showLabel ? "block" : "none";
 });
-var InputSearch = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].input(_templateObject2(), function (props) {
+/* harmony default export */ __webpack_exports__["default"] = (ContainerInput);
+
+/***/ }),
+
+/***/ "./pages/components/AutoComplete/InputSearchStyles.jsx":
+/*!*************************************************************!*\
+  !*** ./pages/components/AutoComplete/InputSearchStyles.jsx ***!
+  \*************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/taggedTemplateLiteral */ "./node_modules/@babel/runtime-corejs2/helpers/esm/taggedTemplateLiteral.js");
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
+
+
+function _templateObject() {
+  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n  border: 1px solid #e6e6e6;\n  border-radius: ", ";\n  box-sizing: border-box;\n  font-family: Helvetica, sans-serif;\n  font-size: 0.85rem;\n  padding: 10px 15px;\n\n  align: center;\n  width: 95%;\n"]);
+
+  _templateObject = function _templateObject() {
+    return data;
+  };
+
+  return data;
+}
+
+
+var InputSearch = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].input(_templateObject(), function (props) {
   return props.open ? "5px 5px 0 0" : "5px";
 });
+/* harmony default export */ __webpack_exports__["default"] = (InputSearch);
+
+/***/ }),
+
+/***/ "./pages/components/AutoComplete/Suggestions/ItemSuggestionsStyles.jsx":
+/*!*****************************************************************************!*\
+  !*** ./pages/components/AutoComplete/Suggestions/ItemSuggestionsStyles.jsx ***!
+  \*****************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/taggedTemplateLiteral */ "./node_modules/@babel/runtime-corejs2/helpers/esm/taggedTemplateLiteral.js");
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
+
+
+function _templateObject() {
+  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n  background: ", ";\n  border: 1px solid #ccc;\n  border-radius: 0 0 5px 5px;\n  box-sizing: border-box;\n  color: ", ";\n  display: ", ";\n  font-family: Helvetica, sans-serif;\n  left: 0;\n  max-width: ", ";\n  position: absolute;\n  width: 100%;\n  z-index: 2;\n\n  & > ul.suggestions-list {\n    list-style: none;\n    margin: 0;\n    padding: 0;\n  }\n"]);
+
+  _templateObject = function _templateObject() {
+    return data;
+  };
+
+  return data;
+}
+
+
+var ItemSuggestions = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div(_templateObject(), function (_ref) {
+  var theme = _ref.theme;
+  return theme.suggestionsBG;
+}, function (_ref2) {
+  var theme = _ref2.theme;
+  return theme.suggestionsTXT;
+}, function (props) {
+  return props.open ? "block" : "none";
+}, function (props) {
+  return props.maxWidth;
+});
+/* harmony default export */ __webpack_exports__["default"] = (ItemSuggestions);
 
 /***/ }),
 
@@ -25897,8 +25955,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _SuggestionsStyled__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./SuggestionsStyled */ "./pages/components/AutoComplete/Suggestions/SuggestionsStyled.jsx");
+/* harmony import */ var _ItemSuggestionsStyles__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./ItemSuggestionsStyles */ "./pages/components/AutoComplete/Suggestions/ItemSuggestionsStyles.jsx");
 var _jsxFileName = "/Users/nicolasfbergues/Desktop/Nico/Trabajo/FrontEnd/nextJsGnomeSearch/pages/components/AutoComplete/Suggestions/Suggestions.jsx";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
 
 
 
@@ -25910,23 +25970,23 @@ var Suggestions = function Suggestions(_ref) {
       open = _ref.open,
       suggestedItems = _ref.suggestedItems,
       currentOption = _ref.currentOption;
-  return __jsx(_SuggestionsStyled__WEBPACK_IMPORTED_MODULE_1__["ItemSuggestions"], {
+  return __jsx(_ItemSuggestionsStyles__WEBPACK_IMPORTED_MODULE_2__["default"], {
     open: open && searchTerm.length > 0 ? open : false,
     maxWidth: maxWidth,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 13
+      lineNumber: 15
     },
     __self: this
   }, __jsx("ul", {
     className: "suggestions-list",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 17
+      lineNumber: 19
     },
     __self: this
   }, suggestedItems.map(function (autoCompleteItem) {
-    return __jsx(_SuggestionsStyled__WEBPACK_IMPORTED_MODULE_1__["Suggestion"], {
+    return __jsx(_SuggestionsStyled__WEBPACK_IMPORTED_MODULE_1__["default"], {
       key: autoCompleteItem,
       onClick: Suggestions.selectCompletion(updateLocalState, updateParentState),
       onMouseOver: Suggestions.mouseOverSuggestion(updateLocalState, suggestedItems.indexOf(autoCompleteItem)),
@@ -25936,7 +25996,7 @@ var Suggestions = function Suggestions(_ref) {
       role: "presentation",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 19
+        lineNumber: 21
       },
       __self: this
     }, autoCompleteItem);
@@ -25984,29 +26044,17 @@ Suggestions.hoverFocus = function (event) {
 /*!*************************************************************************!*\
   !*** ./pages/components/AutoComplete/Suggestions/SuggestionsStyled.jsx ***!
   \*************************************************************************/
-/*! exports provided: ItemSuggestions, Suggestion */
+/*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ItemSuggestions", function() { return ItemSuggestions; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Suggestion", function() { return Suggestion; });
 /* harmony import */ var _babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/taggedTemplateLiteral */ "./node_modules/@babel/runtime-corejs2/helpers/esm/taggedTemplateLiteral.js");
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
 
 
-function _templateObject2() {
-  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n  background-color: ", ";\n  color: ", ";\n  cursor: pointer;\n  padding: 10px 15px;\n"]);
-
-  _templateObject2 = function _templateObject2() {
-    return data;
-  };
-
-  return data;
-}
-
 function _templateObject() {
-  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n  background: ", ";\n  border: 1px solid #ccc;\n  border-radius: 0 0 5px 5px;\n  box-sizing: border-box;\n  color: ", ";\n  display: ", ";\n  font-family: Helvetica, sans-serif;\n  left: 0;\n  max-width: ", ";\n  position: absolute;\n  width: 100%;\n  z-index: 2;\n\n  & > ul.suggestions-list {\n    list-style: none;\n    margin: 0;\n    padding: 0;\n  }\n"]);
+  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n  background-color: ", ";\n  color: ", ";\n  cursor: pointer;\n  padding: 10px 15px;\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -26016,32 +26064,53 @@ function _templateObject() {
 }
 
 
-var ItemSuggestions = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div(_templateObject(), function (_ref) {
-  var theme = _ref.theme;
-  return theme.suggestionsBG;
-}, function (_ref2) {
-  var theme = _ref2.theme;
-  return theme.suggestionsTXT;
-}, function (props) {
-  return props.open ? "block" : "none";
-}, function (props) {
-  return props.maxWidth;
-});
-var Suggestion = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].li(_templateObject2(), function (props) {
+var Suggestion = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].li(_templateObject(), function (props) {
   return props.active ? "#83d6e6" : "transparent";
 }, function (props) {
-  return props.active ? "#fff" : "".concat(function (_ref3) {
-    var theme = _ref3.theme;
+  return props.active ? "#fff" : "".concat(function (_ref) {
+    var theme = _ref.theme;
     return theme.suggestionsTXT;
   });
 });
+/* harmony default export */ __webpack_exports__["default"] = (Suggestion);
 
 /***/ }),
 
-/***/ "./pages/components/Card/Card.jsx":
-/*!****************************************!*\
-  !*** ./pages/components/Card/Card.jsx ***!
-  \****************************************/
+/***/ "./pages/components/Card/AvatarStyles.jsx":
+/*!************************************************!*\
+  !*** ./pages/components/Card/AvatarStyles.jsx ***!
+  \************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/taggedTemplateLiteral */ "./node_modules/@babel/runtime-corejs2/helpers/esm/taggedTemplateLiteral.js");
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
+
+
+function _templateObject() {
+  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n  background: ", ";\n  background-size: cover\n  box-sizing: border-box;\n  margin: auto 0;\n  padding: 5px;\n  height: 100px;\n  position: relative;\n  margin-top: 0px;\n  top: 0px;\n  width: 100%;\n  z-index: 1;\n  img {\n    position: absolute;\n    height: 0;\n    visibility: hidden;\n    width: 0;\n  }\n"]);
+
+  _templateObject = function _templateObject() {
+    return data;
+  };
+
+  return data;
+}
+
+
+var Avatar = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div(_templateObject(), function (props) {
+  return "url(".concat(props.src, ") no-repeat center");
+});
+/* harmony default export */ __webpack_exports__["default"] = (Avatar);
+
+/***/ }),
+
+/***/ "./pages/components/Card/Card.js":
+/*!***************************************!*\
+  !*** ./pages/components/Card/Card.js ***!
+  \***************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -26051,9 +26120,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _utils__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./../../../utils */ "./utils.js");
 /* harmony import */ var _Modal_Modal_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./../Modal/Modal.js */ "./pages/components/Modal/Modal.js");
-/* harmony import */ var _CardStyled__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./CardStyled */ "./pages/components/Card/CardStyled.jsx");
-var _jsxFileName = "/Users/nicolasfbergues/Desktop/Nico/Trabajo/FrontEnd/nextJsGnomeSearch/pages/components/Card/Card.jsx";
+/* harmony import */ var _AvatarStyles__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./AvatarStyles */ "./pages/components/Card/AvatarStyles.jsx");
+/* harmony import */ var _InfoStyles__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./InfoStyles */ "./pages/components/Card/InfoStyles.jsx");
+/* harmony import */ var _InfoListStyles__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./InfoListStyles */ "./pages/components/Card/InfoListStyles.jsx");
+/* harmony import */ var _CardStyles__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./CardStyles */ "./pages/components/Card/CardStyles.jsx");
+var _jsxFileName = "/Users/nicolasfbergues/Desktop/Nico/Trabajo/FrontEnd/nextJsGnomeSearch/pages/components/Card/Card.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
+
+
 
 
 
@@ -26064,26 +26139,26 @@ var Card = function Card(_ref) {
       to = _ref.to,
       _ref$hideFriendButton = _ref.hideFriendButton,
       hideFriendButton = _ref$hideFriendButton === void 0 ? false : _ref$hideFriendButton;
-  return __jsx(_CardStyled__WEBPACK_IMPORTED_MODULE_3__["GnomeCard"], {
+  return __jsx(_CardStyles__WEBPACK_IMPORTED_MODULE_6__["default"], {
     to: to,
     hairColor: Object(_utils__WEBPACK_IMPORTED_MODULE_1__["convertColors"])(gnome && gnome.hair_color),
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 9
+      lineNumber: 12
     },
     __self: this
   }, __jsx("div", {
     className: "banner",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 10
+      lineNumber: 13
     },
     __self: this
-  }), __jsx(_CardStyled__WEBPACK_IMPORTED_MODULE_3__["Avatar"], {
+  }), __jsx(_AvatarStyles__WEBPACK_IMPORTED_MODULE_3__["default"], {
     src: gnome && gnome.thumbnail,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 12
+      lineNumber: 15
     },
     __self: this
   }, __jsx("img", {
@@ -26091,26 +26166,26 @@ var Card = function Card(_ref) {
     alt: "avatar ".concat(gnome && gnome.name),
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 13
+      lineNumber: 16
     },
     __self: this
   })), __jsx("header", {
     className: "description",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 18
+      lineNumber: 21
     },
     __self: this
   }, __jsx("h2", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 19
+      lineNumber: 22
     },
     __self: this
   }, gnome && gnome.name), __jsx("div", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 20
+      lineNumber: 23
     },
     __self: this
   }, gnome.professions.length > 0 ? gnome.professions.join(" • ") : "No Profession")), !hideFriendButton ? __jsx(_Modal_Modal_js__WEBPACK_IMPORTED_MODULE_2__["default"], {
@@ -26119,7 +26194,7 @@ var Card = function Card(_ref) {
     to: to,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 27
+      lineNumber: 30
     },
     __self: this
   }) : null, !hideFriendButton ? __jsx(_Modal_Modal_js__WEBPACK_IMPORTED_MODULE_2__["default"], {
@@ -26128,286 +26203,39 @@ var Card = function Card(_ref) {
     to: to,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 28
-    },
-    __self: this
-  }) : null, __jsx(_CardStyled__WEBPACK_IMPORTED_MODULE_3__["GnomeInfo"], {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 29
-    },
-    __self: this
-  }, __jsx(_CardStyled__WEBPACK_IMPORTED_MODULE_3__["GnomeInfoList"], {
-    hairColor: gnome && Object(_utils__WEBPACK_IMPORTED_MODULE_1__["convertColors"])(gnome.hair_color),
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 30
-    },
-    __self: this
-  }, __jsx("span", {
-    __source: {
-      fileName: _jsxFileName,
       lineNumber: 31
     },
     __self: this
-  }, "Age"), __jsx("span", {
+  }) : null, __jsx(_InfoStyles__WEBPACK_IMPORTED_MODULE_4__["default"], {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 32
     },
     __self: this
-  }, gnome && gnome.age)), __jsx(_CardStyled__WEBPACK_IMPORTED_MODULE_3__["GnomeInfoList"], {
+  }, __jsx(_InfoListStyles__WEBPACK_IMPORTED_MODULE_5__["default"], {
     hairColor: gnome && Object(_utils__WEBPACK_IMPORTED_MODULE_1__["convertColors"])(gnome.hair_color),
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 34
-    },
-    __self: this
-  }, __jsx("span", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 35
-    },
-    __self: this
-  }, "Weight"), __jsx("span", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 36
-    },
-    __self: this
-  }, gnome && Math.ceil(gnome.weight), " ", __jsx("span", {
-    className: "unit",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 37
-    },
-    __self: this
-  }, "KG"))), __jsx(_CardStyled__WEBPACK_IMPORTED_MODULE_3__["GnomeInfoList"], {
-    hairColor: gnome && Object(_utils__WEBPACK_IMPORTED_MODULE_1__["convertColors"])(gnome.hair_color),
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 40
-    },
-    __self: this
-  }, __jsx("span", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 41
-    },
-    __self: this
-  }, "Height"), __jsx("span", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 42
-    },
-    __self: this
-  }, gnome && Math.ceil(gnome.height), " ", __jsx("span", {
-    className: "unit",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 43
-    },
-    __self: this
-  }, "CM")))), __jsx("div", {
-    className: "banner-footer",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 47
-    },
-    __self: this
-  }));
-};
-
-/* harmony default export */ __webpack_exports__["default"] = (Card);
-
-/***/ }),
-
-/***/ "./pages/components/Card/CardStyled.jsx":
-/*!**********************************************!*\
-  !*** ./pages/components/Card/CardStyled.jsx ***!
-  \**********************************************/
-/*! exports provided: GnomeCard, Avatar, GnomeInfo, GnomeInfoList */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "GnomeCard", function() { return GnomeCard; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Avatar", function() { return Avatar; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "GnomeInfo", function() { return GnomeInfo; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "GnomeInfoList", function() { return GnomeInfoList; });
-/* harmony import */ var _babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/taggedTemplateLiteral */ "./node_modules/@babel/runtime-corejs2/helpers/esm/taggedTemplateLiteral.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
-/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
-/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_3__);
-
-
-function _templateObject4() {
-  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n  text-align: center;\n  width: 33%;\n  span {\n    display: block;\n  }\n  span:first-child {\n    color: ", "\n    font-weight: normal;\n    font-size: 0.6rem;\n    text-transform: uppercase;\n    letter-spacing: 1px;\n  }\n  span:last-child {\n    color: ", ";\n    font-weight: normal;\n    font-size: 0.8rem;\n    padding: 1px; 0 10px;\n\n    span.unit {\n      display: inline;\n      font-size: 0.5rem;\n      margin-left: -3px;\n    }\n  }\n"]);
-
-  _templateObject4 = function _templateObject4() {
-    return data;
-  };
-
-  return data;
-}
-
-function _templateObject3() {
-  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n  display: flex;\n  list-style: none;\n  padding: 0 10px 12px;\n"]);
-
-  _templateObject3 = function _templateObject3() {
-    return data;
-  };
-
-  return data;
-}
-
-function _templateObject2() {
-  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n  background: ", ";\n  background-size: cover\n  box-sizing: border-box;\n  margin: auto 0;\n  padding: 5px;\n  height: 100px;\n  position: relative;\n  margin-top: 0px;\n  top: 0px;\n  width: 100%;\n  z-index: 1;\n  img {\n    position: absolute;\n    height: 0;\n    visibility: hidden;\n    width: 0;\n  }\n"]);
-
-  _templateObject2 = function _templateObject2() {
-    return data;
-  };
-
-  return data;
-}
-
-function _templateObject() {
-  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n  border-radius: 15px;\n  background: ", ";\n  box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.2);\n  box-sizing: border-box;\n  color: ", ";\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  margin: 0 5px 15px;\n  max-width: 400px;\n  position: relative;\n  overflow: hidden;\n  text-decoration: none;\n  transition: 0.2s;\n  width: 100%;\n\n  &:hover {\n    box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.4);\n    transition: 0.2s;\n  }\n\n  div.banner {\n    position: absolute;\n    top: 0;\n    width: 100%;\n\n  }\n\n  header.description {\n    margin: 10px 0px;\n    position: relative;\n    height: 112px;\n    margin-top: 35px;\n    padding: 0 10px;\n    text-align: center;\n    font-size: 0.8rem;\n\n    h2 {\n      margin: 0 0 10px;\n    }\n    & > div {\n      font-size: 0.8rem;\n    }\n  }\n\n  div.banner-footer {\n    bottom: 0;\n    background: ", ";\n    height: 8px;\n    position: absolute;\n    width: 100%;\n  }\n\n  @media screen and (min-width: 630px) {\n    max-width: 160px;\n  }\n"]);
-
-  _templateObject = function _templateObject() {
-    return data;
-  };
-
-  return data;
-}
-
-
-
-
-var GnomeCard = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].div(_templateObject(), function (_ref) {
-  var theme = _ref.theme;
-  return theme.cardBG;
-}, function (_ref2) {
-  var theme = _ref2.theme;
-  return theme.mainFontColor;
-}, function (props) {
-  return props.hairColor;
-});
-var Avatar = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].div(_templateObject2(), function (props) {
-  return "url(".concat(props.src, ") no-repeat center");
-});
-var GnomeInfo = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].ul(_templateObject3());
-var GnomeInfoList = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].li(_templateObject4(), function (_ref3) {
-  var theme = _ref3.theme;
-  return theme.secondaryFontColor;
-}, function (_ref4) {
-  var hairColor = _ref4.hairColor;
-  return hairColor || "#f94";
-});
-
-/***/ }),
-
-/***/ "./pages/components/DetailsInfo/DetailsInfo.jsx":
-/*!******************************************************!*\
-  !*** ./pages/components/DetailsInfo/DetailsInfo.jsx ***!
-  \******************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _utils__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./../../../utils */ "./utils.js");
-/* harmony import */ var _DetailsInfoStyled__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./DetailsInfoStyled */ "./pages/components/DetailsInfo/DetailsInfoStyled.jsx");
-var _jsxFileName = "/Users/nicolasfbergues/Desktop/Nico/Trabajo/FrontEnd/nextJsGnomeSearch/pages/components/DetailsInfo/DetailsInfo.jsx";
-var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
-
-
-
-
-var DetailsInfo = function DetailsInfo(_ref) {
-  var gnome = _ref.gnome;
-  return __jsx(_DetailsInfoStyled__WEBPACK_IMPORTED_MODULE_2__["Details"], {
-    hairColor: Object(_utils__WEBPACK_IMPORTED_MODULE_1__["convertColors"])(gnome && gnome.hair_color),
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 12
-    },
-    __self: this
-  }, __jsx("div", {
-    className: "banner",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 13
-    },
-    __self: this
-  }), __jsx(_DetailsInfoStyled__WEBPACK_IMPORTED_MODULE_2__["Avatar"], {
-    src: gnome && gnome.thumbnail,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 14
-    },
-    __self: this
-  }, __jsx("img", {
-    src: gnome && gnome.thumbnail,
-    alt: "avatar ".concat(gnome && gnome.name),
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 15
-    },
-    __self: this
-  })), __jsx("header", {
-    className: "description",
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 20
-    },
-    __self: this
-  }, __jsx("h2", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 21
-    },
-    __self: this
-  }, gnome && gnome.name), __jsx("div", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 22
-    },
-    __self: this
-  }, gnome.professions.length > 0 ? gnome.professions.join(" || ") : "No Profession")), __jsx(_DetailsInfoStyled__WEBPACK_IMPORTED_MODULE_2__["GnomeInfo"], {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 28
-    },
-    __self: this
-  }, __jsx(_DetailsInfoStyled__WEBPACK_IMPORTED_MODULE_2__["GnomeInfoList"], {
-    hairColor: gnome && Object(_utils__WEBPACK_IMPORTED_MODULE_1__["convertColors"])(gnome.hair_color),
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 29
-    },
-    __self: this
-  }, __jsx("span", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 32
-    },
-    __self: this
-  }, "Age"), __jsx("span", {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 33
     },
     __self: this
-  }, gnome && gnome.age)), __jsx(_DetailsInfoStyled__WEBPACK_IMPORTED_MODULE_2__["GnomeInfoList"], {
-    hairColor: gnome && Object(_utils__WEBPACK_IMPORTED_MODULE_1__["convertColors"])(gnome.hair_color),
+  }, __jsx("span", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 34
+    },
+    __self: this
+  }, "Age"), __jsx("span", {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 35
+    },
+    __self: this
+  }, gnome && gnome.age)), __jsx(_InfoListStyles__WEBPACK_IMPORTED_MODULE_5__["default"], {
+    hairColor: gnome && Object(_utils__WEBPACK_IMPORTED_MODULE_1__["convertColors"])(gnome.hair_color),
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 37
     },
     __self: this
   }, __jsx("span", {
@@ -26429,7 +26257,7 @@ var DetailsInfo = function DetailsInfo(_ref) {
       lineNumber: 40
     },
     __self: this
-  }, "KG"))), __jsx(_DetailsInfoStyled__WEBPACK_IMPORTED_MODULE_2__["GnomeInfoList"], {
+  }, "KG"))), __jsx(_InfoListStyles__WEBPACK_IMPORTED_MODULE_5__["default"], {
     hairColor: gnome && Object(_utils__WEBPACK_IMPORTED_MODULE_1__["convertColors"])(gnome.hair_color),
     __source: {
       fileName: _jsxFileName,
@@ -26439,46 +26267,347 @@ var DetailsInfo = function DetailsInfo(_ref) {
   }, __jsx("span", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 46
+      lineNumber: 44
     },
     __self: this
   }, "Height"), __jsx("span", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 47
+      lineNumber: 45
     },
     __self: this
   }, gnome && Math.ceil(gnome.height), " ", __jsx("span", {
     className: "unit",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 48
+      lineNumber: 46
     },
     __self: this
-  }, "CM"))), __jsx(_DetailsInfoStyled__WEBPACK_IMPORTED_MODULE_2__["GnomeInfoList"], {
+  }, "CM")))), __jsx("div", {
+    className: "banner-footer",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 50
+    },
+    __self: this
+  }));
+};
+
+/* harmony default export */ __webpack_exports__["default"] = (Card);
+
+/***/ }),
+
+/***/ "./pages/components/Card/CardStyles.jsx":
+/*!**********************************************!*\
+  !*** ./pages/components/Card/CardStyles.jsx ***!
+  \**********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/taggedTemplateLiteral */ "./node_modules/@babel/runtime-corejs2/helpers/esm/taggedTemplateLiteral.js");
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
+
+
+function _templateObject() {
+  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n  border-radius: 15px;\n  background: ", ";\n  box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.2);\n  box-sizing: border-box;\n  color: ", ";\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  margin: 0 5px 15px;\n  max-width: 400px;\n  position: relative;\n  overflow: hidden;\n  text-decoration: none;\n  transition: 0.2s;\n  width: 100%;\n\n  &:hover {\n    box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.4);\n    transition: 0.2s;\n  }\n\n  div.banner {\n    position: absolute;\n    top: 0;\n    width: 100%;\n\n  }\n\n  header.description {\n    margin: 10px 0px;\n    position: relative;\n    height: 112px;\n    margin-top: 35px;\n    padding: 0 10px;\n    text-align: center;\n    font-size: 0.8rem;\n\n    h2 {\n      margin: 0 0 10px;\n    }\n    & > div {\n      font-size: 0.8rem;\n    }\n  }\n\n  div.banner-footer {\n    bottom: 0;\n    background: ", ";\n    height: 8px;\n    position: absolute;\n    width: 100%;\n  }\n\n  @media screen and (min-width: 630px) {\n    max-width: 160px;\n  }\n"]);
+
+  _templateObject = function _templateObject() {
+    return data;
+  };
+
+  return data;
+}
+
+
+var GnomeCard = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div(_templateObject(), function (_ref) {
+  var theme = _ref.theme;
+  return theme.cardBG;
+}, function (_ref2) {
+  var theme = _ref2.theme;
+  return theme.mainFontColor;
+}, function (props) {
+  return props.hairColor;
+});
+/* harmony default export */ __webpack_exports__["default"] = (GnomeCard);
+
+/***/ }),
+
+/***/ "./pages/components/Card/InfoListStyles.jsx":
+/*!**************************************************!*\
+  !*** ./pages/components/Card/InfoListStyles.jsx ***!
+  \**************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/taggedTemplateLiteral */ "./node_modules/@babel/runtime-corejs2/helpers/esm/taggedTemplateLiteral.js");
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
+
+
+function _templateObject() {
+  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n  text-align: center;\n  width: 33%;\n  span {\n    display: block;\n  }\n  span:first-child {\n    color: ", "\n    font-weight: normal;\n    font-size: 0.6rem;\n    text-transform: uppercase;\n    letter-spacing: 1px;\n  }\n  span:last-child {\n    color: ", ";\n    font-weight: normal;\n    font-size: 0.8rem;\n    padding: 1px; 0 10px;\n\n    span.unit {\n      display: inline;\n      font-size: 0.5rem;\n      margin-left: -3px;\n    }\n  }\n"]);
+
+  _templateObject = function _templateObject() {
+    return data;
+  };
+
+  return data;
+}
+
+
+var InfoList = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].li(_templateObject(), function (_ref) {
+  var theme = _ref.theme;
+  return theme.secondaryFontColor;
+}, function (_ref2) {
+  var hairColor = _ref2.hairColor;
+  return hairColor || "#f94";
+});
+/* harmony default export */ __webpack_exports__["default"] = (InfoList);
+
+/***/ }),
+
+/***/ "./pages/components/Card/InfoStyles.jsx":
+/*!**********************************************!*\
+  !*** ./pages/components/Card/InfoStyles.jsx ***!
+  \**********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/taggedTemplateLiteral */ "./node_modules/@babel/runtime-corejs2/helpers/esm/taggedTemplateLiteral.js");
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
+
+
+function _templateObject() {
+  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n  display: flex;\n  list-style: none;\n  padding: 0 10px 12px;\n"]);
+
+  _templateObject = function _templateObject() {
+    return data;
+  };
+
+  return data;
+}
+
+
+var Info = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].ul(_templateObject());
+/* harmony default export */ __webpack_exports__["default"] = (Info);
+
+/***/ }),
+
+/***/ "./pages/components/DetailsInfo/AvatarStyles.jsx":
+/*!*******************************************************!*\
+  !*** ./pages/components/DetailsInfo/AvatarStyles.jsx ***!
+  \*******************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/taggedTemplateLiteral */ "./node_modules/@babel/runtime-corejs2/helpers/esm/taggedTemplateLiteral.js");
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
+
+
+function _templateObject() {
+  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n  background: ", ";\n  background-size: cover;\n  border: 4px solid ", ";\n  border-radius: 50%;\n  box-sizing: border-box;\n  margin: 65px auto 0;\n  padding: 5px;\n  height: 130px;\n  position: relative;\n  width: 130px;\n  z-index: 1;\n  img {\n    position: absolute;\n    height: 0;\n    visibility: hidden;\n    width: 0;\n  }\n\n  @media screen and (min-width: 400px) {\n    height: 180px;\n    margin: 40px auto 0;\n    width: 180px;\n  }\n"]);
+
+  _templateObject = function _templateObject() {
+    return data;
+  };
+
+  return data;
+}
+
+
+var Avatar = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div(_templateObject(), function (props) {
+  return "url(".concat(props.src, ") no-repeat center");
+}, function (_ref) {
+  var theme = _ref.theme;
+  return theme.cardBG;
+});
+/* harmony default export */ __webpack_exports__["default"] = (Avatar);
+
+/***/ }),
+
+/***/ "./pages/components/DetailsInfo/DetailsInfo.js":
+/*!*****************************************************!*\
+  !*** ./pages/components/DetailsInfo/DetailsInfo.js ***!
+  \*****************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _utils__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./../../../utils */ "./utils.js");
+/* harmony import */ var _DetailsInfoStyled__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./DetailsInfoStyled */ "./pages/components/DetailsInfo/DetailsInfoStyled.jsx");
+/* harmony import */ var _AvatarStyles__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./AvatarStyles */ "./pages/components/DetailsInfo/AvatarStyles.jsx");
+/* harmony import */ var _InfoStyles__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./InfoStyles */ "./pages/components/DetailsInfo/InfoStyles.jsx");
+/* harmony import */ var _InfoListStyles__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./InfoListStyles */ "./pages/components/DetailsInfo/InfoListStyles.jsx");
+var _jsxFileName = "/Users/nicolasfbergues/Desktop/Nico/Trabajo/FrontEnd/nextJsGnomeSearch/pages/components/DetailsInfo/DetailsInfo.js";
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
+
+
+
+
+
+
+var DetailsInfo = function DetailsInfo(_ref) {
+  var gnome = _ref.gnome;
+  return __jsx(_DetailsInfoStyled__WEBPACK_IMPORTED_MODULE_2__["default"], {
+    hairColor: Object(_utils__WEBPACK_IMPORTED_MODULE_1__["convertColors"])(gnome && gnome.hair_color),
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 9
+    },
+    __self: this
+  }, __jsx("div", {
+    className: "banner",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 10
+    },
+    __self: this
+  }), __jsx(_AvatarStyles__WEBPACK_IMPORTED_MODULE_3__["default"], {
+    src: gnome && gnome.thumbnail,
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 11
+    },
+    __self: this
+  }, __jsx("img", {
+    src: gnome && gnome.thumbnail,
+    alt: "avatar ".concat(gnome && gnome.name),
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 12
+    },
+    __self: this
+  })), __jsx("header", {
+    className: "description",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 17
+    },
+    __self: this
+  }, __jsx("h2", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 18
+    },
+    __self: this
+  }, gnome && gnome.name), __jsx("div", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 19
+    },
+    __self: this
+  }, gnome.professions.length > 0 ? gnome.professions.join(" || ") : "No Profession")), __jsx(_InfoStyles__WEBPACK_IMPORTED_MODULE_4__["default"], {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 25
+    },
+    __self: this
+  }, __jsx(_InfoListStyles__WEBPACK_IMPORTED_MODULE_5__["default"], {
     hairColor: gnome && Object(_utils__WEBPACK_IMPORTED_MODULE_1__["convertColors"])(gnome.hair_color),
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 51
+      lineNumber: 26
     },
     __self: this
   }, __jsx("span", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 54
+      lineNumber: 29
+    },
+    __self: this
+  }, "Age"), __jsx("span", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 30
+    },
+    __self: this
+  }, gnome && gnome.age)), __jsx(_InfoListStyles__WEBPACK_IMPORTED_MODULE_5__["default"], {
+    hairColor: gnome && Object(_utils__WEBPACK_IMPORTED_MODULE_1__["convertColors"])(gnome.hair_color),
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 32
+    },
+    __self: this
+  }, __jsx("span", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 35
+    },
+    __self: this
+  }, "Weight"), __jsx("span", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 36
+    },
+    __self: this
+  }, gnome && Math.ceil(gnome.weight), " ", __jsx("span", {
+    className: "unit",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 37
+    },
+    __self: this
+  }, "KG"))), __jsx(_InfoListStyles__WEBPACK_IMPORTED_MODULE_5__["default"], {
+    hairColor: gnome && Object(_utils__WEBPACK_IMPORTED_MODULE_1__["convertColors"])(gnome.hair_color),
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 40
+    },
+    __self: this
+  }, __jsx("span", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 43
+    },
+    __self: this
+  }, "Height"), __jsx("span", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 44
+    },
+    __self: this
+  }, gnome && Math.ceil(gnome.height), " ", __jsx("span", {
+    className: "unit",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 45
+    },
+    __self: this
+  }, "CM"))), __jsx(_InfoListStyles__WEBPACK_IMPORTED_MODULE_5__["default"], {
+    hairColor: gnome && Object(_utils__WEBPACK_IMPORTED_MODULE_1__["convertColors"])(gnome.hair_color),
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 48
+    },
+    __self: this
+  }, __jsx("span", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 51
     },
     __self: this
   }, "Hair color"), __jsx("span", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 55
+      lineNumber: 52
     },
     __self: this
   }, gnome && gnome.hair_color.toUpperCase()))), __jsx("div", {
     className: "banner-footer",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 58
+      lineNumber: 55
     },
     __self: this
   }));
@@ -26492,48 +26621,14 @@ var DetailsInfo = function DetailsInfo(_ref) {
 /*!************************************************************!*\
   !*** ./pages/components/DetailsInfo/DetailsInfoStyled.jsx ***!
   \************************************************************/
-/*! exports provided: Details, Avatar, GnomeInfo, GnomeInfoList */
+/*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Details", function() { return Details; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Avatar", function() { return Avatar; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "GnomeInfo", function() { return GnomeInfo; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "GnomeInfoList", function() { return GnomeInfoList; });
 /* harmony import */ var _babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/taggedTemplateLiteral */ "./node_modules/@babel/runtime-corejs2/helpers/esm/taggedTemplateLiteral.js");
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
 
-
-function _templateObject4() {
-  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n  text-align: center;\n  width: 25%;\n  span {\n    display: block;\n  }\n  span:first-child {\n    color: ", "\n    font-weight: bold;\n    font-size: 0.9rem;\n    text-transform: uppercase;\n    letter-spacing: 1px;\n  }\n  span:last-child {\n    color: ", ";\n    font-weight: bold;\n    font-size: 1.1rem;\n    padding: 5px; 0 10px;\n\n    span.unit {\n      display: inline;\n      font-size: 0.8rem;\n      margin-left: -8px;\n    }\n  }\n\n  @media screen and (min-width: 400px) {\n    span:first-child {\n      font-size: 1rem;\n    }\n    span:last-child {\n      font-size: 1.3rem;\n\n      span.unit {\n        font-size: 0.9rem;\n      }\n    }\n  }\n"]);
-
-  _templateObject4 = function _templateObject4() {
-    return data;
-  };
-
-  return data;
-}
-
-function _templateObject3() {
-  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n  display: flex;\n  list-style: none;\n  padding: 0 10px 12px;\n"]);
-
-  _templateObject3 = function _templateObject3() {
-    return data;
-  };
-
-  return data;
-}
-
-function _templateObject2() {
-  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n  background: ", ";\n  background-size: cover;\n  border: 4px solid ", ";\n  border-radius: 50%;\n  box-sizing: border-box;\n  margin: 65px auto 0;\n  padding: 5px;\n  height: 130px;\n  position: relative;\n  width: 130px;\n  z-index: 1;\n  img {\n    position: absolute;\n    height: 0;\n    visibility: hidden;\n    width: 0;\n  }\n\n  @media screen and (min-width: 400px) {\n    height: 180px;\n    margin: 40px auto 0;\n    width: 180px;\n  }\n"]);
-
-  _templateObject2 = function _templateObject2() {
-    return data;
-  };
-
-  return data;
-}
 
 function _templateObject() {
   var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n  border-radius: 5px;\n  background: ", ";\n  box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.2);\n  box-sizing: border-box;\n  color: ", ";\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  padding: 0 0;\n  position: relative;\n  overflow: hidden;\n  text-decoration: none;\n  transition: 0.5s;\n  width: 100%;\n\n  div.banner {\n    background: ", ";\n    height: 130px;\n    position: absolute;\n    top: 0;\n    width: 100%;\n  }\n\n  header.description {\n    margin: 10px 0 20px;\n    padding: 0 10px;\n    text-align: center;\n\n    h2 {\n      font-size: 1.6rem;\n      margin: 0 0 10px;\n    }\n    & > div {\n      font-size: 1rem;\n      margin: 0 0 20px;\n    }\n  }\n\n  div.banner-footer {\n    bottom: 0;\n    background: ", ";\n    height: 15px;\n    position: absolute;\n    width: 100%;\n  }\n\n  @media screen and (min-width: 400px) {\n    header.description {\n      h2 {\n        font-size: 1.7rem;\n      }\n      & > div {\n        font-size: 1.2rem;\n      }\n    }\n  }\n"]);
@@ -26557,20 +26652,71 @@ var Details = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div(_tem
 }, function (props) {
   return props.hairColor;
 });
-var Avatar = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div(_templateObject2(), function (props) {
-  return "url(".concat(props.src, ") no-repeat center");
-}, function (_ref3) {
-  var theme = _ref3.theme;
-  return theme.cardBG;
-});
-var GnomeInfo = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].ul(_templateObject3());
-var GnomeInfoList = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].li(_templateObject4(), function (_ref4) {
-  var theme = _ref4.theme;
+/* harmony default export */ __webpack_exports__["default"] = (Details);
+
+/***/ }),
+
+/***/ "./pages/components/DetailsInfo/InfoListStyles.jsx":
+/*!*********************************************************!*\
+  !*** ./pages/components/DetailsInfo/InfoListStyles.jsx ***!
+  \*********************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/taggedTemplateLiteral */ "./node_modules/@babel/runtime-corejs2/helpers/esm/taggedTemplateLiteral.js");
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
+
+
+function _templateObject() {
+  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n  text-align: center;\n  width: 25%;\n  span {\n    display: block;\n  }\n  span:first-child {\n    color: ", "\n    font-weight: bold;\n    font-size: 0.9rem;\n    text-transform: uppercase;\n    letter-spacing: 1px;\n  }\n  span:last-child {\n    color: ", ";\n    font-weight: bold;\n    font-size: 1.1rem;\n    padding: 5px; 0 10px;\n\n    span.unit {\n      display: inline;\n      font-size: 0.8rem;\n      margin-left: -8px;\n    }\n  }\n\n  @media screen and (min-width: 400px) {\n    span:first-child {\n      font-size: 1rem;\n    }\n    span:last-child {\n      font-size: 1.3rem;\n\n      span.unit {\n        font-size: 0.9rem;\n      }\n    }\n  }\n"]);
+
+  _templateObject = function _templateObject() {
+    return data;
+  };
+
+  return data;
+}
+
+
+var InfoList = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].li(_templateObject(), function (_ref) {
+  var theme = _ref.theme;
   return theme.secondaryFontColor;
-}, function (_ref5) {
-  var hairColor = _ref5.hairColor;
+}, function (_ref2) {
+  var hairColor = _ref2.hairColor;
   return hairColor || "#f94";
 });
+/* harmony default export */ __webpack_exports__["default"] = (InfoList);
+
+/***/ }),
+
+/***/ "./pages/components/DetailsInfo/InfoStyles.jsx":
+/*!*****************************************************!*\
+  !*** ./pages/components/DetailsInfo/InfoStyles.jsx ***!
+  \*****************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/taggedTemplateLiteral */ "./node_modules/@babel/runtime-corejs2/helpers/esm/taggedTemplateLiteral.js");
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
+
+
+function _templateObject() {
+  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n  display: flex;\n  list-style: none;\n  padding: 0 10px 12px;\n"]);
+
+  _templateObject = function _templateObject() {
+    return data;
+  };
+
+  return data;
+}
+
+
+var Info = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].ul(_templateObject());
+/* harmony default export */ __webpack_exports__["default"] = (Info);
 
 /***/ }),
 
@@ -26631,6 +26777,37 @@ var Footer = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].footer(_t
 
 /***/ }),
 
+/***/ "./pages/components/Gender/AvatarStyles.jsx":
+/*!**************************************************!*\
+  !*** ./pages/components/Gender/AvatarStyles.jsx ***!
+  \**************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/taggedTemplateLiteral */ "./node_modules/@babel/runtime-corejs2/helpers/esm/taggedTemplateLiteral.js");
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
+
+
+function _templateObject() {
+  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n  background: ", ";\n  background-size: cover\n  box-sizing: border-box;\n  margin: auto 0;\n  padding: 5px;\n  height: 100px;\n  position: relative;\n  margin-top: 0px;\n  top: 0px;\n  width: 100%;\n  z-index: 1;\n  img {\n    position: absolute;\n    height: 0;\n    visibility: hidden;\n    width: 0;\n  }\n"]);
+
+  _templateObject = function _templateObject() {
+    return data;
+  };
+
+  return data;
+}
+
+
+var Avatar = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div(_templateObject(), function (props) {
+  return "url(".concat(props.src, ") no-repeat center");
+});
+/* harmony default export */ __webpack_exports__["default"] = (Avatar);
+
+/***/ }),
+
 /***/ "./pages/components/Gender/Gender.js":
 /*!*******************************************!*\
   !*** ./pages/components/Gender/Gender.js ***!
@@ -26647,8 +26824,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _utils__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./../../../utils */ "./utils.js");
 /* harmony import */ var _GenderCard_GenderCard__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./GenderCard/GenderCard */ "./pages/components/Gender/GenderCard/GenderCard.js");
 /* harmony import */ var _GenderStyled__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./GenderStyled */ "./pages/components/Gender/GenderStyled.jsx");
+/* harmony import */ var _AvatarStyles__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./AvatarStyles */ "./pages/components/Gender/AvatarStyles.jsx");
+/* harmony import */ var _InfoStyles__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./InfoStyles */ "./pages/components/Gender/InfoStyles.jsx");
+/* harmony import */ var _InfoListStyles__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./InfoListStyles */ "./pages/components/Gender/InfoListStyles.jsx");
 var _jsxFileName = "/Users/nicolasfbergues/Desktop/Nico/Trabajo/FrontEnd/nextJsGnomeSearch/pages/components/Gender/Gender.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
+
+
 
 
 
@@ -26668,7 +26851,9 @@ var Gender = function Gender(props) {
 
   Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(function () {
     props.fetchGender("name[]=" + name).then(function (response) {
+      console.log(response);
       setGender(response);
+      console.log(gender);
     });
   }, []);
   /*useEffect(() => {
@@ -26677,25 +26862,25 @@ var Gender = function Gender(props) {
      }
   },[gender]);*/
 
-  return __jsx(_GenderStyled__WEBPACK_IMPORTED_MODULE_5__["GnomeCard"], {
+  return __jsx(_GenderStyled__WEBPACK_IMPORTED_MODULE_5__["default"], {
     to: to,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 31
+      lineNumber: 36
     },
     __self: this
   }, __jsx("div", {
     className: "banner",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 32
+      lineNumber: 37
     },
     __self: this
-  }), __jsx(_GenderStyled__WEBPACK_IMPORTED_MODULE_5__["Avatar"], {
+  }), __jsx(_AvatarStyles__WEBPACK_IMPORTED_MODULE_6__["default"], {
     src: gnome && gnome.thumbnail,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 34
+      lineNumber: 39
     },
     __self: this
   }, __jsx("img", {
@@ -26703,117 +26888,117 @@ var Gender = function Gender(props) {
     alt: "avatar ".concat(gnome && gnome.name),
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 35
+      lineNumber: 40
     },
     __self: this
   })), __jsx("header", {
     className: "headerBox",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 40
+      lineNumber: 45
     },
     __self: this
   }, __jsx("h2", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 41
+      lineNumber: 46
     },
     __self: this
   }, gnome && gnome.name), __jsx("div", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 42
+      lineNumber: 47
     },
     __self: this
   }, gnome.professions.length > 0 ? gnome.professions.join(" • ") : "No Profession")), __jsx(_GenderCard_GenderCard__WEBPACK_IMPORTED_MODULE_4__["default"], {
     gender: gender,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 48
+      lineNumber: 53
     },
     __self: this
-  }), __jsx(_GenderStyled__WEBPACK_IMPORTED_MODULE_5__["GnomeInfo"], {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 49
-    },
-    __self: this
-  }, __jsx(_GenderStyled__WEBPACK_IMPORTED_MODULE_5__["GnomeInfoList"], {
-    hairColor: gnome && Object(_utils__WEBPACK_IMPORTED_MODULE_3__["convertColors"])(gnome.hair_color),
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 50
-    },
-    __self: this
-  }, __jsx("span", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 51
-    },
-    __self: this
-  }, "Age"), __jsx("span", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 52
-    },
-    __self: this
-  }, gnome && gnome.age)), __jsx(_GenderStyled__WEBPACK_IMPORTED_MODULE_5__["GnomeInfoList"], {
-    hairColor: gnome && Object(_utils__WEBPACK_IMPORTED_MODULE_3__["convertColors"])(gnome.hair_color),
+  }), __jsx(_InfoStyles__WEBPACK_IMPORTED_MODULE_7__["default"], {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 54
     },
     __self: this
-  }, __jsx("span", {
+  }, __jsx(_InfoListStyles__WEBPACK_IMPORTED_MODULE_8__["default"], {
+    hairColor: gnome && Object(_utils__WEBPACK_IMPORTED_MODULE_3__["convertColors"])(gnome.hair_color),
     __source: {
       fileName: _jsxFileName,
       lineNumber: 55
     },
     __self: this
-  }, "Weight"), __jsx("span", {
+  }, __jsx("span", {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 56
+    },
+    __self: this
+  }, "Age"), __jsx("span", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 57
+    },
+    __self: this
+  }, gnome && gnome.age)), __jsx(_InfoListStyles__WEBPACK_IMPORTED_MODULE_8__["default"], {
+    hairColor: gnome && Object(_utils__WEBPACK_IMPORTED_MODULE_3__["convertColors"])(gnome.hair_color),
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 59
+    },
+    __self: this
+  }, __jsx("span", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 60
+    },
+    __self: this
+  }, "Weight"), __jsx("span", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 61
     },
     __self: this
   }, gnome && Math.ceil(gnome.weight), " ", __jsx("span", {
     className: "unit",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 57
+      lineNumber: 62
     },
     __self: this
-  }, "KG"))), __jsx(_GenderStyled__WEBPACK_IMPORTED_MODULE_5__["GnomeInfoList"], {
+  }, "KG"))), __jsx(_InfoListStyles__WEBPACK_IMPORTED_MODULE_8__["default"], {
     hairColor: gnome && Object(_utils__WEBPACK_IMPORTED_MODULE_3__["convertColors"])(gnome.hair_color),
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 60
+      lineNumber: 65
     },
     __self: this
   }, __jsx("span", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 61
+      lineNumber: 66
     },
     __self: this
   }, "Height"), __jsx("span", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 62
+      lineNumber: 67
     },
     __self: this
   }, gnome && Math.ceil(gnome.height), " ", __jsx("span", {
     className: "unit",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 63
+      lineNumber: 68
     },
     __self: this
   }, "CM")))), __jsx("div", {
     className: "banner-footer",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 67
+      lineNumber: 72
     },
     __self: this
   }));
@@ -26840,7 +27025,7 @@ var mapStateToProps = function mapStateToProps(state) {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _GenderCardStyled__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./GenderCardStyled */ "./pages/components/Gender/GenderCard/GenderCardStyled.jsx");
+/* harmony import */ var _GenderCardStyles__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./GenderCardStyles */ "./pages/components/Gender/GenderCard/GenderCardStyles.jsx");
 var _jsxFileName = "/Users/nicolasfbergues/Desktop/Nico/Trabajo/FrontEnd/nextJsGnomeSearch/pages/components/Gender/GenderCard/GenderCard.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
@@ -26868,7 +27053,7 @@ var GenderCard = function GenderCard(props) {
 
   if (props.gender.length > 0) {
     if (props.gender[0].gender) {
-      return __jsx(_GenderCardStyled__WEBPACK_IMPORTED_MODULE_1__["default"], {
+      return __jsx(_GenderCardStyles__WEBPACK_IMPORTED_MODULE_1__["default"], {
         __source: {
           fileName: _jsxFileName,
           lineNumber: 25
@@ -26895,7 +27080,7 @@ var GenderCard = function GenderCard(props) {
         __self: this
       }, "(", props.gender[0].probability * 100, "% chances according to our report)")));
     } else if (!props.gender[0].gender && findOutIfFemale(props.gender[0].name) == true) {
-      return __jsx(_GenderCardStyled__WEBPACK_IMPORTED_MODULE_1__["default"], {
+      return __jsx(_GenderCardStyles__WEBPACK_IMPORTED_MODULE_1__["default"], {
         __source: {
           fileName: _jsxFileName,
           lineNumber: 36
@@ -26922,7 +27107,7 @@ var GenderCard = function GenderCard(props) {
         __self: this
       }, "(", randomNumberAprox, "% chances according to our report)")));
     } else {
-      return __jsx(_GenderCardStyled__WEBPACK_IMPORTED_MODULE_1__["default"], {
+      return __jsx(_GenderCardStyles__WEBPACK_IMPORTED_MODULE_1__["default"], {
         __source: {
           fileName: _jsxFileName,
           lineNumber: 47
@@ -26944,7 +27129,7 @@ var GenderCard = function GenderCard(props) {
       }, props.gender[0].name, " could be an hermafrodith gnome with ", randomNumberAprox, "% of chances.")));
     }
   } else {
-    return __jsx(_GenderCardStyled__WEBPACK_IMPORTED_MODULE_1__["default"], {
+    return __jsx(_GenderCardStyles__WEBPACK_IMPORTED_MODULE_1__["default"], {
       __source: {
         fileName: _jsxFileName,
         lineNumber: 59
@@ -26971,9 +27156,9 @@ var GenderCard = function GenderCard(props) {
 
 /***/ }),
 
-/***/ "./pages/components/Gender/GenderCard/GenderCardStyled.jsx":
+/***/ "./pages/components/Gender/GenderCard/GenderCardStyles.jsx":
 /*!*****************************************************************!*\
-  !*** ./pages/components/Gender/GenderCard/GenderCardStyled.jsx ***!
+  !*** ./pages/components/Gender/GenderCard/GenderCardStyles.jsx ***!
   \*****************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
@@ -26997,8 +27182,8 @@ function _templateObject() {
  // themes value received thenaks to themesProvider
 // so themes variables are available in all styled components
 
-var GenderCardStyle = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].header(_templateObject());
-/* harmony default export */ __webpack_exports__["default"] = (GenderCardStyle);
+var GenderResult = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].header(_templateObject());
+/* harmony default export */ __webpack_exports__["default"] = (GenderResult);
 
 /***/ }),
 
@@ -27006,54 +27191,14 @@ var GenderCardStyle = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].
 /*!**************************************************!*\
   !*** ./pages/components/Gender/GenderStyled.jsx ***!
   \**************************************************/
-/*! exports provided: GnomeCard, Avatar, GnomeInfo, GnomeInfoList */
+/*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "GnomeCard", function() { return GnomeCard; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Avatar", function() { return Avatar; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "GnomeInfo", function() { return GnomeInfo; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "GnomeInfoList", function() { return GnomeInfoList; });
 /* harmony import */ var _babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/taggedTemplateLiteral */ "./node_modules/@babel/runtime-corejs2/helpers/esm/taggedTemplateLiteral.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
-/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
-/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_3__);
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
 
-var _jsxFileName = "/Users/nicolasfbergues/Desktop/Nico/Trabajo/FrontEnd/nextJsGnomeSearch/pages/components/Gender/GenderStyled.jsx";
-var __jsx = react__WEBPACK_IMPORTED_MODULE_1___default.a.createElement;
-
-function _templateObject4() {
-  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n  text-align: center;\n  width: 33%;\n  span {\n    display: block;\n  }\n  span:first-child {\n    color: ", "\n    font-weight: normal;\n    font-size: 0.6rem;\n    text-transform: uppercase;\n    letter-spacing: 1px;\n  }\n  span:last-child {\n    color: ", ";\n    font-weight: normal;\n    font-size: 0.8rem;\n    padding: 1px; 0 10px;\n\n    span.unit {\n      display: inline;\n      font-size: 0.5rem;\n      margin-left: -3px;\n    }\n  }\n"]);
-
-  _templateObject4 = function _templateObject4() {
-    return data;
-  };
-
-  return data;
-}
-
-function _templateObject3() {
-  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n  display: flex;\n  list-style: none;\n  padding: 0 10px 12px;\n"]);
-
-  _templateObject3 = function _templateObject3() {
-    return data;
-  };
-
-  return data;
-}
-
-function _templateObject2() {
-  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n  background: ", ";\n  background-size: cover\n  box-sizing: border-box;\n  margin: auto 0;\n  padding: 5px;\n  height: 100px;\n  position: relative;\n  margin-top: 0px;\n  top: 0px;\n  width: 100%;\n  z-index: 1;\n  img {\n    position: absolute;\n    height: 0;\n    visibility: hidden;\n    width: 0;\n  }\n"]);
-
-  _templateObject2 = function _templateObject2() {
-    return data;
-  };
-
-  return data;
-}
 
 function _templateObject() {
   var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n  border-radius: 5px;\n  background: ", ";\n  box-shadow: 0px 0px 3px rgba(0, 0, 0, 0.2);\n  box-sizing: border-box;\n  color: ", ";\n  display: flex;\n  flex-direction: column;\n  justify-content: center;\n  margin: 0 5px 15px;\n  max-width: 400px;\n  position: relative;\n  overflow: hidden;\n  text-decoration: none;\n  transition: 0.2s;\n  width: 100%;\n\n  &:hover {\n    box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.4);\n    transition: 0.2s;\n  }\n\n  div.banner {\n    position: absolute;\n    top: 0;\n    width: 100%;\n\n  }\n\n  header.headerBox{\n    margin: 10px 0px;\n    position: relative;\n    height: 30px;\n    margin-top: 35px;\n    padding: 0 10px;\n    text-align: center;\n    font-size: 0.8rem;\n\n    h2 {\n      margin: 0 0 10px;\n    }\n    & > div {\n      font-size: 0.8rem;\n    }\n  }\n\n  div.banner-footer {\n    bottom: 0;\n    background: ", ";\n    height: 8px;\n    position: absolute;\n    width: 100%;\n  }\n\n  @media screen and (min-width: 630px) {\n    max-width: 570px;\n    margin: auto;\n  }\n"]);
@@ -27066,69 +27211,80 @@ function _templateObject() {
 }
 
 
-
-
-
-var CardLink = function CardLink(_ref) {
-  var className = _ref.className,
-      children = _ref.children,
-      to = _ref.to;
-  return __jsx("div", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 8
-    },
-    __self: this
-  }, __jsx("div", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 9
-    },
-    __self: this
-  }, children), __jsx("div", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 12
-    },
-    __self: this
-  }, __jsx(next_link__WEBPACK_IMPORTED_MODULE_3___default.a, {
-    href: "href=https://api.genderize.io/?name=" + to,
-    to: to,
-    className: className,
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 13
-    },
-    __self: this
-  }, __jsx("p", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 14
-    },
-    __self: this
-  }, "Consultar gnomo"))));
-};
-
-var GnomeCard = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].div(_templateObject(), function (_ref2) {
-  var theme = _ref2.theme;
+var GenderCardStyle = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div(_templateObject(), function (_ref) {
+  var theme = _ref.theme;
   return theme.cardBG;
-}, function (_ref3) {
-  var theme = _ref3.theme;
+}, function (_ref2) {
+  var theme = _ref2.theme;
   return theme.mainFontColor;
 }, function (props) {
   return props.hairColor;
 });
-var Avatar = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].div(_templateObject2(), function (props) {
-  return "url(".concat(props.src, ") no-repeat center");
-});
-var GnomeInfo = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].ul(_templateObject3());
-var GnomeInfoList = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].li(_templateObject4(), function (_ref4) {
-  var theme = _ref4.theme;
+/* harmony default export */ __webpack_exports__["default"] = (GenderCardStyle);
+
+/***/ }),
+
+/***/ "./pages/components/Gender/InfoListStyles.jsx":
+/*!****************************************************!*\
+  !*** ./pages/components/Gender/InfoListStyles.jsx ***!
+  \****************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/taggedTemplateLiteral */ "./node_modules/@babel/runtime-corejs2/helpers/esm/taggedTemplateLiteral.js");
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
+
+
+function _templateObject() {
+  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n  text-align: center;\n  width: 33%;\n  span {\n    display: block;\n  }\n  span:first-child {\n    color: ", "\n    font-weight: normal;\n    font-size: 0.6rem;\n    text-transform: uppercase;\n    letter-spacing: 1px;\n  }\n  span:last-child {\n    color: ", ";\n    font-weight: normal;\n    font-size: 0.8rem;\n    padding: 1px; 0 10px;\n\n    span.unit {\n      display: inline;\n      font-size: 0.5rem;\n      margin-left: -3px;\n    }\n  }\n"]);
+
+  _templateObject = function _templateObject() {
+    return data;
+  };
+
+  return data;
+}
+
+
+var InfoList = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].li(_templateObject(), function (_ref) {
+  var theme = _ref.theme;
   return theme.secondaryFontColor;
-}, function (_ref5) {
-  var hairColor = _ref5.hairColor;
+}, function (_ref2) {
+  var hairColor = _ref2.hairColor;
   return hairColor || "#f94";
 });
+/* harmony default export */ __webpack_exports__["default"] = (InfoList);
+
+/***/ }),
+
+/***/ "./pages/components/Gender/InfoStyles.jsx":
+/*!************************************************!*\
+  !*** ./pages/components/Gender/InfoStyles.jsx ***!
+  \************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/taggedTemplateLiteral */ "./node_modules/@babel/runtime-corejs2/helpers/esm/taggedTemplateLiteral.js");
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
+
+
+function _templateObject() {
+  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n  display: flex;\n  list-style: none;\n  padding: 0 10px 12px;\n"]);
+
+  _templateObject = function _templateObject() {
+    return data;
+  };
+
+  return data;
+}
+
+
+var Info = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].ul(_templateObject());
+/* harmony default export */ __webpack_exports__["default"] = (Info);
 
 /***/ }),
 
@@ -27193,7 +27349,7 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
   var label = _ref.label,
       gnomes = _ref.gnomes,
       to = _ref.to;
-  return __jsx(_ModalStyles__WEBPACK_IMPORTED_MODULE_4__["ModalStyle"], {
+  return __jsx(_ModalStyles__WEBPACK_IMPORTED_MODULE_4__["default"], {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 9
@@ -27343,12 +27499,11 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 /*!************************************************!*\
   !*** ./pages/components/Modal/ModalStyles.jsx ***!
   \************************************************/
-/*! exports provided: ModalStyle */
+/*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ModalStyle", function() { return ModalStyle; });
 /* harmony import */ var _babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/taggedTemplateLiteral */ "./node_modules/@babel/runtime-corejs2/helpers/esm/taggedTemplateLiteral.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
@@ -27368,6 +27523,7 @@ function _templateObject() {
 
 
 var ModalStyle = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].div(_templateObject());
+/* harmony default export */ __webpack_exports__["default"] = (ModalStyle);
 
 /***/ }),
 
@@ -27481,6 +27637,204 @@ var OrderButton = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].butt
   return highScreenWidth || "16%";
 });
 /* harmony default export */ __webpack_exports__["default"] = (OrderButton);
+
+/***/ }),
+
+/***/ "./pages/components/Pagination/BtnStyled.jsx":
+/*!***************************************************!*\
+  !*** ./pages/components/Pagination/BtnStyled.jsx ***!
+  \***************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/taggedTemplateLiteral */ "./node_modules/@babel/runtime-corejs2/helpers/esm/taggedTemplateLiteral.js");
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
+
+
+function _templateObject() {
+  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n  background: ", "\n  color: ", ";\n  cursor: ", ";\n  font-size: 0.9rem;\n  width: 80%;\n  max-width: 140px;\n  padding: 6px 0;\n  text-align: center;\n\n  &:hover {\n    background: ", "\n  }\n  &:focus {\n    outline:none;\n  }\n"]);
+
+  _templateObject = function _templateObject() {
+    return data;
+  };
+
+  return data;
+}
+
+
+var PaginationBtn = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].button(_templateObject(), function (_ref) {
+  var disableStyle = _ref.disableStyle;
+  return disableStyle ? "none" : "#80cf86";
+}, function (_ref2) {
+  var disableStyle = _ref2.disableStyle;
+  return disableStyle ? "transparent" : "#fff";
+}, function (_ref3) {
+  var disableStyle = _ref3.disableStyle;
+  return disableStyle ? "context-menu" : "pointer";
+}, function (_ref4) {
+  var disableStyle = _ref4.disableStyle;
+  return disableStyle ? "transparent" : "##e74142";
+});
+/* harmony default export */ __webpack_exports__["default"] = (PaginationBtn);
+
+/***/ }),
+
+/***/ "./pages/components/Pagination/Pagination.js":
+/*!***************************************************!*\
+  !*** ./pages/components/Pagination/Pagination.js ***!
+  \***************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _WrapperStyled__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./WrapperStyled */ "./pages/components/Pagination/WrapperStyled.jsx");
+/* harmony import */ var _BtnStyled__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./BtnStyled */ "./pages/components/Pagination/BtnStyled.jsx");
+var _jsxFileName = "/Users/nicolasfbergues/Desktop/Nico/Trabajo/FrontEnd/nextJsGnomeSearch/pages/components/Pagination/Pagination.js";
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
+
+
+var nextButtonValue = "Next";
+var previousButtonValue = "Previous";
+
+var Pagination = function Pagination(_ref) {
+  var page = _ref.page,
+      updateGlobalState = _ref.updateGlobalState,
+      maxPages = _ref.maxPages;
+  return (//const callGenderLocal = callGender;
+    //const propsGenderLocal = propsGender;
+    __jsx(_WrapperStyled__WEBPACK_IMPORTED_MODULE_1__["default"], {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 11
+      },
+      __self: this
+    }, __jsx(_BtnStyled__WEBPACK_IMPORTED_MODULE_2__["default"], {
+      disableStyle: page <= 0,
+      page: page,
+      onClick: Pagination.onClick(page, updateGlobalState, maxPages),
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 12
+      },
+      __self: this
+    }, "Previous"), __jsx("span", {
+      className: "current-page",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 19
+      },
+      __self: this
+    }, "Page: ", page + 1, " / ", maxPages + 1), __jsx(_BtnStyled__WEBPACK_IMPORTED_MODULE_2__["default"], {
+      disableStyle: page >= maxPages,
+      page: page,
+      onClick: Pagination.onClick(page, updateGlobalState, maxPages),
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 20
+      },
+      __self: this
+    }, "Next"))
+  );
+};
+
+Pagination.onClick = function (page, updateGlobalState, maxPages) {
+  return function () {
+    var event = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : event.currentTarget;
+    event.preventDefault();
+    window.scroll(null, 0);
+    var btnName = event.currentTarget.textContent.toLowerCase();
+    /*let format;
+     const setDirection = (direction) =>{
+           let updatedPageNext = page + 1;
+          let updatedPagePrevious = page  - 1;
+          const paginationDirection = direction == "next" ? updatedPageNext : updatedPagePrevious;
+           const gnomeNames = gnomes.map(gnome => gnome.name)
+          const pageGnomes = gnomeNames.slice(
+          itemsByPage * paginationDirection,
+          itemsByPage + paginationDirection * itemsByPage
+          )
+           pageGnomes.map(gnome => (
+            gnome => gnome.name
+          ))
+             const getFirstName = arr =>{
+              var arrCroped = [];
+                for(var a=0; a<arr.length; a++){
+                   var corte = arr[a].indexOf(" ");
+                  arrCroped[a] = arr[a].substr(0, corte);
+                }
+                function removeDuplicates(array) {
+                  return array.filter((a, b) => array.indexOf(a) === b)
+                };
+                return removeDuplicates(arrCroped);
+            }
+             const justRenderedPageNames = getFirstName(pageGnomes);
+             const parseToService = arrToFormat =>{
+              var arrayFormated = [];
+                 for(var b=0; b<arrToFormat.length; b++){
+                  arrayFormated[b] = "name[]="+arrToFormat[b];
+                }
+                 return arrayFormated;
+             }
+             format = parseToService(justRenderedPageNames).toString().replace(/,/g, "&");
+     }*/
+
+    if (btnName === nextButtonValue.toLowerCase()) {
+      var nextPage = page + 1;
+
+      if (page !== maxPages) {
+        updateGlobalState(nextPage); //setDirection("next")
+        //callGender(format);
+      }
+    } else if (btnName === previousButtonValue.toLowerCase()) {
+      var previousPage = page - 1;
+
+      if (page > 0) {
+        updateGlobalState(previousPage); //setDirection("previous")
+        //callGender(format);
+      }
+    }
+  };
+};
+
+Pagination.defaultProps = {
+  page: false
+};
+/* harmony default export */ __webpack_exports__["default"] = (Pagination);
+
+/***/ }),
+
+/***/ "./pages/components/Pagination/WrapperStyled.jsx":
+/*!*******************************************************!*\
+  !*** ./pages/components/Pagination/WrapperStyled.jsx ***!
+  \*******************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/taggedTemplateLiteral */ "./node_modules/@babel/runtime-corejs2/helpers/esm/taggedTemplateLiteral.js");
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
+
+
+function _templateObject() {
+  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n  align-items: center;\n  display: flex;\n  justify-content: space-between;\n  position: relative;\n  left: 40px;\n  max-width: 820px;\n  width: 90%;\n\n  & .current-page {\n    font-size: 0.95rem;\n    font-weight: bold;\n    text-align: center;\n    color: #80cf86;\n  }\n"]);
+
+  _templateObject = function _templateObject() {
+    return data;
+  };
+
+  return data;
+}
+
+
+var PaginationWrapper = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div(_templateObject());
+/* harmony default export */ __webpack_exports__["default"] = (PaginationWrapper);
 
 /***/ }),
 
@@ -27599,11 +27953,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
-/* harmony import */ var _components_DetailsInfo_DetailsInfo__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./../../components/DetailsInfo/DetailsInfo */ "./pages/components/DetailsInfo/DetailsInfo.jsx");
-/* harmony import */ var _components_Card_Card__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./../../components/Card/Card */ "./pages/components/Card/Card.jsx");
-/* harmony import */ var _DetailsStyled__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./DetailsStyled */ "./pages/containers/Details/DetailsStyled.jsx");
+/* harmony import */ var _components_DetailsInfo_DetailsInfo__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./../../components/DetailsInfo/DetailsInfo */ "./pages/components/DetailsInfo/DetailsInfo.js");
+/* harmony import */ var _components_Card_Card__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./../../components/Card/Card */ "./pages/components/Card/Card.js");
+/* harmony import */ var _DetailsRowStyled__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./DetailsRowStyled */ "./pages/containers/Details/DetailsRowStyled.jsx");
+/* harmony import */ var _DetailsWrapperStyled__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./DetailsWrapperStyled */ "./pages/containers/Details/DetailsWrapperStyled.jsx");
+/* harmony import */ var _FriendsRowStyled__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./FriendsRowStyled */ "./pages/containers/Details/FriendsRowStyled.jsx");
 var _jsxFileName = "/Users/nicolasfbergues/Desktop/Nico/Trabajo/FrontEnd/nextJsGnomeSearch/pages/containers/Details/Details.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
+
 
 
 
@@ -27625,22 +27983,22 @@ var Details = function Details(_ref) {
       return gnome.name.toLowerCase() === friend;
     });
   });
-  return __jsx(_DetailsStyled__WEBPACK_IMPORTED_MODULE_4__["DetailsWrapper"], {
+  return __jsx(_DetailsWrapperStyled__WEBPACK_IMPORTED_MODULE_5__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 31
+      lineNumber: 29
     },
     __self: this
-  }, __jsx(_DetailsStyled__WEBPACK_IMPORTED_MODULE_4__["DetailsRow"], {
+  }, __jsx(_DetailsRowStyled__WEBPACK_IMPORTED_MODULE_4__["default"], {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 30
+    },
+    __self: this
+  }), __jsx(_FriendsRowStyled__WEBPACK_IMPORTED_MODULE_6__["default"], {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 32
-    },
-    __self: this
-  }), __jsx(_DetailsStyled__WEBPACK_IMPORTED_MODULE_4__["FriendsRow"], {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 34
     },
     __self: this
   }, renderFriends.length > 0 ? renderFriends.map(function (friend) {
@@ -27648,7 +28006,7 @@ var Details = function Details(_ref) {
       key: "".concat(friend.id),
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 37
+        lineNumber: 35
       },
       __self: this
     }, __jsx(_components_Card_Card__WEBPACK_IMPORTED_MODULE_3__["default"], {
@@ -27658,7 +28016,7 @@ var Details = function Details(_ref) {
       hideFriendButton: true,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 39
+        lineNumber: 37
       },
       __self: this
     }));
@@ -27666,7 +28024,7 @@ var Details = function Details(_ref) {
     className: "notFound",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 48
+      lineNumber: 46
     },
     __self: this
   }, "...seems to have no friends")));
@@ -27682,45 +28040,50 @@ var mapStateToProps = function mapStateToProps(state) {
 
 /***/ }),
 
-/***/ "./pages/containers/Details/DetailsStyled.jsx":
-/*!****************************************************!*\
-  !*** ./pages/containers/Details/DetailsStyled.jsx ***!
-  \****************************************************/
-/*! exports provided: DetailsWrapper, DetailsRow, FriendsRow */
+/***/ "./pages/containers/Details/DetailsRowStyled.jsx":
+/*!*******************************************************!*\
+  !*** ./pages/containers/Details/DetailsRowStyled.jsx ***!
+  \*******************************************************/
+/*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DetailsWrapper", function() { return DetailsWrapper; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DetailsRow", function() { return DetailsRow; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "FriendsRow", function() { return FriendsRow; });
 /* harmony import */ var _babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/taggedTemplateLiteral */ "./node_modules/@babel/runtime-corejs2/helpers/esm/taggedTemplateLiteral.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
-/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
-/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_3__);
 
 
-function _templateObject3() {
-  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n  background: #fff;\n  border-radius: 5px;\n  box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.1);\n  padding: 0 15px;\n"]);
-
-  _templateObject3 = function _templateObject3() {
-    return data;
-  };
-
-  return data;
-}
-
-function _templateObject2() {
+function _templateObject() {
   var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n  display: flex;\n  flex-wrap: wrap;\n  justify-content: center;\n  margin-bottom: 10px;\n  width: 100%;\n\n  @media (min-width: 630px) {\n    justify-content: flex-start;\n  }\n\n  div.notFound {\n    color: #ccc;\n    font-size: 1.5rem;\n    font-weight: lighter;\n    padding: 140px 30px\n    text-align: center;\n    width: 100%;\n  }\n"]);
 
-  _templateObject2 = function _templateObject2() {
+  _templateObject = function _templateObject() {
     return data;
   };
 
   return data;
 }
+
+
+
+var DetailsRow = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].div(_templateObject());
+/* harmony default export */ __webpack_exports__["default"] = (DetailsRow);
+
+/***/ }),
+
+/***/ "./pages/containers/Details/DetailsWrapperStyled.jsx":
+/*!***********************************************************!*\
+  !*** ./pages/containers/Details/DetailsWrapperStyled.jsx ***!
+  \***********************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/taggedTemplateLiteral */ "./node_modules/@babel/runtime-corejs2/helpers/esm/taggedTemplateLiteral.js");
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
+
 
 function _templateObject() {
   var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n  border-radius: 5px;\n  margin: 10px auto;\n  max-width: 900px;\n  max-heigth: 600px;\n  padding: 0;\n\n  @media (max-width: 990px) {\n    max-width: 610px;\n  }\n"]);
@@ -27733,11 +28096,48 @@ function _templateObject() {
 }
 
 
+var DetailsWrapper = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].main(_templateObject());
+/* harmony default export */ __webpack_exports__["default"] = (DetailsWrapper);
+
+/***/ }),
+
+/***/ "./pages/containers/Details/FriendsRowStyled.jsx":
+/*!*******************************************************!*\
+  !*** ./pages/containers/Details/FriendsRowStyled.jsx ***!
+  \*******************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/taggedTemplateLiteral */ "./node_modules/@babel/runtime-corejs2/helpers/esm/taggedTemplateLiteral.js");
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
 
 
-var DetailsWrapper = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].main(_templateObject());
-var DetailsRow = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].div(_templateObject2());
-var FriendsRow = DetailsRow.extend(_templateObject3());
+function _templateObject2() {
+  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n  background: #fff;\n  border-radius: 5px;\n  box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.1);\n  padding: 0 15px;\n"]);
+
+  _templateObject2 = function _templateObject2() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject() {
+  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n  display: flex;\n  flex-wrap: wrap;\n  justify-content: center;\n  margin-bottom: 10px;\n  width: 100%;\n\n  @media (min-width: 630px) {\n    justify-content: flex-start;\n  }\n\n  div.notFound {\n    color: #ccc;\n    font-size: 1.5rem;\n    font-weight: lighter;\n    padding: 140px 30px\n    text-align: center;\n    width: 100%;\n  }\n"]);
+
+  _templateObject = function _templateObject() {
+    return data;
+  };
+
+  return data;
+}
+
+
+var DetailsRow = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div(_templateObject());
+var FriendsRow = DetailsRow.extend(_templateObject2());
+/* harmony default export */ __webpack_exports__["default"] = (FriendsRow);
 
 /***/ }),
 
@@ -27757,15 +28157,17 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
-/* harmony import */ var _FiltersStyled__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./FiltersStyled */ "./pages/containers/Filters/FiltersStyled.js");
-/* harmony import */ var _redux_actions_actions__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./../../../redux/actions/actions */ "./redux/actions/actions.js");
-/* harmony import */ var _components_AutoComplete_AutoComplete__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./../../components/AutoComplete/AutoComplete */ "./pages/components/AutoComplete/AutoComplete.jsx");
-/* harmony import */ var _components_Select_Select__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./../../components/Select/Select */ "./pages/components/Select/Select.jsx");
-/* harmony import */ var _components_OrderBy_OrderBy_js__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./../../components/OrderBy/OrderBy.js */ "./pages/components/OrderBy/OrderBy.js");
+/* harmony import */ var _redux_actions_actions__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./../../../redux/actions/actions */ "./redux/actions/actions.js");
+/* harmony import */ var _components_AutoComplete_AutoComplete__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./../../components/AutoComplete/AutoComplete */ "./pages/components/AutoComplete/AutoComplete.js");
+/* harmony import */ var _components_Select_Select__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./../../components/Select/Select */ "./pages/components/Select/Select.jsx");
+/* harmony import */ var _components_OrderBy_OrderBy_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./../../components/OrderBy/OrderBy.js */ "./pages/components/OrderBy/OrderBy.js");
+/* harmony import */ var _FormSearchStyled__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./FormSearchStyled */ "./pages/containers/Filters/FormSearchStyled.jsx");
+/* harmony import */ var _FormRowStyled__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./FormRowStyled */ "./pages/containers/Filters/FormRowStyled.jsx");
 
 
 var _jsxFileName = "/Users/nicolasfbergues/Desktop/Nico/Trabajo/FrontEnd/nextJsGnomeSearch/pages/containers/Filters/Filters.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement;
+
 
 
 
@@ -27786,95 +28188,95 @@ var Filters = function Filters(props) {
 
   var jobs = _babel_runtime_corejs2_core_js_array_from__WEBPACK_IMPORTED_MODULE_1___default()(new _babel_runtime_corejs2_core_js_set__WEBPACK_IMPORTED_MODULE_0___default.a(getJobs));
 
-  return __jsx(_FiltersStyled__WEBPACK_IMPORTED_MODULE_4__["FormSearch"], {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 23
-    },
-    __self: this
-  }, __jsx(_FiltersStyled__WEBPACK_IMPORTED_MODULE_4__["FormRow"], {
+  return __jsx(_FormSearchStyled__WEBPACK_IMPORTED_MODULE_8__["default"], {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 24
     },
     __self: this
-  }, __jsx(_components_OrderBy_OrderBy_js__WEBPACK_IMPORTED_MODULE_8__["default"], {
+  }, __jsx(_FormRowStyled__WEBPACK_IMPORTED_MODULE_9__["default"], {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 25
     },
     __self: this
-  }, "Most Friendly"), __jsx(_components_OrderBy_OrderBy_js__WEBPACK_IMPORTED_MODULE_8__["default"], {
+  }, __jsx(_components_OrderBy_OrderBy_js__WEBPACK_IMPORTED_MODULE_7__["default"], {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 26
     },
     __self: this
-  }, "Less Friendly"), __jsx(_components_OrderBy_OrderBy_js__WEBPACK_IMPORTED_MODULE_8__["default"], {
+  }, "Most Friendly"), __jsx(_components_OrderBy_OrderBy_js__WEBPACK_IMPORTED_MODULE_7__["default"], {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 27
     },
     __self: this
-  }, "Youngest"), __jsx(_components_OrderBy_OrderBy_js__WEBPACK_IMPORTED_MODULE_8__["default"], {
+  }, "Less Friendly"), __jsx(_components_OrderBy_OrderBy_js__WEBPACK_IMPORTED_MODULE_7__["default"], {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 28
     },
     __self: this
-  }, "Oldest"), __jsx(_components_OrderBy_OrderBy_js__WEBPACK_IMPORTED_MODULE_8__["default"], {
+  }, "Youngest"), __jsx(_components_OrderBy_OrderBy_js__WEBPACK_IMPORTED_MODULE_7__["default"], {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 29
     },
     __self: this
-  }, "Lightest"), __jsx(_components_OrderBy_OrderBy_js__WEBPACK_IMPORTED_MODULE_8__["default"], {
+  }, "Oldest"), __jsx(_components_OrderBy_OrderBy_js__WEBPACK_IMPORTED_MODULE_7__["default"], {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 30
     },
     __self: this
-  }, "Heaviest")), __jsx(_FiltersStyled__WEBPACK_IMPORTED_MODULE_4__["FormRow"], {
+  }, "Lightest"), __jsx(_components_OrderBy_OrderBy_js__WEBPACK_IMPORTED_MODULE_7__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 32
+      lineNumber: 31
+    },
+    __self: this
+  }, "Heaviest")), __jsx(_FormRowStyled__WEBPACK_IMPORTED_MODULE_9__["default"], {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 33
     },
     __self: this
   }), __jsx("div", {
     className: "filterWrappTitles",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 34
-    },
-    __self: this
-  }, __jsx("div", {
-    className: "profession",
-    __source: {
-      fileName: _jsxFileName,
       lineNumber: 35
     },
     __self: this
-  }, "Search by Name"), __jsx("div", {
+  }, __jsx("div", {
     className: "profession",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 36
     },
     __self: this
-  }, "Search by Profession")), __jsx(_FiltersStyled__WEBPACK_IMPORTED_MODULE_4__["FormRow"], {
+  }, "Search by Name"), __jsx("div", {
+    className: "profession",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 38
+      lineNumber: 37
+    },
+    __self: this
+  }, "Search by Profession")), __jsx(_FormRowStyled__WEBPACK_IMPORTED_MODULE_9__["default"], {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 39
     },
     __self: this
   }, __jsx("div", {
     className: "filterWrapp",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 39
+      lineNumber: 40
     },
     __self: this
-  }, __jsx(_components_AutoComplete_AutoComplete__WEBPACK_IMPORTED_MODULE_6__["default"], {
+  }, __jsx(_components_AutoComplete_AutoComplete__WEBPACK_IMPORTED_MODULE_5__["default"], {
     stateName: "searchTerm",
     updateCurrentPage: props.getCurrentPage,
     parentUpdateState: props.getSearchText,
@@ -27886,10 +28288,10 @@ var Filters = function Filters(props) {
     includeSearchTerm: true,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 40
+      lineNumber: 41
     },
     __self: this
-  }), __jsx(_components_Select_Select__WEBPACK_IMPORTED_MODULE_7__["default"], {
+  }), __jsx(_components_Select_Select__WEBPACK_IMPORTED_MODULE_6__["default"], {
     items: jobs && jobs,
     defaultValue: "All Professions",
     stateName: "filteBy",
@@ -27899,7 +28301,7 @@ var Filters = function Filters(props) {
     state: props,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 52
+      lineNumber: 53
     },
     __self: this
   }))));
@@ -27911,35 +28313,53 @@ function mapStateToProps(state) {
   };
 }
 
-/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_3__["connect"])(mapStateToProps, _redux_actions_actions__WEBPACK_IMPORTED_MODULE_5__)(Filters));
+/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_3__["connect"])(mapStateToProps, _redux_actions_actions__WEBPACK_IMPORTED_MODULE_4__)(Filters));
 
 /***/ }),
 
-/***/ "./pages/containers/Filters/FiltersStyled.js":
-/*!***************************************************!*\
-  !*** ./pages/containers/Filters/FiltersStyled.js ***!
-  \***************************************************/
-/*! exports provided: FormSearch, FormRow */
+/***/ "./pages/containers/Filters/FormRowStyled.jsx":
+/*!****************************************************!*\
+  !*** ./pages/containers/Filters/FormRowStyled.jsx ***!
+  \****************************************************/
+/*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "FormSearch", function() { return FormSearch; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "FormRow", function() { return FormRow; });
 /* harmony import */ var _babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/taggedTemplateLiteral */ "./node_modules/@babel/runtime-corejs2/helpers/esm/taggedTemplateLiteral.js");
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
-/* harmony import */ var _Home_HomeStyled__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./../Home/HomeStyled */ "./pages/containers/Home/HomeStyled.jsx");
+/* harmony import */ var _Home_HomeWrapperStyled__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./../Home/HomeWrapperStyled */ "./pages/containers/Home/HomeWrapperStyled.jsx");
 
 
-function _templateObject2() {
-  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n  background: inherit;\n  display: flex;\n  flex-wrap: wrap;\n  justify-content: center;\n  margin: 0;\n  width: 100%;\n\n\n"]);
+function _templateObject() {
+  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n  background: inherit;\n  display: flex;\n  flex-wrap: wrap;\n  justify-content: center;\n  margin: 0;\n  width: 100%;\n"]);
 
-  _templateObject2 = function _templateObject2() {
+  _templateObject = function _templateObject() {
     return data;
   };
 
   return data;
 }
+
+
+
+var FormRow = _Home_HomeWrapperStyled__WEBPACK_IMPORTED_MODULE_2__["default"].withComponent("div").extend(_templateObject());
+/* harmony default export */ __webpack_exports__["default"] = (FormRow);
+
+/***/ }),
+
+/***/ "./pages/containers/Filters/FormSearchStyled.jsx":
+/*!*******************************************************!*\
+  !*** ./pages/containers/Filters/FormSearchStyled.jsx ***!
+  \*******************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/taggedTemplateLiteral */ "./node_modules/@babel/runtime-corejs2/helpers/esm/taggedTemplateLiteral.js");
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
+
 
 function _templateObject() {
   var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n  display: block;\n  width: 100%;\n\n  div.profession{\n    height: 40px;\n    padding-top: 20px;\n    width: 50%;\n    color: #a3a3a3;\n  }\n\n  div.filterWrapp{\n    display: inline-flex;\n    width: 96%;\n  }\n\n  div.filterWrappTitles{\n    display: inline-flex;\n    align: center;\n    width: 100%;\n    padding-left: 19px;\n    padding-bottom: 4px;\n  }\n"]);
@@ -27952,9 +28372,8 @@ function _templateObject() {
 }
 
 
-
 var FormSearch = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div(_templateObject());
-var FormRow = _Home_HomeStyled__WEBPACK_IMPORTED_MODULE_2__["HomeWrapper"].withComponent("div").extend(_templateObject2());
+/* harmony default export */ __webpack_exports__["default"] = (FormSearch);
 
 /***/ }),
 
@@ -27998,7 +28417,7 @@ var Header = function Header() {
       lineNumber: 8
     },
     __self: this
-  }, "gnomo-matic-search")));
+  }, "gnomo-matic-gender-search")));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Header);
@@ -28019,7 +28438,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 function _templateObject() {
-  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n  align-items: center;\n  background: #146e7d;\n  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.9);\n  display: flex;\n  height: 65px;\n  justify-content: center;\n\n  h1 {\n\n      color: #eceeee;\n      text-decoration: none;\n      letter-spacing: 10px;\n      font-size: 1.8em;\n  }\n\n  div.row {\n    align-items: center;\n    display: flex;\n    justify-content: center;\n    padding: 0 5px;\n    max-width: 900px;\n    width: 100%;\n  }\n"]);
+  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n  align-items: center;\n  background: #146e7d;\n  box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.9);\n  display: flex;\n  height: 65px;\n  justify-content: center;\n\n  h1 {\n\n      color: #eceeee;\n      text-decoration: none;\n      letter-spacing: 6px;\n      font-size: 1.7em;\n  }\n\n  div.row {\n    align-items: center;\n    display: flex;\n    justify-content: center;\n    padding: 0 5px;\n    max-width: 900px;\n    width: 100%;\n  }\n"]);
 
   _templateObject = function _templateObject() {
     return data;
@@ -28052,13 +28471,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_transition_group__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-transition-group */ "./node_modules/react-transition-group/esm/index.js");
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
 /* harmony import */ var _Filters_Filters__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./../Filters/Filters */ "./pages/containers/Filters/Filters.js");
-/* harmony import */ var _components_Card_Card__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./../../components/Card/Card */ "./pages/components/Card/Card.jsx");
+/* harmony import */ var _components_Card_Card__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./../../components/Card/Card */ "./pages/components/Card/Card.js");
 /* harmony import */ var _redux_actions_actions__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./../../../redux/actions/actions */ "./redux/actions/actions.js");
-/* harmony import */ var _HomeStyled__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./HomeStyled */ "./pages/containers/Home/HomeStyled.jsx");
-/* harmony import */ var _side_Pagination_Pagination__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./../../../side/Pagination/Pagination */ "./side/Pagination/Pagination.jsx");
-/* harmony import */ var _utils__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./../../../utils */ "./utils.js");
+/* harmony import */ var _components_Pagination_Pagination__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./../../components/Pagination/Pagination */ "./pages/components/Pagination/Pagination.js");
+/* harmony import */ var _utils__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./../../../utils */ "./utils.js");
+/* harmony import */ var _HomeRowStyled__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./HomeRowStyled */ "./pages/containers/Home/HomeRowStyled.jsx");
+/* harmony import */ var _HomeWrapperStyled__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./HomeWrapperStyled */ "./pages/containers/Home/HomeWrapperStyled.jsx");
 var _jsxFileName = "/Users/nicolasfbergues/Desktop/Nico/Trabajo/FrontEnd/nextJsGnomeSearch/pages/containers/Home/Home.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
 
 
 
@@ -28075,7 +28496,7 @@ var Home = function Home(props) {
       gnomes = props.gnomes,
       orderByFilter = props.orderByFilter,
       currentPage = props.currentPage;
-  var searchFilters = Object(_utils__WEBPACK_IMPORTED_MODULE_9__["filterGnomesBy"])(gnomes, orderByFilter).filter(function (gnome) {
+  var searchFilters = Object(_utils__WEBPACK_IMPORTED_MODULE_8__["filterGnomesBy"])(gnomes, orderByFilter).filter(function (gnome) {
     var isJob = gnome.professions.find(function (profession) {
       return profession === props.filterBy;
     });
@@ -28087,22 +28508,22 @@ var Home = function Home(props) {
     var search = gnome.name.toLowerCase().indexOf(searchTerm.toLowerCase()) >= 0;
     return search;
   });
-  return __jsx(_HomeStyled__WEBPACK_IMPORTED_MODULE_7__["HomeWrapper"], {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 39
-    },
-    __self: this
-  }, __jsx(react_helmet__WEBPACK_IMPORTED_MODULE_1__["Helmet"], {
+  return __jsx(_HomeWrapperStyled__WEBPACK_IMPORTED_MODULE_10__["default"], {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 40
     },
     __self: this
-  }, __jsx("title", {
+  }, __jsx(react_helmet__WEBPACK_IMPORTED_MODULE_1__["Helmet"], {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 41
+    },
+    __self: this
+  }, __jsx("title", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 42
     },
     __self: this
   }, "Nicolas Bergues"), __jsx("link", {
@@ -28110,7 +28531,7 @@ var Home = function Home(props) {
     href: "favicon.ico",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 42
+      lineNumber: 43
     },
     __self: this
   }), __jsx("meta", {
@@ -28118,34 +28539,34 @@ var Home = function Home(props) {
     content: "Assesment App",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 43
+      lineNumber: 44
     },
     __self: this
-  })), __jsx(_HomeStyled__WEBPACK_IMPORTED_MODULE_7__["HomeRow"], {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 48
-    },
-    __self: this
-  }, __jsx(_Filters_Filters__WEBPACK_IMPORTED_MODULE_4__["default"], {
+  })), __jsx(_HomeRowStyled__WEBPACK_IMPORTED_MODULE_9__["default"], {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 49
     },
     __self: this
-  })), __jsx(_side_Pagination_Pagination__WEBPACK_IMPORTED_MODULE_8__["default"], {
-    page: currentPage,
-    updateGlobalState: props.getCurrentPage,
-    maxPages: Math.floor(searchFilters.length / _utils__WEBPACK_IMPORTED_MODULE_9__["itemsByPage"]),
+  }, __jsx(_Filters_Filters__WEBPACK_IMPORTED_MODULE_4__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 51
+      lineNumber: 50
     },
     __self: this
-  }), __jsx(_HomeStyled__WEBPACK_IMPORTED_MODULE_7__["HomeRow"], {
+  })), __jsx(_components_Pagination_Pagination__WEBPACK_IMPORTED_MODULE_7__["default"], {
+    page: currentPage,
+    updateGlobalState: props.getCurrentPage,
+    maxPages: Math.floor(searchFilters.length / _utils__WEBPACK_IMPORTED_MODULE_8__["itemsByPage"]),
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 56
+      lineNumber: 52
+    },
+    __self: this
+  }), __jsx(_HomeRowStyled__WEBPACK_IMPORTED_MODULE_9__["default"], {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 57
     },
     __self: this
   }, __jsx(react_transition_group__WEBPACK_IMPORTED_MODULE_2__["TransitionGroup"], {
@@ -28153,17 +28574,17 @@ var Home = function Home(props) {
     "in": true,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 57
+      lineNumber: 58
     },
     __self: this
-  }, searchFilters.length > 0 ? searchFilters.slice(_utils__WEBPACK_IMPORTED_MODULE_9__["itemsByPage"] * currentPage, _utils__WEBPACK_IMPORTED_MODULE_9__["itemsByPage"] + currentPage * _utils__WEBPACK_IMPORTED_MODULE_9__["itemsByPage"]).map(function (gnome) {
+  }, searchFilters.length > 0 ? searchFilters.slice(_utils__WEBPACK_IMPORTED_MODULE_8__["itemsByPage"] * currentPage, _utils__WEBPACK_IMPORTED_MODULE_8__["itemsByPage"] + currentPage * _utils__WEBPACK_IMPORTED_MODULE_8__["itemsByPage"]).map(function (gnome) {
     return __jsx(react_transition_group__WEBPACK_IMPORTED_MODULE_2__["CSSTransition"], {
       key: gnome.id,
       timeout: 500,
       classNames: "item",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 65
+        lineNumber: 66
       },
       __self: this
     }, __jsx(_components_Card_Card__WEBPACK_IMPORTED_MODULE_5__["default"], {
@@ -28172,7 +28593,7 @@ var Home = function Home(props) {
       to: "".concat(gnome.id, "-").concat(gnome.name.split(" ").join("-")),
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 66
+        lineNumber: 67
       },
       __self: this
     }));
@@ -28181,23 +28602,23 @@ var Home = function Home(props) {
     classNames: "item",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 73
+      lineNumber: 74
     },
     __self: this
   }, __jsx("div", {
     className: "notFound",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 74
+      lineNumber: 75
     },
     __self: this
-  }, searchFilters.length, " no gnomes founded for current search")))), __jsx(_side_Pagination_Pagination__WEBPACK_IMPORTED_MODULE_8__["default"], {
+  }, searchFilters.length, " no gnomes founded for current search")))), __jsx(_components_Pagination_Pagination__WEBPACK_IMPORTED_MODULE_7__["default"], {
     page: currentPage,
     updateGlobalState: props.getCurrentPage,
-    maxPages: Math.floor(searchFilters.length / _utils__WEBPACK_IMPORTED_MODULE_9__["itemsByPage"]),
+    maxPages: Math.floor(searchFilters.length / _utils__WEBPACK_IMPORTED_MODULE_8__["itemsByPage"]),
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 80
+      lineNumber: 81
     },
     __self: this
   }));
@@ -28217,30 +28638,47 @@ function mapStateToProps(state) {
 
 /***/ }),
 
-/***/ "./pages/containers/Home/HomeStyled.jsx":
-/*!**********************************************!*\
-  !*** ./pages/containers/Home/HomeStyled.jsx ***!
-  \**********************************************/
-/*! exports provided: HomeWrapper, HomeRow */
+/***/ "./pages/containers/Home/HomeRowStyled.jsx":
+/*!*************************************************!*\
+  !*** ./pages/containers/Home/HomeRowStyled.jsx ***!
+  \*************************************************/
+/*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "HomeWrapper", function() { return HomeWrapper; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "HomeRow", function() { return HomeRow; });
 /* harmony import */ var _babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/taggedTemplateLiteral */ "./node_modules/@babel/runtime-corejs2/helpers/esm/taggedTemplateLiteral.js");
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
 
 
-function _templateObject2() {
+function _templateObject() {
   var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n  background: #fff;\n  border-radius: 5px;\n  box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.1);\n  display: flex;\n  flex-wrap: wrap;\n  justify-content: center;\n  margin-bottom: 10px;\n  padding: 10px 15px;\n  width: 100%;\n\n  div.notFound {\n    color: #ccc;\n    font-size: 1.5rem;\n    font-weight: lighter;\n    padding: 140px 30px\n    text-align: center;\n    width: 100%;\n  }\n\ndiv.cards{\n  background: #fff;\n  border-radius: 5px;\n  display: flex;\n  flex-wrap: wrap;\n  justify-content: center;\n  margin-bottom: 10px;\n  width: 100%;\n  padding-top: 10px;\n}\n/*\ndiv.cards-enter.cards-enter-active {\n\topacity: 1;\n\ttransition: opacity 900ms ease-in;\n}\n\ndiv.cards-leave {\n\topacity: 1;\n}\n\ndiv.cards-leave.cards-leave-active {\n\topacity: 0.01;\n\ttransition: opacity 900ms ease-in;\n}*/\n\n\ndiv.item-enter {\n\t   opacity: 0.01;\n}\n\ndiv.item-enter.item-enter-active {\n\topacity: 1;\n\ttransition: opacity 1200ms ease-in;\n}\n\ndiv.item-leave {\n\topacity: 1;\n}\n\ndiv.item-leave.item-leave-active {\n\topacity: 0.01;\n\ttransition: opacity 1200ms ease-in;\n}\n\n  @media (min-width: 630px) {\n    justify-content: flex-start;\n  }\n"]);
 
-  _templateObject2 = function _templateObject2() {
+  _templateObject = function _templateObject() {
     return data;
   };
 
   return data;
 }
+
+
+var HomeRow = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div(_templateObject());
+/* harmony default export */ __webpack_exports__["default"] = (HomeRow);
+
+/***/ }),
+
+/***/ "./pages/containers/Home/HomeWrapperStyled.jsx":
+/*!*****************************************************!*\
+  !*** ./pages/containers/Home/HomeWrapperStyled.jsx ***!
+  \*****************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/taggedTemplateLiteral */ "./node_modules/@babel/runtime-corejs2/helpers/esm/taggedTemplateLiteral.js");
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
+
 
 function _templateObject() {
   var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n  margin: 10px auto;\n  max-width: 900px;\n  position: relative;\n\n  @media (max-width: 990px) {\n    max-width: 610px;\n  }\n"]);
@@ -28254,7 +28692,7 @@ function _templateObject() {
 
 
 var HomeWrapper = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].main(_templateObject());
-var HomeRow = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div(_templateObject2());
+/* harmony default export */ __webpack_exports__["default"] = (HomeWrapper);
 
 /***/ }),
 
@@ -28880,186 +29318,6 @@ var configure = function configure() {
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (configure);
-
-/***/ }),
-
-/***/ "./side/Pagination/Pagination.jsx":
-/*!****************************************!*\
-  !*** ./side/Pagination/Pagination.jsx ***!
-  \****************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _PaginationStyled__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./PaginationStyled */ "./side/Pagination/PaginationStyled.jsx");
-var _jsxFileName = "/Users/nicolasfbergues/Desktop/Nico/Trabajo/FrontEnd/nextJsGnomeSearch/side/Pagination/Pagination.jsx";
-var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
-
- //import { itemsByPage, getCurrentPageGenderFormat } from "./../../utils";
-
-var nextButtonValue = "Next";
-var previousButtonValue = "Previous";
-
-var Pagination = function Pagination(_ref) {
-  var page = _ref.page,
-      updateGlobalState = _ref.updateGlobalState,
-      maxPages = _ref.maxPages;
-  return (//const callGenderLocal = callGender;
-    //const propsGenderLocal = propsGender;
-    __jsx(_PaginationStyled__WEBPACK_IMPORTED_MODULE_1__["PaginationWrapper"], {
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 12
-      },
-      __self: this
-    }, __jsx(_PaginationStyled__WEBPACK_IMPORTED_MODULE_1__["PaginationBtn"], {
-      disableStyle: page <= 0,
-      page: page,
-      onClick: Pagination.onClick(page, updateGlobalState, maxPages),
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 13
-      },
-      __self: this
-    }, "Previous"), __jsx("span", {
-      className: "current-page",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 20
-      },
-      __self: this
-    }, "Page: ", page + 1, " / ", maxPages + 1), __jsx(_PaginationStyled__WEBPACK_IMPORTED_MODULE_1__["PaginationBtn"], {
-      disableStyle: page >= maxPages,
-      page: page,
-      onClick: Pagination.onClick(page, updateGlobalState, maxPages),
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 21
-      },
-      __self: this
-    }, "Next"))
-  );
-};
-
-Pagination.onClick = function (page, updateGlobalState, maxPages) {
-  return function () {
-    var event = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : event.currentTarget;
-    event.preventDefault();
-    window.scroll(null, 0);
-    var btnName = event.currentTarget.textContent.toLowerCase();
-    /*let format;
-     const setDirection = (direction) =>{
-           let updatedPageNext = page + 1;
-          let updatedPagePrevious = page  - 1;
-          const paginationDirection = direction == "next" ? updatedPageNext : updatedPagePrevious;
-           const gnomeNames = gnomes.map(gnome => gnome.name)
-          const pageGnomes = gnomeNames.slice(
-          itemsByPage * paginationDirection,
-          itemsByPage + paginationDirection * itemsByPage
-          )
-           pageGnomes.map(gnome => (
-            gnome => gnome.name
-          ))
-             const getFirstName = arr =>{
-              var arrCroped = [];
-                for(var a=0; a<arr.length; a++){
-                   var corte = arr[a].indexOf(" ");
-                  arrCroped[a] = arr[a].substr(0, corte);
-                }
-                function removeDuplicates(array) {
-                  return array.filter((a, b) => array.indexOf(a) === b)
-                };
-                return removeDuplicates(arrCroped);
-            }
-             const justRenderedPageNames = getFirstName(pageGnomes);
-             const parseToService = arrToFormat =>{
-              var arrayFormated = [];
-                 for(var b=0; b<arrToFormat.length; b++){
-                  arrayFormated[b] = "name[]="+arrToFormat[b];
-                }
-                 return arrayFormated;
-             }
-             format = parseToService(justRenderedPageNames).toString().replace(/,/g, "&");
-     }*/
-
-    if (btnName === nextButtonValue.toLowerCase()) {
-      var nextPage = page + 1;
-
-      if (page !== maxPages) {
-        updateGlobalState(nextPage); //setDirection("next")
-        //callGender(format);
-      }
-    } else if (btnName === previousButtonValue.toLowerCase()) {
-      var previousPage = page - 1;
-
-      if (page > 0) {
-        updateGlobalState(previousPage); //setDirection("previous")
-        //callGender(format);
-      }
-    }
-  };
-};
-
-Pagination.defaultProps = {
-  page: false
-};
-/* harmony default export */ __webpack_exports__["default"] = (Pagination);
-
-/***/ }),
-
-/***/ "./side/Pagination/PaginationStyled.jsx":
-/*!**********************************************!*\
-  !*** ./side/Pagination/PaginationStyled.jsx ***!
-  \**********************************************/
-/*! exports provided: PaginationWrapper, PaginationBtn */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PaginationWrapper", function() { return PaginationWrapper; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PaginationBtn", function() { return PaginationBtn; });
-/* harmony import */ var _babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/taggedTemplateLiteral */ "./node_modules/@babel/runtime-corejs2/helpers/esm/taggedTemplateLiteral.js");
-/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
-
-
-function _templateObject2() {
-  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n  background: ", "\n  color: ", ";\n  cursor: ", ";\n  font-size: 0.9rem;\n  width: 80%;\n  max-width: 140px;\n  padding: 6px 0;\n  text-align: center;\n\n  &:hover {\n    background: ", "\n  }\n  &:focus {\n    outline:none;\n  }\n"]);
-
-  _templateObject2 = function _templateObject2() {
-    return data;
-  };
-
-  return data;
-}
-
-function _templateObject() {
-  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n  align-items: center;\n  display: flex;\n  justify-content: space-between;\n  position: relative;\n  left: 40px;\n  max-width: 820px;\n  width: 90%;\n\n  & .current-page {\n    font-size: 0.95rem;\n    font-weight: bold;\n    text-align: center;\n    color: #80cf86;\n  }\n"]);
-
-  _templateObject = function _templateObject() {
-    return data;
-  };
-
-  return data;
-}
-
-
-var PaginationWrapper = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div(_templateObject());
-var PaginationBtn = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].button(_templateObject2(), function (_ref) {
-  var disableStyle = _ref.disableStyle;
-  return disableStyle ? "none" : "#80cf86";
-}, function (_ref2) {
-  var disableStyle = _ref2.disableStyle;
-  return disableStyle ? "transparent" : "#fff";
-}, function (_ref3) {
-  var disableStyle = _ref3.disableStyle;
-  return disableStyle ? "context-menu" : "pointer";
-}, function (_ref4) {
-  var disableStyle = _ref4.disableStyle;
-  return disableStyle ? "transparent" : "##e74142";
-});
 
 /***/ }),
 

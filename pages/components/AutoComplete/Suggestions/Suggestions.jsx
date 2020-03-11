@@ -1,5 +1,7 @@
 import React from "react";
-import { ItemSuggestions, Suggestion } from "./SuggestionsStyled";
+import Suggestion from "./SuggestionsStyled";
+import ItemSuggestions from "./ItemSuggestionsStyles";
+
 
 const Suggestions = ({
   searchTerm,

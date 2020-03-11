@@ -1,5 +1,5 @@
 import React from "react";
-import GenderCardStyle from "./GenderCardStyled";
+import GenderResult from "./GenderCardStyles";
 
 const GenderCard = (props) => {
 
@@ -22,47 +22,47 @@ const GenderCard = (props) => {
   if(props.gender.length > 0){
       if(props.gender[0].gender){
       return(
-        <GenderCardStyle>
+        <GenderResult>
           <div className="column">
             <h1>
               {props.gender[0].name} it's a {props.gender[0].gender == "male" ? "Boy" : "Girl"}!
             </h1>
             <h3>({props.gender[0].probability * 100}% chances according to our report)</h3>
           </div>
-        </GenderCardStyle>
+        </GenderResult>
     )
   }else if(!props.gender[0].gender && findOutIfFemale(props.gender[0].name) == true){
       return(
-        <GenderCardStyle>
+        <GenderResult>
           <div className="column">
             <h1>
               {props.gender[0].name} it's a Girl!
             </h1>
             <h3>({randomNumberAprox}% chances according to our report)</h3>
           </div>
-        </GenderCardStyle>
+        </GenderResult>
     )
   }else{
     return(
-      <GenderCardStyle>
+      <GenderResult>
         <div className="column">
           <h1>
             {props.gender[0].name} could be an hermafrodith gnome with {randomNumberAprox}% of chances.
           </h1>
 
         </div>
-      </GenderCardStyle>
+      </GenderResult>
   )
   }
 }else{
       return(
-      <GenderCardStyle>
+      <GenderResult>
         <div className="row">
           <h1>
             Loading Gender...
           </h1>
         </div>
-      </GenderCardStyle>
+      </GenderResult>
     )
  }
 };

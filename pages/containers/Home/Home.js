@@ -5,9 +5,10 @@ import { connect } from "react-redux";
 import Filters from "./../Filters/Filters";
 import Card from "./../../components/Card/Card";
 import * as actions from "./../../../redux/actions/actions";
-import { HomeRow, HomeWrapper } from "./HomeStyled";
-import Pagination from "./../../../side/Pagination/Pagination";
+import Pagination from "./../../components/Pagination/Pagination";
 import { filterGnomesBy, itemsByPage} from "./../../../utils";
+import HomeRow from "./HomeRowStyled";
+import HomeWrapper from "./HomeWrapperStyled";
 
 
 const Home = (props) => {

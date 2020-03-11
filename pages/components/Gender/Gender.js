@@ -3,7 +3,10 @@ import { connect } from "react-redux";
 import * as actions from "../../../redux/actions/actions";
 import { convertColors } from "./../../../utils";
 import  GenderCard  from "./GenderCard/GenderCard";
-import { GnomeCard, Avatar, GnomeInfo, GnomeInfoList } from "./GenderStyled";
+import  GenderCardStyle from "./GenderStyled"
+import Avatar from "./AvatarStyles";
+import  Info from "./InfoStyles";
+import  InfoList from "./InfoListStyles";
 
 const Gender = (props) => {
 
@@ -16,7 +19,9 @@ const Gender = (props) => {
     useEffect(() => {
 
       props.fetchGender( "name[]="+ name ).then(response =>{
+        console.log(response)
         setGender(response)
+        console.log(gender)
       })
     }, []);
 
@@ -28,7 +33,7 @@ const Gender = (props) => {
 
   return(
 
-  <GnomeCard to={to}>
+  <GenderCardStyle to={to}>
     <div className="banner" />
 
     <Avatar src={gnome && gnome.thumbnail}>
@@ -46,26 +51,26 @@ const Gender = (props) => {
       </div>
     </header>
     <GenderCard gender={gender}/>
-    <GnomeInfo>
-      <GnomeInfoList hairColor={gnome && convertColors(gnome.hair_color)}>
+    <Info>
+      <InfoList hairColor={gnome && convertColors(gnome.hair_color)}>
         <span>Age</span>
         <span>{gnome && gnome.age}</span>
-      </GnomeInfoList>
-      <GnomeInfoList hairColor={gnome && convertColors(gnome.hair_color)}>
+      </InfoList>
+      <InfoList hairColor={gnome && convertColors(gnome.hair_color)}>
         <span>Weight</span>
         <span>
           {gnome && Math.ceil(gnome.weight)} <span className="unit">KG</span>
         </span>
-      </GnomeInfoList>
-      <GnomeInfoList hairColor={gnome && convertColors(gnome.hair_color)}>
+      </InfoList>
+      <InfoList hairColor={gnome && convertColors(gnome.hair_color)}>
         <span>Height</span>
         <span>
           {gnome && Math.ceil(gnome.height)} <span className="unit">CM</span>
         </span>
-      </GnomeInfoList>
-    </GnomeInfo>
+      </InfoList>
+    </Info>
     <div className="banner-footer" />
-  </GnomeCard>
+  </GenderCardStyle>
 
 )};
 

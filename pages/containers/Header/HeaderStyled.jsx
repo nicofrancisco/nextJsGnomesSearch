@@ -14,8 +14,8 @@ const HeaderComponent = styled.header`
 
       color: #eceeee;
       text-decoration: none;
-      letter-spacing: 10px;
-      font-size: 1.8em;
+      letter-spacing: 6px;
+      font-size: 1.7em;
   }
 
   div.row {

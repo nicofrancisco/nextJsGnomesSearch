@@ -1,7 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 
-export const ModalStyle = styled.div`
+const ModalStyle = styled.div`
 
     button {
       margin-left: auto;
@@ -91,3 +91,5 @@ export const ModalStyle = styled.div`
       border-radius: 18px;
       border: 1px solid #cfcece;
     }`;
+
+export default ModalStyle;

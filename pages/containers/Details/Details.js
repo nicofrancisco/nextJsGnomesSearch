@@ -2,11 +2,9 @@ import React from "react";
 import { connect } from "react-redux";
 import DetailsInfo from "./../../components/DetailsInfo/DetailsInfo";
 import Card from "./../../components/Card/Card";
-import {
-  DetailsRow,
-  DetailsWrapper,
-  FriendsRow
-} from "./DetailsStyled";
+import DetailsRow from "./DetailsRowStyled";
+import DetailsWrapper from "./DetailsWrapperStyled";
+import FriendsRow from "./FriendsRowStyled";
 
 
 const Details = ({ gnomeURL, gnomes }) => {

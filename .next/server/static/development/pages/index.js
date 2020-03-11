@@ -2893,10 +2893,10 @@ if (false) {} else {
 
 /***/ }),
 
-/***/ "./pages/components/AutoComplete/AutoComplete.jsx":
-/*!********************************************************!*\
-  !*** ./pages/components/AutoComplete/AutoComplete.jsx ***!
-  \********************************************************/
+/***/ "./pages/components/AutoComplete/AutoComplete.js":
+/*!*******************************************************!*\
+  !*** ./pages/components/AutoComplete/AutoComplete.js ***!
+  \*******************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -2907,13 +2907,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom */ "react-dom");
 /* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_dom__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var _Suggestions_Suggestions__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Suggestions/Suggestions */ "./pages/components/AutoComplete/Suggestions/Suggestions.jsx");
-/* harmony import */ var _AutoCompleteStyles__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./AutoCompleteStyles */ "./pages/components/AutoComplete/AutoCompleteStyles.jsx");
-var _jsxFileName = "/Users/nicolasfbergues/Desktop/Nico/Trabajo/FrontEnd/nextJsGnomeSearch/pages/components/AutoComplete/AutoComplete.jsx";
+/* harmony import */ var _ContainerInputStyles__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./ContainerInputStyles */ "./pages/components/AutoComplete/ContainerInputStyles.jsx");
+/* harmony import */ var _InputSearchStyles__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./InputSearchStyles */ "./pages/components/AutoComplete/InputSearchStyles.jsx");
+var _jsxFileName = "/Users/nicolasfbergues/Desktop/Nico/Trabajo/FrontEnd/nextJsGnomeSearch/pages/components/AutoComplete/AutoComplete.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 function _extends() { _extends = Object.assign || function (target) { for (var i = 1; i < arguments.length; i++) { var source = arguments[i]; for (var key in source) { if (Object.prototype.hasOwnProperty.call(source, key)) { target[key] = source[key]; } } } return target; }; return _extends.apply(this, arguments); }
 
 function _defineProperty(obj, key, value) { if (key in obj) { Object.defineProperty(obj, key, { value: value, enumerable: true, configurable: true, writable: true }); } else { obj[key] = value; } return obj; }
+
 
 
 
@@ -2961,23 +2963,23 @@ class AutoComplete extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       searchTerm,
       open
     } = this.state;
-    return __jsx(_AutoCompleteStyles__WEBPACK_IMPORTED_MODULE_3__["ContainerInput"], {
+    return __jsx(_ContainerInputStyles__WEBPACK_IMPORTED_MODULE_3__["default"], {
       className: "autocomplete",
       showLabel: this.props.showLabel,
       htmlFor: this.props.stateName,
       maxWidth: this.props.maxWidth,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 51
+        lineNumber: 52
       },
       __self: this
     }, this.props.labelName.length > 0 && __jsx("span", {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 58
+        lineNumber: 59
       },
       __self: this
-    }, " ", this.props.labelName, " "), __jsx(_AutoCompleteStyles__WEBPACK_IMPORTED_MODULE_3__["InputSearch"], {
+    }, " ", this.props.labelName, " "), __jsx(_InputSearchStyles__WEBPACK_IMPORTED_MODULE_4__["default"], {
       autoComplete: "off",
       type: "text",
       id: this.props.stateName,
@@ -2989,7 +2991,7 @@ class AutoComplete extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
       open: open && searchTerm.length > 0 ? open : false,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 60
+        lineNumber: 61
       },
       __self: this
     }), __jsx(_Suggestions_Suggestions__WEBPACK_IMPORTED_MODULE_2__["default"], _extends({
@@ -3000,7 +3002,7 @@ class AutoComplete extends react__WEBPACK_IMPORTED_MODULE_0__["Component"] {
     }, this.state, this.props, {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 87
+        lineNumber: 88
       },
       __self: this
     })));
@@ -3088,17 +3090,15 @@ AutoComplete.handleCloseAutoComplete = (updateLocalState, state, updateParentSta
 
 /***/ }),
 
-/***/ "./pages/components/AutoComplete/AutoCompleteStyles.jsx":
-/*!**************************************************************!*\
-  !*** ./pages/components/AutoComplete/AutoCompleteStyles.jsx ***!
-  \**************************************************************/
-/*! exports provided: ContainerInput, InputSearch */
+/***/ "./pages/components/AutoComplete/ContainerInputStyles.jsx":
+/*!****************************************************************!*\
+  !*** ./pages/components/AutoComplete/ContainerInputStyles.jsx ***!
+  \****************************************************************/
+/*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ContainerInput", function() { return ContainerInput; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "InputSearch", function() { return InputSearch; });
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! styled-components */ "styled-components");
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_0__);
 
@@ -3117,7 +3117,7 @@ const ContainerInput = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.
     background-color:#298838;
   }
 
-  ::-moz-selection { 
+  ::-moz-selection {
   color: green !important;;
   background: light-blue !important;
   }
@@ -3127,6 +3127,22 @@ const ContainerInput = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.
     background: light-blue !important;
   }
 `;
+/* harmony default export */ __webpack_exports__["default"] = (ContainerInput);
+
+/***/ }),
+
+/***/ "./pages/components/AutoComplete/InputSearchStyles.jsx":
+/*!*************************************************************!*\
+  !*** ./pages/components/AutoComplete/InputSearchStyles.jsx ***!
+  \*************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! styled-components */ "styled-components");
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_0__);
+
 const InputSearch = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.input`
   border: 1px solid #e6e6e6;
   border-radius: ${props => props.open ? "5px 5px 0 0" : "5px"};
@@ -3138,6 +3154,47 @@ const InputSearch = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.inp
   align: center;
   width: 95%;
 `;
+/* harmony default export */ __webpack_exports__["default"] = (InputSearch);
+
+/***/ }),
+
+/***/ "./pages/components/AutoComplete/Suggestions/ItemSuggestionsStyles.jsx":
+/*!*****************************************************************************!*\
+  !*** ./pages/components/AutoComplete/Suggestions/ItemSuggestionsStyles.jsx ***!
+  \*****************************************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! styled-components */ "styled-components");
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_0__);
+
+const ItemSuggestions = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.div`
+  background: ${({
+  theme
+}) => theme.suggestionsBG};
+  border: 1px solid #ccc;
+  border-radius: 0 0 5px 5px;
+  box-sizing: border-box;
+  color: ${({
+  theme
+}) => theme.suggestionsTXT};
+  display: ${props => props.open ? "block" : "none"};
+  font-family: Helvetica, sans-serif;
+  left: 0;
+  max-width: ${props => props.maxWidth};
+  position: absolute;
+  width: 100%;
+  z-index: 2;
+
+  & > ul.suggestions-list {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+  }
+`;
+/* harmony default export */ __webpack_exports__["default"] = (ItemSuggestions);
 
 /***/ }),
 
@@ -3153,8 +3210,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _SuggestionsStyled__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./SuggestionsStyled */ "./pages/components/AutoComplete/Suggestions/SuggestionsStyled.jsx");
+/* harmony import */ var _ItemSuggestionsStyles__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./ItemSuggestionsStyles */ "./pages/components/AutoComplete/Suggestions/ItemSuggestionsStyles.jsx");
 var _jsxFileName = "/Users/nicolasfbergues/Desktop/Nico/Trabajo/FrontEnd/nextJsGnomeSearch/pages/components/AutoComplete/Suggestions/Suggestions.jsx";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
 
 
 
@@ -3166,22 +3225,22 @@ const Suggestions = ({
   open,
   suggestedItems,
   currentOption
-}) => __jsx(_SuggestionsStyled__WEBPACK_IMPORTED_MODULE_1__["ItemSuggestions"], {
+}) => __jsx(_ItemSuggestionsStyles__WEBPACK_IMPORTED_MODULE_2__["default"], {
   open: open && searchTerm.length > 0 ? open : false,
   maxWidth: maxWidth,
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 13
+    lineNumber: 15
   },
   __self: undefined
 }, __jsx("ul", {
   className: "suggestions-list",
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 17
+    lineNumber: 19
   },
   __self: undefined
-}, suggestedItems.map(autoCompleteItem => __jsx(_SuggestionsStyled__WEBPACK_IMPORTED_MODULE_1__["Suggestion"], {
+}, suggestedItems.map(autoCompleteItem => __jsx(_SuggestionsStyled__WEBPACK_IMPORTED_MODULE_1__["default"], {
   key: autoCompleteItem,
   onClick: Suggestions.selectCompletion(updateLocalState, updateParentState),
   onMouseOver: Suggestions.mouseOverSuggestion(updateLocalState, suggestedItems.indexOf(autoCompleteItem)),
@@ -3191,7 +3250,7 @@ const Suggestions = ({
   role: "presentation",
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 19
+    lineNumber: 21
   },
   __self: undefined
 }, autoCompleteItem))));
@@ -3231,40 +3290,14 @@ Suggestions.hoverFocus = event => {
 /*!*************************************************************************!*\
   !*** ./pages/components/AutoComplete/Suggestions/SuggestionsStyled.jsx ***!
   \*************************************************************************/
-/*! exports provided: ItemSuggestions, Suggestion */
+/*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ItemSuggestions", function() { return ItemSuggestions; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Suggestion", function() { return Suggestion; });
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! styled-components */ "styled-components");
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_0__);
 
-const ItemSuggestions = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.div`
-  background: ${({
-  theme
-}) => theme.suggestionsBG};
-  border: 1px solid #ccc;
-  border-radius: 0 0 5px 5px;
-  box-sizing: border-box;
-  color: ${({
-  theme
-}) => theme.suggestionsTXT};
-  display: ${props => props.open ? "block" : "none"};
-  font-family: Helvetica, sans-serif;
-  left: 0;
-  max-width: ${props => props.maxWidth};
-  position: absolute;
-  width: 100%;
-  z-index: 2;
-
-  & > ul.suggestions-list {
-    list-style: none;
-    margin: 0;
-    padding: 0;
-  }
-`;
 const Suggestion = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.li`
   background-color: ${props => props.active ? `#83d6e6` : "transparent"};
   color: ${props => props.active ? `#fff` : `${({
@@ -3273,13 +3306,49 @@ const Suggestion = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.li`
   cursor: pointer;
   padding: 10px 15px;
 `;
+/* harmony default export */ __webpack_exports__["default"] = (Suggestion);
 
 /***/ }),
 
-/***/ "./pages/components/Card/Card.jsx":
-/*!****************************************!*\
-  !*** ./pages/components/Card/Card.jsx ***!
-  \****************************************/
+/***/ "./pages/components/Card/AvatarStyles.jsx":
+/*!************************************************!*\
+  !*** ./pages/components/Card/AvatarStyles.jsx ***!
+  \************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! styled-components */ "styled-components");
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_0__);
+
+const Avatar = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.div`
+  background: ${props => `url(${props.src}) no-repeat center`};
+  background-size: cover
+  box-sizing: border-box;
+  margin: auto 0;
+  padding: 5px;
+  height: 100px;
+  position: relative;
+  margin-top: 0px;
+  top: 0px;
+  width: 100%;
+  z-index: 1;
+  img {
+    position: absolute;
+    height: 0;
+    visibility: hidden;
+    width: 0;
+  }
+`;
+/* harmony default export */ __webpack_exports__["default"] = (Avatar);
+
+/***/ }),
+
+/***/ "./pages/components/Card/Card.js":
+/*!***************************************!*\
+  !*** ./pages/components/Card/Card.js ***!
+  \***************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -3289,9 +3358,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _utils__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./../../../utils */ "./utils.js");
 /* harmony import */ var _Modal_Modal_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./../Modal/Modal.js */ "./pages/components/Modal/Modal.js");
-/* harmony import */ var _CardStyled__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./CardStyled */ "./pages/components/Card/CardStyled.jsx");
-var _jsxFileName = "/Users/nicolasfbergues/Desktop/Nico/Trabajo/FrontEnd/nextJsGnomeSearch/pages/components/Card/Card.jsx";
+/* harmony import */ var _AvatarStyles__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./AvatarStyles */ "./pages/components/Card/AvatarStyles.jsx");
+/* harmony import */ var _InfoStyles__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./InfoStyles */ "./pages/components/Card/InfoStyles.jsx");
+/* harmony import */ var _InfoListStyles__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./InfoListStyles */ "./pages/components/Card/InfoListStyles.jsx");
+/* harmony import */ var _CardStyles__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./CardStyles */ "./pages/components/Card/CardStyles.jsx");
+var _jsxFileName = "/Users/nicolasfbergues/Desktop/Nico/Trabajo/FrontEnd/nextJsGnomeSearch/pages/components/Card/Card.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
+
+
 
 
 
@@ -3301,26 +3376,26 @@ const Card = ({
   gnome,
   to,
   hideFriendButton = false
-}) => __jsx(_CardStyled__WEBPACK_IMPORTED_MODULE_3__["GnomeCard"], {
+}) => __jsx(_CardStyles__WEBPACK_IMPORTED_MODULE_6__["default"], {
   to: to,
   hairColor: Object(_utils__WEBPACK_IMPORTED_MODULE_1__["convertColors"])(gnome && gnome.hair_color),
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 9
+    lineNumber: 12
   },
   __self: undefined
 }, __jsx("div", {
   className: "banner",
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 10
+    lineNumber: 13
   },
   __self: undefined
-}), __jsx(_CardStyled__WEBPACK_IMPORTED_MODULE_3__["Avatar"], {
+}), __jsx(_AvatarStyles__WEBPACK_IMPORTED_MODULE_3__["default"], {
   src: gnome && gnome.thumbnail,
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 12
+    lineNumber: 15
   },
   __self: undefined
 }, __jsx("img", {
@@ -3328,26 +3403,26 @@ const Card = ({
   alt: `avatar ${gnome && gnome.name}`,
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 13
+    lineNumber: 16
   },
   __self: undefined
 })), __jsx("header", {
   className: "description",
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 18
+    lineNumber: 21
   },
   __self: undefined
 }, __jsx("h2", {
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 19
+    lineNumber: 22
   },
   __self: undefined
 }, gnome && gnome.name), __jsx("div", {
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 20
+    lineNumber: 23
   },
   __self: undefined
 }, gnome.professions.length > 0 ? gnome.professions.join(" • ") : "No Profession")), !hideFriendButton ? __jsx(_Modal_Modal_js__WEBPACK_IMPORTED_MODULE_2__["default"], {
@@ -3356,7 +3431,7 @@ const Card = ({
   to: to,
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 27
+    lineNumber: 30
   },
   __self: undefined
 }) : null, !hideFriendButton ? __jsx(_Modal_Modal_js__WEBPACK_IMPORTED_MODULE_2__["default"], {
@@ -3365,91 +3440,91 @@ const Card = ({
   to: to,
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 28
-  },
-  __self: undefined
-}) : null, __jsx(_CardStyled__WEBPACK_IMPORTED_MODULE_3__["GnomeInfo"], {
-  __source: {
-    fileName: _jsxFileName,
-    lineNumber: 29
-  },
-  __self: undefined
-}, __jsx(_CardStyled__WEBPACK_IMPORTED_MODULE_3__["GnomeInfoList"], {
-  hairColor: gnome && Object(_utils__WEBPACK_IMPORTED_MODULE_1__["convertColors"])(gnome.hair_color),
-  __source: {
-    fileName: _jsxFileName,
-    lineNumber: 30
-  },
-  __self: undefined
-}, __jsx("span", {
-  __source: {
-    fileName: _jsxFileName,
     lineNumber: 31
   },
   __self: undefined
-}, "Age"), __jsx("span", {
+}) : null, __jsx(_InfoStyles__WEBPACK_IMPORTED_MODULE_4__["default"], {
   __source: {
     fileName: _jsxFileName,
     lineNumber: 32
   },
   __self: undefined
-}, gnome && gnome.age)), __jsx(_CardStyled__WEBPACK_IMPORTED_MODULE_3__["GnomeInfoList"], {
+}, __jsx(_InfoListStyles__WEBPACK_IMPORTED_MODULE_5__["default"], {
   hairColor: gnome && Object(_utils__WEBPACK_IMPORTED_MODULE_1__["convertColors"])(gnome.hair_color),
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 34
+    lineNumber: 33
   },
   __self: undefined
 }, __jsx("span", {
   __source: {
     fileName: _jsxFileName,
+    lineNumber: 34
+  },
+  __self: undefined
+}, "Age"), __jsx("span", {
+  __source: {
+    fileName: _jsxFileName,
     lineNumber: 35
+  },
+  __self: undefined
+}, gnome && gnome.age)), __jsx(_InfoListStyles__WEBPACK_IMPORTED_MODULE_5__["default"], {
+  hairColor: gnome && Object(_utils__WEBPACK_IMPORTED_MODULE_1__["convertColors"])(gnome.hair_color),
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 37
+  },
+  __self: undefined
+}, __jsx("span", {
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 38
   },
   __self: undefined
 }, "Weight"), __jsx("span", {
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 36
+    lineNumber: 39
   },
   __self: undefined
 }, gnome && Math.ceil(gnome.weight), " ", __jsx("span", {
   className: "unit",
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 37
+    lineNumber: 40
   },
   __self: undefined
-}, "KG"))), __jsx(_CardStyled__WEBPACK_IMPORTED_MODULE_3__["GnomeInfoList"], {
+}, "KG"))), __jsx(_InfoListStyles__WEBPACK_IMPORTED_MODULE_5__["default"], {
   hairColor: gnome && Object(_utils__WEBPACK_IMPORTED_MODULE_1__["convertColors"])(gnome.hair_color),
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 40
+    lineNumber: 43
   },
   __self: undefined
 }, __jsx("span", {
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 41
+    lineNumber: 44
   },
   __self: undefined
 }, "Height"), __jsx("span", {
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 42
+    lineNumber: 45
   },
   __self: undefined
 }, gnome && Math.ceil(gnome.height), " ", __jsx("span", {
   className: "unit",
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 43
+    lineNumber: 46
   },
   __self: undefined
 }, "CM")))), __jsx("div", {
   className: "banner-footer",
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 47
+    lineNumber: 50
   },
   __self: undefined
 }));
@@ -3458,29 +3533,19 @@ const Card = ({
 
 /***/ }),
 
-/***/ "./pages/components/Card/CardStyled.jsx":
+/***/ "./pages/components/Card/CardStyles.jsx":
 /*!**********************************************!*\
-  !*** ./pages/components/Card/CardStyled.jsx ***!
+  !*** ./pages/components/Card/CardStyles.jsx ***!
   \**********************************************/
-/*! exports provided: GnomeCard, Avatar, GnomeInfo, GnomeInfoList */
+/*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "GnomeCard", function() { return GnomeCard; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Avatar", function() { return Avatar; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "GnomeInfo", function() { return GnomeInfo; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "GnomeInfoList", function() { return GnomeInfoList; });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! styled-components */ "styled-components");
-/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
-/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_2__);
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! styled-components */ "styled-components");
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_0__);
 
-
-
-const GnomeCard = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.div`
+const GnomeCard = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.div`
   border-radius: 15px;
   background: ${({
   theme
@@ -3542,31 +3607,23 @@ const GnomeCard = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.div`
     max-width: 160px;
   }
 `;
-const Avatar = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.div`
-  background: ${props => `url(${props.src}) no-repeat center`};
-  background-size: cover
-  box-sizing: border-box;
-  margin: auto 0;
-  padding: 5px;
-  height: 100px;
-  position: relative;
-  margin-top: 0px;
-  top: 0px;
-  width: 100%;
-  z-index: 1;
-  img {
-    position: absolute;
-    height: 0;
-    visibility: hidden;
-    width: 0;
-  }
-`;
-const GnomeInfo = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.ul`
-  display: flex;
-  list-style: none;
-  padding: 0 10px 12px;
-`;
-const GnomeInfoList = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.li`
+/* harmony default export */ __webpack_exports__["default"] = (GnomeCard);
+
+/***/ }),
+
+/***/ "./pages/components/Card/InfoListStyles.jsx":
+/*!**************************************************!*\
+  !*** ./pages/components/Card/InfoListStyles.jsx ***!
+  \**************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! styled-components */ "styled-components");
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_0__);
+
+const InfoList = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.li`
   text-align: center;
   width: 33%;
   span {
@@ -3596,13 +3653,78 @@ const GnomeInfoList = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.l
     }
   }
 `;
+/* harmony default export */ __webpack_exports__["default"] = (InfoList);
 
 /***/ }),
 
-/***/ "./pages/components/DetailsInfo/DetailsInfo.jsx":
-/*!******************************************************!*\
-  !*** ./pages/components/DetailsInfo/DetailsInfo.jsx ***!
-  \******************************************************/
+/***/ "./pages/components/Card/InfoStyles.jsx":
+/*!**********************************************!*\
+  !*** ./pages/components/Card/InfoStyles.jsx ***!
+  \**********************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! styled-components */ "styled-components");
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_0__);
+
+const Info = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.ul`
+  display: flex;
+  list-style: none;
+  padding: 0 10px 12px;
+`;
+/* harmony default export */ __webpack_exports__["default"] = (Info);
+
+/***/ }),
+
+/***/ "./pages/components/DetailsInfo/AvatarStyles.jsx":
+/*!*******************************************************!*\
+  !*** ./pages/components/DetailsInfo/AvatarStyles.jsx ***!
+  \*******************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! styled-components */ "styled-components");
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_0__);
+
+const Avatar = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.div`
+  background: ${props => `url(${props.src}) no-repeat center`};
+  background-size: cover;
+  border: 4px solid ${({
+  theme
+}) => theme.cardBG};
+  border-radius: 50%;
+  box-sizing: border-box;
+  margin: 65px auto 0;
+  padding: 5px;
+  height: 130px;
+  position: relative;
+  width: 130px;
+  z-index: 1;
+  img {
+    position: absolute;
+    height: 0;
+    visibility: hidden;
+    width: 0;
+  }
+
+  @media screen and (min-width: 400px) {
+    height: 180px;
+    margin: 40px auto 0;
+    width: 180px;
+  }
+`;
+/* harmony default export */ __webpack_exports__["default"] = (Avatar);
+
+/***/ }),
+
+/***/ "./pages/components/DetailsInfo/DetailsInfo.js":
+/*!*****************************************************!*\
+  !*** ./pages/components/DetailsInfo/DetailsInfo.js ***!
+  \*****************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -3612,33 +3734,39 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _utils__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./../../../utils */ "./utils.js");
 /* harmony import */ var _DetailsInfoStyled__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./DetailsInfoStyled */ "./pages/components/DetailsInfo/DetailsInfoStyled.jsx");
-var _jsxFileName = "/Users/nicolasfbergues/Desktop/Nico/Trabajo/FrontEnd/nextJsGnomeSearch/pages/components/DetailsInfo/DetailsInfo.jsx";
+/* harmony import */ var _AvatarStyles__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./AvatarStyles */ "./pages/components/DetailsInfo/AvatarStyles.jsx");
+/* harmony import */ var _InfoStyles__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./InfoStyles */ "./pages/components/DetailsInfo/InfoStyles.jsx");
+/* harmony import */ var _InfoListStyles__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./InfoListStyles */ "./pages/components/DetailsInfo/InfoListStyles.jsx");
+var _jsxFileName = "/Users/nicolasfbergues/Desktop/Nico/Trabajo/FrontEnd/nextJsGnomeSearch/pages/components/DetailsInfo/DetailsInfo.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
+
+
 
 
 
 
 const DetailsInfo = ({
   gnome
-}) => __jsx(_DetailsInfoStyled__WEBPACK_IMPORTED_MODULE_2__["Details"], {
+}) => __jsx(_DetailsInfoStyled__WEBPACK_IMPORTED_MODULE_2__["default"], {
   hairColor: Object(_utils__WEBPACK_IMPORTED_MODULE_1__["convertColors"])(gnome && gnome.hair_color),
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 12
+    lineNumber: 9
   },
   __self: undefined
 }, __jsx("div", {
   className: "banner",
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 13
+    lineNumber: 10
   },
   __self: undefined
-}), __jsx(_DetailsInfoStyled__WEBPACK_IMPORTED_MODULE_2__["Avatar"], {
+}), __jsx(_AvatarStyles__WEBPACK_IMPORTED_MODULE_3__["default"], {
   src: gnome && gnome.thumbnail,
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 14
+    lineNumber: 11
   },
   __self: undefined
 }, __jsx("img", {
@@ -3646,129 +3774,129 @@ const DetailsInfo = ({
   alt: `avatar ${gnome && gnome.name}`,
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 15
+    lineNumber: 12
   },
   __self: undefined
 })), __jsx("header", {
   className: "description",
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 20
+    lineNumber: 17
   },
   __self: undefined
 }, __jsx("h2", {
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 21
+    lineNumber: 18
   },
   __self: undefined
 }, gnome && gnome.name), __jsx("div", {
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 22
+    lineNumber: 19
   },
   __self: undefined
-}, gnome.professions.length > 0 ? gnome.professions.join(" || ") : "No Profession")), __jsx(_DetailsInfoStyled__WEBPACK_IMPORTED_MODULE_2__["GnomeInfo"], {
+}, gnome.professions.length > 0 ? gnome.professions.join(" || ") : "No Profession")), __jsx(_InfoStyles__WEBPACK_IMPORTED_MODULE_4__["default"], {
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 28
+    lineNumber: 25
   },
   __self: undefined
-}, __jsx(_DetailsInfoStyled__WEBPACK_IMPORTED_MODULE_2__["GnomeInfoList"], {
+}, __jsx(_InfoListStyles__WEBPACK_IMPORTED_MODULE_5__["default"], {
   hairColor: gnome && Object(_utils__WEBPACK_IMPORTED_MODULE_1__["convertColors"])(gnome.hair_color),
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 26
+  },
+  __self: undefined
+}, __jsx("span", {
   __source: {
     fileName: _jsxFileName,
     lineNumber: 29
   },
   __self: undefined
-}, __jsx("span", {
+}, "Age"), __jsx("span", {
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 30
+  },
+  __self: undefined
+}, gnome && gnome.age)), __jsx(_InfoListStyles__WEBPACK_IMPORTED_MODULE_5__["default"], {
+  hairColor: gnome && Object(_utils__WEBPACK_IMPORTED_MODULE_1__["convertColors"])(gnome.hair_color),
   __source: {
     fileName: _jsxFileName,
     lineNumber: 32
   },
   __self: undefined
-}, "Age"), __jsx("span", {
-  __source: {
-    fileName: _jsxFileName,
-    lineNumber: 33
-  },
-  __self: undefined
-}, gnome && gnome.age)), __jsx(_DetailsInfoStyled__WEBPACK_IMPORTED_MODULE_2__["GnomeInfoList"], {
-  hairColor: gnome && Object(_utils__WEBPACK_IMPORTED_MODULE_1__["convertColors"])(gnome.hair_color),
+}, __jsx("span", {
   __source: {
     fileName: _jsxFileName,
     lineNumber: 35
   },
   __self: undefined
-}, __jsx("span", {
-  __source: {
-    fileName: _jsxFileName,
-    lineNumber: 38
-  },
-  __self: undefined
 }, "Weight"), __jsx("span", {
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 39
+    lineNumber: 36
   },
   __self: undefined
 }, gnome && Math.ceil(gnome.weight), " ", __jsx("span", {
   className: "unit",
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 40
+    lineNumber: 37
   },
   __self: undefined
-}, "KG"))), __jsx(_DetailsInfoStyled__WEBPACK_IMPORTED_MODULE_2__["GnomeInfoList"], {
+}, "KG"))), __jsx(_InfoListStyles__WEBPACK_IMPORTED_MODULE_5__["default"], {
   hairColor: gnome && Object(_utils__WEBPACK_IMPORTED_MODULE_1__["convertColors"])(gnome.hair_color),
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 43
+    lineNumber: 40
   },
   __self: undefined
 }, __jsx("span", {
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 46
+    lineNumber: 43
   },
   __self: undefined
 }, "Height"), __jsx("span", {
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 47
+    lineNumber: 44
   },
   __self: undefined
 }, gnome && Math.ceil(gnome.height), " ", __jsx("span", {
   className: "unit",
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 48
+    lineNumber: 45
   },
   __self: undefined
-}, "CM"))), __jsx(_DetailsInfoStyled__WEBPACK_IMPORTED_MODULE_2__["GnomeInfoList"], {
+}, "CM"))), __jsx(_InfoListStyles__WEBPACK_IMPORTED_MODULE_5__["default"], {
   hairColor: gnome && Object(_utils__WEBPACK_IMPORTED_MODULE_1__["convertColors"])(gnome.hair_color),
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 51
+    lineNumber: 48
   },
   __self: undefined
 }, __jsx("span", {
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 54
+    lineNumber: 51
   },
   __self: undefined
 }, "Hair color"), __jsx("span", {
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 55
+    lineNumber: 52
   },
   __self: undefined
 }, gnome && gnome.hair_color.toUpperCase()))), __jsx("div", {
   className: "banner-footer",
   __source: {
     fileName: _jsxFileName,
-    lineNumber: 58
+    lineNumber: 55
   },
   __self: undefined
 }));
@@ -3781,15 +3909,11 @@ const DetailsInfo = ({
 /*!************************************************************!*\
   !*** ./pages/components/DetailsInfo/DetailsInfoStyled.jsx ***!
   \************************************************************/
-/*! exports provided: Details, Avatar, GnomeInfo, GnomeInfoList */
+/*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Details", function() { return Details; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Avatar", function() { return Avatar; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "GnomeInfo", function() { return GnomeInfo; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "GnomeInfoList", function() { return GnomeInfoList; });
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! styled-components */ "styled-components");
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_0__);
 
@@ -3855,39 +3979,23 @@ const Details = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.div`
     }
   }
 `;
-const Avatar = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.div`
-  background: ${props => `url(${props.src}) no-repeat center`};
-  background-size: cover;
-  border: 4px solid ${({
-  theme
-}) => theme.cardBG};
-  border-radius: 50%;
-  box-sizing: border-box;
-  margin: 65px auto 0;
-  padding: 5px;
-  height: 130px;
-  position: relative;
-  width: 130px;
-  z-index: 1;
-  img {
-    position: absolute;
-    height: 0;
-    visibility: hidden;
-    width: 0;
-  }
+/* harmony default export */ __webpack_exports__["default"] = (Details);
 
-  @media screen and (min-width: 400px) {
-    height: 180px;
-    margin: 40px auto 0;
-    width: 180px;
-  }
-`;
-const GnomeInfo = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.ul`
-  display: flex;
-  list-style: none;
-  padding: 0 10px 12px;
-`;
-const GnomeInfoList = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.li`
+/***/ }),
+
+/***/ "./pages/components/DetailsInfo/InfoListStyles.jsx":
+/*!*********************************************************!*\
+  !*** ./pages/components/DetailsInfo/InfoListStyles.jsx ***!
+  \*********************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! styled-components */ "styled-components");
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_0__);
+
+const InfoList = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.li`
   text-align: center;
   width: 25%;
   span {
@@ -3930,6 +4038,28 @@ const GnomeInfoList = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.l
     }
   }
 `;
+/* harmony default export */ __webpack_exports__["default"] = (InfoList);
+
+/***/ }),
+
+/***/ "./pages/components/DetailsInfo/InfoStyles.jsx":
+/*!*****************************************************!*\
+  !*** ./pages/components/DetailsInfo/InfoStyles.jsx ***!
+  \*****************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! styled-components */ "styled-components");
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_0__);
+
+const Info = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.ul`
+  display: flex;
+  list-style: none;
+  padding: 0 10px 12px;
+`;
+/* harmony default export */ __webpack_exports__["default"] = (Info);
 
 /***/ }),
 
@@ -3983,6 +4113,41 @@ const Footer = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.footer`
 
 /***/ }),
 
+/***/ "./pages/components/Gender/AvatarStyles.jsx":
+/*!**************************************************!*\
+  !*** ./pages/components/Gender/AvatarStyles.jsx ***!
+  \**************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! styled-components */ "styled-components");
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_0__);
+
+const Avatar = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.div`
+  background: ${props => `url(${props.src}) no-repeat center`};
+  background-size: cover
+  box-sizing: border-box;
+  margin: auto 0;
+  padding: 5px;
+  height: 100px;
+  position: relative;
+  margin-top: 0px;
+  top: 0px;
+  width: 100%;
+  z-index: 1;
+  img {
+    position: absolute;
+    height: 0;
+    visibility: hidden;
+    width: 0;
+  }
+`;
+/* harmony default export */ __webpack_exports__["default"] = (Avatar);
+
+/***/ }),
+
 /***/ "./pages/components/Gender/Gender.js":
 /*!*******************************************!*\
   !*** ./pages/components/Gender/Gender.js ***!
@@ -4000,8 +4165,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _utils__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./../../../utils */ "./utils.js");
 /* harmony import */ var _GenderCard_GenderCard__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./GenderCard/GenderCard */ "./pages/components/Gender/GenderCard/GenderCard.js");
 /* harmony import */ var _GenderStyled__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./GenderStyled */ "./pages/components/Gender/GenderStyled.jsx");
+/* harmony import */ var _AvatarStyles__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./AvatarStyles */ "./pages/components/Gender/AvatarStyles.jsx");
+/* harmony import */ var _InfoStyles__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./InfoStyles */ "./pages/components/Gender/InfoStyles.jsx");
+/* harmony import */ var _InfoListStyles__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./InfoListStyles */ "./pages/components/Gender/InfoListStyles.jsx");
 var _jsxFileName = "/Users/nicolasfbergues/Desktop/Nico/Trabajo/FrontEnd/nextJsGnomeSearch/pages/components/Gender/Gender.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
+
+
 
 
 
@@ -4022,7 +4193,9 @@ const Gender = props => {
   } = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])([]);
   Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(() => {
     props.fetchGender("name[]=" + name).then(response => {
+      console.log(response);
       setGender(response);
+      console.log(gender);
     });
   }, []);
   /*useEffect(() => {
@@ -4031,25 +4204,25 @@ const Gender = props => {
      }
   },[gender]);*/
 
-  return __jsx(_GenderStyled__WEBPACK_IMPORTED_MODULE_5__["GnomeCard"], {
+  return __jsx(_GenderStyled__WEBPACK_IMPORTED_MODULE_5__["default"], {
     to: to,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 31
+      lineNumber: 36
     },
     __self: undefined
   }, __jsx("div", {
     className: "banner",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 32
+      lineNumber: 37
     },
     __self: undefined
-  }), __jsx(_GenderStyled__WEBPACK_IMPORTED_MODULE_5__["Avatar"], {
+  }), __jsx(_AvatarStyles__WEBPACK_IMPORTED_MODULE_6__["default"], {
     src: gnome && gnome.thumbnail,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 34
+      lineNumber: 39
     },
     __self: undefined
   }, __jsx("img", {
@@ -4057,117 +4230,117 @@ const Gender = props => {
     alt: `avatar ${gnome && gnome.name}`,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 35
+      lineNumber: 40
     },
     __self: undefined
   })), __jsx("header", {
     className: "headerBox",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 40
+      lineNumber: 45
     },
     __self: undefined
   }, __jsx("h2", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 41
+      lineNumber: 46
     },
     __self: undefined
   }, gnome && gnome.name), __jsx("div", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 42
+      lineNumber: 47
     },
     __self: undefined
   }, gnome.professions.length > 0 ? gnome.professions.join(" • ") : "No Profession")), __jsx(_GenderCard_GenderCard__WEBPACK_IMPORTED_MODULE_4__["default"], {
     gender: gender,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 48
+      lineNumber: 53
     },
     __self: undefined
-  }), __jsx(_GenderStyled__WEBPACK_IMPORTED_MODULE_5__["GnomeInfo"], {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 49
-    },
-    __self: undefined
-  }, __jsx(_GenderStyled__WEBPACK_IMPORTED_MODULE_5__["GnomeInfoList"], {
-    hairColor: gnome && Object(_utils__WEBPACK_IMPORTED_MODULE_3__["convertColors"])(gnome.hair_color),
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 50
-    },
-    __self: undefined
-  }, __jsx("span", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 51
-    },
-    __self: undefined
-  }, "Age"), __jsx("span", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 52
-    },
-    __self: undefined
-  }, gnome && gnome.age)), __jsx(_GenderStyled__WEBPACK_IMPORTED_MODULE_5__["GnomeInfoList"], {
-    hairColor: gnome && Object(_utils__WEBPACK_IMPORTED_MODULE_3__["convertColors"])(gnome.hair_color),
+  }), __jsx(_InfoStyles__WEBPACK_IMPORTED_MODULE_7__["default"], {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 54
     },
     __self: undefined
-  }, __jsx("span", {
+  }, __jsx(_InfoListStyles__WEBPACK_IMPORTED_MODULE_8__["default"], {
+    hairColor: gnome && Object(_utils__WEBPACK_IMPORTED_MODULE_3__["convertColors"])(gnome.hair_color),
     __source: {
       fileName: _jsxFileName,
       lineNumber: 55
     },
     __self: undefined
-  }, "Weight"), __jsx("span", {
+  }, __jsx("span", {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 56
+    },
+    __self: undefined
+  }, "Age"), __jsx("span", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 57
+    },
+    __self: undefined
+  }, gnome && gnome.age)), __jsx(_InfoListStyles__WEBPACK_IMPORTED_MODULE_8__["default"], {
+    hairColor: gnome && Object(_utils__WEBPACK_IMPORTED_MODULE_3__["convertColors"])(gnome.hair_color),
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 59
+    },
+    __self: undefined
+  }, __jsx("span", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 60
+    },
+    __self: undefined
+  }, "Weight"), __jsx("span", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 61
     },
     __self: undefined
   }, gnome && Math.ceil(gnome.weight), " ", __jsx("span", {
     className: "unit",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 57
+      lineNumber: 62
     },
     __self: undefined
-  }, "KG"))), __jsx(_GenderStyled__WEBPACK_IMPORTED_MODULE_5__["GnomeInfoList"], {
+  }, "KG"))), __jsx(_InfoListStyles__WEBPACK_IMPORTED_MODULE_8__["default"], {
     hairColor: gnome && Object(_utils__WEBPACK_IMPORTED_MODULE_3__["convertColors"])(gnome.hair_color),
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 60
+      lineNumber: 65
     },
     __self: undefined
   }, __jsx("span", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 61
+      lineNumber: 66
     },
     __self: undefined
   }, "Height"), __jsx("span", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 62
+      lineNumber: 67
     },
     __self: undefined
   }, gnome && Math.ceil(gnome.height), " ", __jsx("span", {
     className: "unit",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 63
+      lineNumber: 68
     },
     __self: undefined
   }, "CM")))), __jsx("div", {
     className: "banner-footer",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 67
+      lineNumber: 72
     },
     __self: undefined
   }));
@@ -4192,7 +4365,7 @@ const mapStateToProps = state => ({
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _GenderCardStyled__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./GenderCardStyled */ "./pages/components/Gender/GenderCard/GenderCardStyled.jsx");
+/* harmony import */ var _GenderCardStyles__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./GenderCardStyles */ "./pages/components/Gender/GenderCard/GenderCardStyles.jsx");
 var _jsxFileName = "/Users/nicolasfbergues/Desktop/Nico/Trabajo/FrontEnd/nextJsGnomeSearch/pages/components/Gender/GenderCard/GenderCard.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
@@ -4218,7 +4391,7 @@ const GenderCard = props => {
 
   if (props.gender.length > 0) {
     if (props.gender[0].gender) {
-      return __jsx(_GenderCardStyled__WEBPACK_IMPORTED_MODULE_1__["default"], {
+      return __jsx(_GenderCardStyles__WEBPACK_IMPORTED_MODULE_1__["default"], {
         __source: {
           fileName: _jsxFileName,
           lineNumber: 25
@@ -4245,7 +4418,7 @@ const GenderCard = props => {
         __self: undefined
       }, "(", props.gender[0].probability * 100, "% chances according to our report)")));
     } else if (!props.gender[0].gender && findOutIfFemale(props.gender[0].name) == true) {
-      return __jsx(_GenderCardStyled__WEBPACK_IMPORTED_MODULE_1__["default"], {
+      return __jsx(_GenderCardStyles__WEBPACK_IMPORTED_MODULE_1__["default"], {
         __source: {
           fileName: _jsxFileName,
           lineNumber: 36
@@ -4272,7 +4445,7 @@ const GenderCard = props => {
         __self: undefined
       }, "(", randomNumberAprox, "% chances according to our report)")));
     } else {
-      return __jsx(_GenderCardStyled__WEBPACK_IMPORTED_MODULE_1__["default"], {
+      return __jsx(_GenderCardStyles__WEBPACK_IMPORTED_MODULE_1__["default"], {
         __source: {
           fileName: _jsxFileName,
           lineNumber: 47
@@ -4294,7 +4467,7 @@ const GenderCard = props => {
       }, props.gender[0].name, " could be an hermafrodith gnome with ", randomNumberAprox, "% of chances.")));
     }
   } else {
-    return __jsx(_GenderCardStyled__WEBPACK_IMPORTED_MODULE_1__["default"], {
+    return __jsx(_GenderCardStyles__WEBPACK_IMPORTED_MODULE_1__["default"], {
       __source: {
         fileName: _jsxFileName,
         lineNumber: 59
@@ -4321,9 +4494,9 @@ const GenderCard = props => {
 
 /***/ }),
 
-/***/ "./pages/components/Gender/GenderCard/GenderCardStyled.jsx":
+/***/ "./pages/components/Gender/GenderCard/GenderCardStyles.jsx":
 /*!*****************************************************************!*\
-  !*** ./pages/components/Gender/GenderCard/GenderCardStyled.jsx ***!
+  !*** ./pages/components/Gender/GenderCard/GenderCardStyles.jsx ***!
   \*****************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
@@ -4335,7 +4508,7 @@ __webpack_require__.r(__webpack_exports__);
  // themes value received thenaks to themesProvider
 // so themes variables are available in all styled components
 
-const GenderCardStyle = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.header`
+const GenderResult = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.header`
   align-items: center;
   background: #fff;
   /*box-shadow: 0px 0px 5px rgba(0, 0, 0, 0.9);*/
@@ -4376,7 +4549,7 @@ const GenderCardStyle = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a
     margin: auto;
   }
 `;
-/* harmony default export */ __webpack_exports__["default"] = (GenderCardStyle);
+/* harmony default export */ __webpack_exports__["default"] = (GenderResult);
 
 /***/ }),
 
@@ -4384,67 +4557,15 @@ const GenderCardStyle = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a
 /*!**************************************************!*\
   !*** ./pages/components/Gender/GenderStyled.jsx ***!
   \**************************************************/
-/*! exports provided: GnomeCard, Avatar, GnomeInfo, GnomeInfoList */
+/*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "GnomeCard", function() { return GnomeCard; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "Avatar", function() { return Avatar; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "GnomeInfo", function() { return GnomeInfo; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "GnomeInfoList", function() { return GnomeInfoList; });
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! styled-components */ "styled-components");
-/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
-/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_2__);
-var _jsxFileName = "/Users/nicolasfbergues/Desktop/Nico/Trabajo/FrontEnd/nextJsGnomeSearch/pages/components/Gender/GenderStyled.jsx";
-var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! styled-components */ "styled-components");
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_0__);
 
-
-
-
-const CardLink = ({
-  className,
-  children,
-  to
-}) => __jsx("div", {
-  __source: {
-    fileName: _jsxFileName,
-    lineNumber: 8
-  },
-  __self: undefined
-}, __jsx("div", {
-  __source: {
-    fileName: _jsxFileName,
-    lineNumber: 9
-  },
-  __self: undefined
-}, children), __jsx("div", {
-  __source: {
-    fileName: _jsxFileName,
-    lineNumber: 12
-  },
-  __self: undefined
-}, __jsx(next_link__WEBPACK_IMPORTED_MODULE_2___default.a, {
-  href: "href=https://api.genderize.io/?name=" + to,
-  to: to,
-  className: className,
-  __source: {
-    fileName: _jsxFileName,
-    lineNumber: 13
-  },
-  __self: undefined
-}, __jsx("p", {
-  __source: {
-    fileName: _jsxFileName,
-    lineNumber: 14
-  },
-  __self: undefined
-}, "Consultar gnomo"))));
-
-const GnomeCard = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.div`
+const GenderCardStyle = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.div`
   border-radius: 5px;
   background: ${({
   theme
@@ -4507,31 +4628,23 @@ const GnomeCard = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.div`
     margin: auto;
   }
 `;
-const Avatar = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.div`
-  background: ${props => `url(${props.src}) no-repeat center`};
-  background-size: cover
-  box-sizing: border-box;
-  margin: auto 0;
-  padding: 5px;
-  height: 100px;
-  position: relative;
-  margin-top: 0px;
-  top: 0px;
-  width: 100%;
-  z-index: 1;
-  img {
-    position: absolute;
-    height: 0;
-    visibility: hidden;
-    width: 0;
-  }
-`;
-const GnomeInfo = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.ul`
-  display: flex;
-  list-style: none;
-  padding: 0 10px 12px;
-`;
-const GnomeInfoList = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.li`
+/* harmony default export */ __webpack_exports__["default"] = (GenderCardStyle);
+
+/***/ }),
+
+/***/ "./pages/components/Gender/InfoListStyles.jsx":
+/*!****************************************************!*\
+  !*** ./pages/components/Gender/InfoListStyles.jsx ***!
+  \****************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! styled-components */ "styled-components");
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_0__);
+
+const InfoList = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.li`
   text-align: center;
   width: 33%;
   span {
@@ -4561,6 +4674,28 @@ const GnomeInfoList = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.l
     }
   }
 `;
+/* harmony default export */ __webpack_exports__["default"] = (InfoList);
+
+/***/ }),
+
+/***/ "./pages/components/Gender/InfoStyles.jsx":
+/*!************************************************!*\
+  !*** ./pages/components/Gender/InfoStyles.jsx ***!
+  \************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! styled-components */ "styled-components");
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_0__);
+
+const Info = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.ul`
+  display: flex;
+  list-style: none;
+  padding: 0 10px 12px;
+`;
+/* harmony default export */ __webpack_exports__["default"] = (Info);
 
 /***/ }),
 
@@ -4625,7 +4760,7 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
   gnomes,
   to
 }) => {
-  return __jsx(_ModalStyles__WEBPACK_IMPORTED_MODULE_4__["ModalStyle"], {
+  return __jsx(_ModalStyles__WEBPACK_IMPORTED_MODULE_4__["default"], {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 9
@@ -4775,12 +4910,11 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 /*!************************************************!*\
   !*** ./pages/components/Modal/ModalStyles.jsx ***!
   \************************************************/
-/*! exports provided: ModalStyle */
+/*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ModalStyle", function() { return ModalStyle; });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! styled-components */ "styled-components");
@@ -4877,6 +5011,7 @@ const ModalStyle = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.div`
       border-radius: 18px;
       border: 1px solid #cfcece;
     }`;
+/* harmony default export */ __webpack_exports__["default"] = (ModalStyle);
 
 /***/ }),
 
@@ -4991,6 +5126,202 @@ const OrderButton = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.but
   }
 `;
 /* harmony default export */ __webpack_exports__["default"] = (OrderButton);
+
+/***/ }),
+
+/***/ "./pages/components/Pagination/BtnStyled.jsx":
+/*!***************************************************!*\
+  !*** ./pages/components/Pagination/BtnStyled.jsx ***!
+  \***************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! styled-components */ "styled-components");
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_0__);
+
+const PaginationBtn = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.button`
+  background: ${({
+  disableStyle
+}) => disableStyle ? "none" : "#80cf86"}
+  color: ${({
+  disableStyle
+}) => disableStyle ? "transparent" : "#fff"};
+  cursor: ${({
+  disableStyle
+}) => disableStyle ? "context-menu" : "pointer"};
+  font-size: 0.9rem;
+  width: 80%;
+  max-width: 140px;
+  padding: 6px 0;
+  text-align: center;
+
+  &:hover {
+    background: ${({
+  disableStyle
+}) => disableStyle ? "transparent" : "##e74142"}
+  }
+  &:focus {
+    outline:none;
+  }
+`;
+/* harmony default export */ __webpack_exports__["default"] = (PaginationBtn);
+
+/***/ }),
+
+/***/ "./pages/components/Pagination/Pagination.js":
+/*!***************************************************!*\
+  !*** ./pages/components/Pagination/Pagination.js ***!
+  \***************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _WrapperStyled__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./WrapperStyled */ "./pages/components/Pagination/WrapperStyled.jsx");
+/* harmony import */ var _BtnStyled__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./BtnStyled */ "./pages/components/Pagination/BtnStyled.jsx");
+var _jsxFileName = "/Users/nicolasfbergues/Desktop/Nico/Trabajo/FrontEnd/nextJsGnomeSearch/pages/components/Pagination/Pagination.js";
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
+
+
+const nextButtonValue = "Next";
+const previousButtonValue = "Previous";
+
+const Pagination = ({
+  page,
+  updateGlobalState,
+  maxPages
+}) => //const callGenderLocal = callGender;
+//const propsGenderLocal = propsGender;
+__jsx(_WrapperStyled__WEBPACK_IMPORTED_MODULE_1__["default"], {
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 11
+  },
+  __self: undefined
+}, __jsx(_BtnStyled__WEBPACK_IMPORTED_MODULE_2__["default"], {
+  disableStyle: page <= 0,
+  page: page,
+  onClick: Pagination.onClick(page, updateGlobalState, maxPages),
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 12
+  },
+  __self: undefined
+}, "Previous"), __jsx("span", {
+  className: "current-page",
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 19
+  },
+  __self: undefined
+}, "Page: ", page + 1, " / ", maxPages + 1), __jsx(_BtnStyled__WEBPACK_IMPORTED_MODULE_2__["default"], {
+  disableStyle: page >= maxPages,
+  page: page,
+  onClick: Pagination.onClick(page, updateGlobalState, maxPages),
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 20
+  },
+  __self: undefined
+}, "Next"));
+
+Pagination.onClick = (page, updateGlobalState, maxPages) => (event = event.currentTarget) => {
+  event.preventDefault();
+  window.scroll(null, 0);
+  const btnName = event.currentTarget.textContent.toLowerCase();
+  /*let format;
+   const setDirection = (direction) =>{
+         let updatedPageNext = page + 1;
+        let updatedPagePrevious = page  - 1;
+        const paginationDirection = direction == "next" ? updatedPageNext : updatedPagePrevious;
+         const gnomeNames = gnomes.map(gnome => gnome.name)
+        const pageGnomes = gnomeNames.slice(
+        itemsByPage * paginationDirection,
+        itemsByPage + paginationDirection * itemsByPage
+        )
+         pageGnomes.map(gnome => (
+          gnome => gnome.name
+        ))
+           const getFirstName = arr =>{
+            var arrCroped = [];
+              for(var a=0; a<arr.length; a++){
+                 var corte = arr[a].indexOf(" ");
+                arrCroped[a] = arr[a].substr(0, corte);
+              }
+              function removeDuplicates(array) {
+                return array.filter((a, b) => array.indexOf(a) === b)
+              };
+              return removeDuplicates(arrCroped);
+          }
+           const justRenderedPageNames = getFirstName(pageGnomes);
+           const parseToService = arrToFormat =>{
+            var arrayFormated = [];
+               for(var b=0; b<arrToFormat.length; b++){
+                arrayFormated[b] = "name[]="+arrToFormat[b];
+              }
+               return arrayFormated;
+           }
+           format = parseToService(justRenderedPageNames).toString().replace(/,/g, "&");
+   }*/
+
+  if (btnName === nextButtonValue.toLowerCase()) {
+    const nextPage = page + 1;
+
+    if (page !== maxPages) {
+      updateGlobalState(nextPage); //setDirection("next")
+      //callGender(format);
+    }
+  } else if (btnName === previousButtonValue.toLowerCase()) {
+    const previousPage = page - 1;
+
+    if (page > 0) {
+      updateGlobalState(previousPage); //setDirection("previous")
+      //callGender(format);
+    }
+  }
+};
+
+Pagination.defaultProps = {
+  page: false
+};
+/* harmony default export */ __webpack_exports__["default"] = (Pagination);
+
+/***/ }),
+
+/***/ "./pages/components/Pagination/WrapperStyled.jsx":
+/*!*******************************************************!*\
+  !*** ./pages/components/Pagination/WrapperStyled.jsx ***!
+  \*******************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! styled-components */ "styled-components");
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_0__);
+
+const PaginationWrapper = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.div`
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  left: 40px;
+  max-width: 820px;
+  width: 90%;
+
+  & .current-page {
+    font-size: 0.95rem;
+    font-weight: bold;
+    text-align: center;
+    color: #80cf86;
+  }
+`;
+/* harmony default export */ __webpack_exports__["default"] = (PaginationWrapper);
 
 /***/ }),
 
@@ -5128,11 +5459,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-redux */ "react-redux");
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_redux__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _components_DetailsInfo_DetailsInfo__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./../../components/DetailsInfo/DetailsInfo */ "./pages/components/DetailsInfo/DetailsInfo.jsx");
-/* harmony import */ var _components_Card_Card__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./../../components/Card/Card */ "./pages/components/Card/Card.jsx");
-/* harmony import */ var _DetailsStyled__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./DetailsStyled */ "./pages/containers/Details/DetailsStyled.jsx");
+/* harmony import */ var _components_DetailsInfo_DetailsInfo__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./../../components/DetailsInfo/DetailsInfo */ "./pages/components/DetailsInfo/DetailsInfo.js");
+/* harmony import */ var _components_Card_Card__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./../../components/Card/Card */ "./pages/components/Card/Card.js");
+/* harmony import */ var _DetailsRowStyled__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./DetailsRowStyled */ "./pages/containers/Details/DetailsRowStyled.jsx");
+/* harmony import */ var _DetailsWrapperStyled__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./DetailsWrapperStyled */ "./pages/containers/Details/DetailsWrapperStyled.jsx");
+/* harmony import */ var _FriendsRowStyled__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./FriendsRowStyled */ "./pages/containers/Details/FriendsRowStyled.jsx");
 var _jsxFileName = "/Users/nicolasfbergues/Desktop/Nico/Trabajo/FrontEnd/nextJsGnomeSearch/pages/containers/Details/Details.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
+
 
 
 
@@ -5147,29 +5482,29 @@ const Details = ({
   const selectedGnome = gnomes && gnomes.find(gnome => gnomeURL === `${gnome.id}-${gnome.name.split(" ").join("-")}`);
   const friends = selectedGnome && selectedGnome.friends.map(friend => friend.toLowerCase());
   const renderFriends = gnomes && gnomes.filter(gnome => friends.some(friend => gnome.name.toLowerCase() === friend));
-  return __jsx(_DetailsStyled__WEBPACK_IMPORTED_MODULE_4__["DetailsWrapper"], {
+  return __jsx(_DetailsWrapperStyled__WEBPACK_IMPORTED_MODULE_5__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 31
+      lineNumber: 29
     },
     __self: undefined
-  }, __jsx(_DetailsStyled__WEBPACK_IMPORTED_MODULE_4__["DetailsRow"], {
+  }, __jsx(_DetailsRowStyled__WEBPACK_IMPORTED_MODULE_4__["default"], {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 30
+    },
+    __self: undefined
+  }), __jsx(_FriendsRowStyled__WEBPACK_IMPORTED_MODULE_6__["default"], {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 32
-    },
-    __self: undefined
-  }), __jsx(_DetailsStyled__WEBPACK_IMPORTED_MODULE_4__["FriendsRow"], {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 34
     },
     __self: undefined
   }, renderFriends.length > 0 ? renderFriends.map(friend => __jsx("div", {
     key: `${friend.id}`,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 37
+      lineNumber: 35
     },
     __self: undefined
   }, __jsx(_components_Card_Card__WEBPACK_IMPORTED_MODULE_3__["default"], {
@@ -5179,14 +5514,14 @@ const Details = ({
     hideFriendButton: true,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 39
+      lineNumber: 37
     },
     __self: undefined
   }))) : __jsx("div", {
     className: "notFound",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 48
+      lineNumber: 46
     },
     __self: undefined
   }, "...seems to have no friends")));
@@ -5200,28 +5535,58 @@ const mapStateToProps = state => ({
 
 /***/ }),
 
-/***/ "./pages/containers/Details/DetailsStyled.jsx":
-/*!****************************************************!*\
-  !*** ./pages/containers/Details/DetailsStyled.jsx ***!
-  \****************************************************/
-/*! exports provided: DetailsWrapper, DetailsRow, FriendsRow */
+/***/ "./pages/containers/Details/DetailsRowStyled.jsx":
+/*!*******************************************************!*\
+  !*** ./pages/containers/Details/DetailsRowStyled.jsx ***!
+  \*******************************************************/
+/*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DetailsWrapper", function() { return DetailsWrapper; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "DetailsRow", function() { return DetailsRow; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "FriendsRow", function() { return FriendsRow; });
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! styled-components */ "styled-components");
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
-/* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_2__);
 
 
+const DetailsRow = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.div`
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin-bottom: 10px;
+  width: 100%;
 
-const DetailsWrapper = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.main`
+  @media (min-width: 630px) {
+    justify-content: flex-start;
+  }
+
+  div.notFound {
+    color: #ccc;
+    font-size: 1.5rem;
+    font-weight: lighter;
+    padding: 140px 30px
+    text-align: center;
+    width: 100%;
+  }
+`;
+/* harmony default export */ __webpack_exports__["default"] = (DetailsRow);
+
+/***/ }),
+
+/***/ "./pages/containers/Details/DetailsWrapperStyled.jsx":
+/*!***********************************************************!*\
+  !*** ./pages/containers/Details/DetailsWrapperStyled.jsx ***!
+  \***********************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! styled-components */ "styled-components");
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_0__);
+
+const DetailsWrapper = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.main`
   border-radius: 5px;
   margin: 10px auto;
   max-width: 900px;
@@ -5232,7 +5597,23 @@ const DetailsWrapper = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.
     max-width: 610px;
   }
 `;
-const DetailsRow = styled_components__WEBPACK_IMPORTED_MODULE_1___default.a.div`
+/* harmony default export */ __webpack_exports__["default"] = (DetailsWrapper);
+
+/***/ }),
+
+/***/ "./pages/containers/Details/FriendsRowStyled.jsx":
+/*!*******************************************************!*\
+  !*** ./pages/containers/Details/FriendsRowStyled.jsx ***!
+  \*******************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! styled-components */ "styled-components");
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_0__);
+
+const DetailsRow = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.div`
   display: flex;
   flex-wrap: wrap;
   justify-content: center;
@@ -5258,6 +5639,7 @@ const FriendsRow = DetailsRow.extend`
   box-shadow: 0px 0px 6px rgba(0, 0, 0, 0.1);
   padding: 0 15px;
 `;
+/* harmony default export */ __webpack_exports__["default"] = (FriendsRow);
 
 /***/ }),
 
@@ -5274,13 +5656,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-redux */ "react-redux");
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_redux__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _FiltersStyled__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./FiltersStyled */ "./pages/containers/Filters/FiltersStyled.js");
-/* harmony import */ var _redux_actions_actions__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./../../../redux/actions/actions */ "./redux/actions/actions.js");
-/* harmony import */ var _components_AutoComplete_AutoComplete__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./../../components/AutoComplete/AutoComplete */ "./pages/components/AutoComplete/AutoComplete.jsx");
-/* harmony import */ var _components_Select_Select__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./../../components/Select/Select */ "./pages/components/Select/Select.jsx");
-/* harmony import */ var _components_OrderBy_OrderBy_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./../../components/OrderBy/OrderBy.js */ "./pages/components/OrderBy/OrderBy.js");
+/* harmony import */ var _redux_actions_actions__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./../../../redux/actions/actions */ "./redux/actions/actions.js");
+/* harmony import */ var _components_AutoComplete_AutoComplete__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./../../components/AutoComplete/AutoComplete */ "./pages/components/AutoComplete/AutoComplete.js");
+/* harmony import */ var _components_Select_Select__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./../../components/Select/Select */ "./pages/components/Select/Select.jsx");
+/* harmony import */ var _components_OrderBy_OrderBy_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./../../components/OrderBy/OrderBy.js */ "./pages/components/OrderBy/OrderBy.js");
+/* harmony import */ var _FormSearchStyled__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./FormSearchStyled */ "./pages/containers/Filters/FormSearchStyled.jsx");
+/* harmony import */ var _FormRowStyled__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./FormRowStyled */ "./pages/containers/Filters/FormRowStyled.jsx");
 var _jsxFileName = "/Users/nicolasfbergues/Desktop/Nico/Trabajo/FrontEnd/nextJsGnomeSearch/pages/containers/Filters/Filters.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
 
 
 
@@ -5298,95 +5682,95 @@ const Filters = props => {
   }
 
   const jobs = Array.from(new Set(getJobs));
-  return __jsx(_FiltersStyled__WEBPACK_IMPORTED_MODULE_2__["FormSearch"], {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 23
-    },
-    __self: undefined
-  }, __jsx(_FiltersStyled__WEBPACK_IMPORTED_MODULE_2__["FormRow"], {
+  return __jsx(_FormSearchStyled__WEBPACK_IMPORTED_MODULE_6__["default"], {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 24
     },
     __self: undefined
-  }, __jsx(_components_OrderBy_OrderBy_js__WEBPACK_IMPORTED_MODULE_6__["default"], {
+  }, __jsx(_FormRowStyled__WEBPACK_IMPORTED_MODULE_7__["default"], {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 25
     },
     __self: undefined
-  }, "Most Friendly"), __jsx(_components_OrderBy_OrderBy_js__WEBPACK_IMPORTED_MODULE_6__["default"], {
+  }, __jsx(_components_OrderBy_OrderBy_js__WEBPACK_IMPORTED_MODULE_5__["default"], {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 26
     },
     __self: undefined
-  }, "Less Friendly"), __jsx(_components_OrderBy_OrderBy_js__WEBPACK_IMPORTED_MODULE_6__["default"], {
+  }, "Most Friendly"), __jsx(_components_OrderBy_OrderBy_js__WEBPACK_IMPORTED_MODULE_5__["default"], {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 27
     },
     __self: undefined
-  }, "Youngest"), __jsx(_components_OrderBy_OrderBy_js__WEBPACK_IMPORTED_MODULE_6__["default"], {
+  }, "Less Friendly"), __jsx(_components_OrderBy_OrderBy_js__WEBPACK_IMPORTED_MODULE_5__["default"], {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 28
     },
     __self: undefined
-  }, "Oldest"), __jsx(_components_OrderBy_OrderBy_js__WEBPACK_IMPORTED_MODULE_6__["default"], {
+  }, "Youngest"), __jsx(_components_OrderBy_OrderBy_js__WEBPACK_IMPORTED_MODULE_5__["default"], {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 29
     },
     __self: undefined
-  }, "Lightest"), __jsx(_components_OrderBy_OrderBy_js__WEBPACK_IMPORTED_MODULE_6__["default"], {
+  }, "Oldest"), __jsx(_components_OrderBy_OrderBy_js__WEBPACK_IMPORTED_MODULE_5__["default"], {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 30
     },
     __self: undefined
-  }, "Heaviest")), __jsx(_FiltersStyled__WEBPACK_IMPORTED_MODULE_2__["FormRow"], {
+  }, "Lightest"), __jsx(_components_OrderBy_OrderBy_js__WEBPACK_IMPORTED_MODULE_5__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 32
+      lineNumber: 31
+    },
+    __self: undefined
+  }, "Heaviest")), __jsx(_FormRowStyled__WEBPACK_IMPORTED_MODULE_7__["default"], {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 33
     },
     __self: undefined
   }), __jsx("div", {
     className: "filterWrappTitles",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 34
-    },
-    __self: undefined
-  }, __jsx("div", {
-    className: "profession",
-    __source: {
-      fileName: _jsxFileName,
       lineNumber: 35
     },
     __self: undefined
-  }, "Search by Name"), __jsx("div", {
+  }, __jsx("div", {
     className: "profession",
     __source: {
       fileName: _jsxFileName,
       lineNumber: 36
     },
     __self: undefined
-  }, "Search by Profession")), __jsx(_FiltersStyled__WEBPACK_IMPORTED_MODULE_2__["FormRow"], {
+  }, "Search by Name"), __jsx("div", {
+    className: "profession",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 38
+      lineNumber: 37
+    },
+    __self: undefined
+  }, "Search by Profession")), __jsx(_FormRowStyled__WEBPACK_IMPORTED_MODULE_7__["default"], {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 39
     },
     __self: undefined
   }, __jsx("div", {
     className: "filterWrapp",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 39
+      lineNumber: 40
     },
     __self: undefined
-  }, __jsx(_components_AutoComplete_AutoComplete__WEBPACK_IMPORTED_MODULE_4__["default"], {
+  }, __jsx(_components_AutoComplete_AutoComplete__WEBPACK_IMPORTED_MODULE_3__["default"], {
     stateName: "searchTerm",
     updateCurrentPage: props.getCurrentPage,
     parentUpdateState: props.getSearchText,
@@ -5398,10 +5782,10 @@ const Filters = props => {
     includeSearchTerm: true,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 40
+      lineNumber: 41
     },
     __self: undefined
-  }), __jsx(_components_Select_Select__WEBPACK_IMPORTED_MODULE_5__["default"], {
+  }), __jsx(_components_Select_Select__WEBPACK_IMPORTED_MODULE_4__["default"], {
     items: jobs && jobs,
     defaultValue: "All Professions",
     stateName: "filteBy",
@@ -5411,7 +5795,7 @@ const Filters = props => {
     state: props,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 52
+      lineNumber: 53
     },
     __self: undefined
   }))));
@@ -5423,25 +5807,47 @@ function mapStateToProps(state) {
   };
 }
 
-/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_1__["connect"])(mapStateToProps, _redux_actions_actions__WEBPACK_IMPORTED_MODULE_3__)(Filters));
+/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_1__["connect"])(mapStateToProps, _redux_actions_actions__WEBPACK_IMPORTED_MODULE_2__)(Filters));
 
 /***/ }),
 
-/***/ "./pages/containers/Filters/FiltersStyled.js":
-/*!***************************************************!*\
-  !*** ./pages/containers/Filters/FiltersStyled.js ***!
-  \***************************************************/
-/*! exports provided: FormSearch, FormRow */
+/***/ "./pages/containers/Filters/FormRowStyled.jsx":
+/*!****************************************************!*\
+  !*** ./pages/containers/Filters/FormRowStyled.jsx ***!
+  \****************************************************/
+/*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "FormSearch", function() { return FormSearch; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "FormRow", function() { return FormRow; });
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! styled-components */ "styled-components");
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _Home_HomeStyled__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./../Home/HomeStyled */ "./pages/containers/Home/HomeStyled.jsx");
+/* harmony import */ var _Home_HomeWrapperStyled__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./../Home/HomeWrapperStyled */ "./pages/containers/Home/HomeWrapperStyled.jsx");
 
+
+const FormRow = _Home_HomeWrapperStyled__WEBPACK_IMPORTED_MODULE_1__["default"].withComponent("div").extend`
+  background: inherit;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 0;
+  width: 100%;
+`;
+/* harmony default export */ __webpack_exports__["default"] = (FormRow);
+
+/***/ }),
+
+/***/ "./pages/containers/Filters/FormSearchStyled.jsx":
+/*!*******************************************************!*\
+  !*** ./pages/containers/Filters/FormSearchStyled.jsx ***!
+  \*******************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! styled-components */ "styled-components");
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_0__);
 
 const FormSearch = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.div`
   display: block;
@@ -5467,16 +5873,7 @@ const FormSearch = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.div`
     padding-bottom: 4px;
   }
 `;
-const FormRow = _Home_HomeStyled__WEBPACK_IMPORTED_MODULE_1__["HomeWrapper"].withComponent("div").extend`
-  background: inherit;
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  margin: 0;
-  width: 100%;
-
-
-`;
+/* harmony default export */ __webpack_exports__["default"] = (FormSearch);
 
 /***/ }),
 
@@ -5519,7 +5916,7 @@ const Header = () => __jsx(_HeaderStyled__WEBPACK_IMPORTED_MODULE_2__["default"]
     lineNumber: 8
   },
   __self: undefined
-}, "gnomo-matic-search")));
+}, "gnomo-matic-gender-search")));
 
 /* harmony default export */ __webpack_exports__["default"] = (Header);
 
@@ -5551,8 +5948,8 @@ const HeaderComponent = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a
 
       color: #eceeee;
       text-decoration: none;
-      letter-spacing: 10px;
-      font-size: 1.8em;
+      letter-spacing: 6px;
+      font-size: 1.7em;
   }
 
   div.row {
@@ -5586,13 +5983,15 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-redux */ "react-redux");
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react_redux__WEBPACK_IMPORTED_MODULE_3__);
 /* harmony import */ var _Filters_Filters__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./../Filters/Filters */ "./pages/containers/Filters/Filters.js");
-/* harmony import */ var _components_Card_Card__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./../../components/Card/Card */ "./pages/components/Card/Card.jsx");
+/* harmony import */ var _components_Card_Card__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./../../components/Card/Card */ "./pages/components/Card/Card.js");
 /* harmony import */ var _redux_actions_actions__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./../../../redux/actions/actions */ "./redux/actions/actions.js");
-/* harmony import */ var _HomeStyled__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./HomeStyled */ "./pages/containers/Home/HomeStyled.jsx");
-/* harmony import */ var _side_Pagination_Pagination__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./../../../side/Pagination/Pagination */ "./side/Pagination/Pagination.jsx");
-/* harmony import */ var _utils__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./../../../utils */ "./utils.js");
+/* harmony import */ var _components_Pagination_Pagination__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./../../components/Pagination/Pagination */ "./pages/components/Pagination/Pagination.js");
+/* harmony import */ var _utils__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./../../../utils */ "./utils.js");
+/* harmony import */ var _HomeRowStyled__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./HomeRowStyled */ "./pages/containers/Home/HomeRowStyled.jsx");
+/* harmony import */ var _HomeWrapperStyled__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./HomeWrapperStyled */ "./pages/containers/Home/HomeWrapperStyled.jsx");
 var _jsxFileName = "/Users/nicolasfbergues/Desktop/Nico/Trabajo/FrontEnd/nextJsGnomeSearch/pages/containers/Home/Home.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
 
 
 
@@ -5611,7 +6010,7 @@ const Home = props => {
     orderByFilter,
     currentPage
   } = props;
-  const searchFilters = Object(_utils__WEBPACK_IMPORTED_MODULE_9__["filterGnomesBy"])(gnomes, orderByFilter).filter(gnome => {
+  const searchFilters = Object(_utils__WEBPACK_IMPORTED_MODULE_8__["filterGnomesBy"])(gnomes, orderByFilter).filter(gnome => {
     const isJob = gnome.professions.find(profession => profession === props.filterBy);
     const hasProfession = gnome.professions.some(profession => profession === isJob);
     return props.filterBy === "All" ? gnome : hasProfession;
@@ -5619,22 +6018,22 @@ const Home = props => {
     const search = gnome.name.toLowerCase().indexOf(searchTerm.toLowerCase()) >= 0;
     return search;
   });
-  return __jsx(_HomeStyled__WEBPACK_IMPORTED_MODULE_7__["HomeWrapper"], {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 39
-    },
-    __self: undefined
-  }, __jsx(react_helmet__WEBPACK_IMPORTED_MODULE_1__["Helmet"], {
+  return __jsx(_HomeWrapperStyled__WEBPACK_IMPORTED_MODULE_10__["default"], {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 40
     },
     __self: undefined
-  }, __jsx("title", {
+  }, __jsx(react_helmet__WEBPACK_IMPORTED_MODULE_1__["Helmet"], {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 41
+    },
+    __self: undefined
+  }, __jsx("title", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 42
     },
     __self: undefined
   }, "Nicolas Bergues"), __jsx("link", {
@@ -5642,7 +6041,7 @@ const Home = props => {
     href: "favicon.ico",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 42
+      lineNumber: 43
     },
     __self: undefined
   }), __jsx("meta", {
@@ -5650,34 +6049,34 @@ const Home = props => {
     content: "Assesment App",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 43
+      lineNumber: 44
     },
     __self: undefined
-  })), __jsx(_HomeStyled__WEBPACK_IMPORTED_MODULE_7__["HomeRow"], {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 48
-    },
-    __self: undefined
-  }, __jsx(_Filters_Filters__WEBPACK_IMPORTED_MODULE_4__["default"], {
+  })), __jsx(_HomeRowStyled__WEBPACK_IMPORTED_MODULE_9__["default"], {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 49
     },
     __self: undefined
-  })), __jsx(_side_Pagination_Pagination__WEBPACK_IMPORTED_MODULE_8__["default"], {
-    page: currentPage,
-    updateGlobalState: props.getCurrentPage,
-    maxPages: Math.floor(searchFilters.length / _utils__WEBPACK_IMPORTED_MODULE_9__["itemsByPage"]),
+  }, __jsx(_Filters_Filters__WEBPACK_IMPORTED_MODULE_4__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 51
+      lineNumber: 50
     },
     __self: undefined
-  }), __jsx(_HomeStyled__WEBPACK_IMPORTED_MODULE_7__["HomeRow"], {
+  })), __jsx(_components_Pagination_Pagination__WEBPACK_IMPORTED_MODULE_7__["default"], {
+    page: currentPage,
+    updateGlobalState: props.getCurrentPage,
+    maxPages: Math.floor(searchFilters.length / _utils__WEBPACK_IMPORTED_MODULE_8__["itemsByPage"]),
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 56
+      lineNumber: 52
+    },
+    __self: undefined
+  }), __jsx(_HomeRowStyled__WEBPACK_IMPORTED_MODULE_9__["default"], {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 57
     },
     __self: undefined
   }, __jsx(react_transition_group__WEBPACK_IMPORTED_MODULE_2__["TransitionGroup"], {
@@ -5685,16 +6084,16 @@ const Home = props => {
     in: true,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 57
+      lineNumber: 58
     },
     __self: undefined
-  }, searchFilters.length > 0 ? searchFilters.slice(_utils__WEBPACK_IMPORTED_MODULE_9__["itemsByPage"] * currentPage, _utils__WEBPACK_IMPORTED_MODULE_9__["itemsByPage"] + currentPage * _utils__WEBPACK_IMPORTED_MODULE_9__["itemsByPage"]).map(gnome => __jsx(react_transition_group__WEBPACK_IMPORTED_MODULE_2__["CSSTransition"], {
+  }, searchFilters.length > 0 ? searchFilters.slice(_utils__WEBPACK_IMPORTED_MODULE_8__["itemsByPage"] * currentPage, _utils__WEBPACK_IMPORTED_MODULE_8__["itemsByPage"] + currentPage * _utils__WEBPACK_IMPORTED_MODULE_8__["itemsByPage"]).map(gnome => __jsx(react_transition_group__WEBPACK_IMPORTED_MODULE_2__["CSSTransition"], {
     key: gnome.id,
     timeout: 500,
     classNames: "item",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 65
+      lineNumber: 66
     },
     __self: undefined
   }, __jsx(_components_Card_Card__WEBPACK_IMPORTED_MODULE_5__["default"], {
@@ -5703,7 +6102,7 @@ const Home = props => {
     to: `${gnome.id}-${gnome.name.split(" ").join("-")}`,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 66
+      lineNumber: 67
     },
     __self: undefined
   }))) : __jsx(react_transition_group__WEBPACK_IMPORTED_MODULE_2__["CSSTransition"], {
@@ -5711,23 +6110,23 @@ const Home = props => {
     classNames: "item",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 73
+      lineNumber: 74
     },
     __self: undefined
   }, __jsx("div", {
     className: "notFound",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 74
+      lineNumber: 75
     },
     __self: undefined
-  }, searchFilters.length, " no gnomes founded for current search")))), __jsx(_side_Pagination_Pagination__WEBPACK_IMPORTED_MODULE_8__["default"], {
+  }, searchFilters.length, " no gnomes founded for current search")))), __jsx(_components_Pagination_Pagination__WEBPACK_IMPORTED_MODULE_7__["default"], {
     page: currentPage,
     updateGlobalState: props.getCurrentPage,
-    maxPages: Math.floor(searchFilters.length / _utils__WEBPACK_IMPORTED_MODULE_9__["itemsByPage"]),
+    maxPages: Math.floor(searchFilters.length / _utils__WEBPACK_IMPORTED_MODULE_8__["itemsByPage"]),
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 80
+      lineNumber: 81
     },
     __self: undefined
   }));
@@ -5747,29 +6146,18 @@ function mapStateToProps(state) {
 
 /***/ }),
 
-/***/ "./pages/containers/Home/HomeStyled.jsx":
-/*!**********************************************!*\
-  !*** ./pages/containers/Home/HomeStyled.jsx ***!
-  \**********************************************/
-/*! exports provided: HomeWrapper, HomeRow */
+/***/ "./pages/containers/Home/HomeRowStyled.jsx":
+/*!*************************************************!*\
+  !*** ./pages/containers/Home/HomeRowStyled.jsx ***!
+  \*************************************************/
+/*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "HomeWrapper", function() { return HomeWrapper; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "HomeRow", function() { return HomeRow; });
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! styled-components */ "styled-components");
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_0__);
 
-const HomeWrapper = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.main`
-  margin: 10px auto;
-  max-width: 900px;
-  position: relative;
-
-  @media (max-width: 990px) {
-    max-width: 610px;
-  }
-`;
 const HomeRow = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.div`
   background: #fff;
   border-radius: 5px;
@@ -5838,6 +6226,32 @@ div.item-leave.item-leave-active {
     justify-content: flex-start;
   }
 `;
+/* harmony default export */ __webpack_exports__["default"] = (HomeRow);
+
+/***/ }),
+
+/***/ "./pages/containers/Home/HomeWrapperStyled.jsx":
+/*!*****************************************************!*\
+  !*** ./pages/containers/Home/HomeWrapperStyled.jsx ***!
+  \*****************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! styled-components */ "styled-components");
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_0__);
+
+const HomeWrapper = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.main`
+  margin: 10px auto;
+  max-width: 900px;
+  position: relative;
+
+  @media (max-width: 990px) {
+    max-width: 610px;
+  }
+`;
+/* harmony default export */ __webpack_exports__["default"] = (HomeWrapper);
 
 /***/ }),
 
@@ -6359,186 +6773,6 @@ const configure = (initialState = initialValues) => {
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (configure);
-
-/***/ }),
-
-/***/ "./side/Pagination/Pagination.jsx":
-/*!****************************************!*\
-  !*** ./side/Pagination/Pagination.jsx ***!
-  \****************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _PaginationStyled__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./PaginationStyled */ "./side/Pagination/PaginationStyled.jsx");
-var _jsxFileName = "/Users/nicolasfbergues/Desktop/Nico/Trabajo/FrontEnd/nextJsGnomeSearch/side/Pagination/Pagination.jsx";
-var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
-
- //import { itemsByPage, getCurrentPageGenderFormat } from "./../../utils";
-
-const nextButtonValue = "Next";
-const previousButtonValue = "Previous";
-
-const Pagination = ({
-  page,
-  updateGlobalState,
-  maxPages
-}) => //const callGenderLocal = callGender;
-//const propsGenderLocal = propsGender;
-__jsx(_PaginationStyled__WEBPACK_IMPORTED_MODULE_1__["PaginationWrapper"], {
-  __source: {
-    fileName: _jsxFileName,
-    lineNumber: 12
-  },
-  __self: undefined
-}, __jsx(_PaginationStyled__WEBPACK_IMPORTED_MODULE_1__["PaginationBtn"], {
-  disableStyle: page <= 0,
-  page: page,
-  onClick: Pagination.onClick(page, updateGlobalState, maxPages),
-  __source: {
-    fileName: _jsxFileName,
-    lineNumber: 13
-  },
-  __self: undefined
-}, "Previous"), __jsx("span", {
-  className: "current-page",
-  __source: {
-    fileName: _jsxFileName,
-    lineNumber: 20
-  },
-  __self: undefined
-}, "Page: ", page + 1, " / ", maxPages + 1), __jsx(_PaginationStyled__WEBPACK_IMPORTED_MODULE_1__["PaginationBtn"], {
-  disableStyle: page >= maxPages,
-  page: page,
-  onClick: Pagination.onClick(page, updateGlobalState, maxPages),
-  __source: {
-    fileName: _jsxFileName,
-    lineNumber: 21
-  },
-  __self: undefined
-}, "Next"));
-
-Pagination.onClick = (page, updateGlobalState, maxPages) => (event = event.currentTarget) => {
-  event.preventDefault();
-  window.scroll(null, 0);
-  const btnName = event.currentTarget.textContent.toLowerCase();
-  /*let format;
-   const setDirection = (direction) =>{
-         let updatedPageNext = page + 1;
-        let updatedPagePrevious = page  - 1;
-        const paginationDirection = direction == "next" ? updatedPageNext : updatedPagePrevious;
-         const gnomeNames = gnomes.map(gnome => gnome.name)
-        const pageGnomes = gnomeNames.slice(
-        itemsByPage * paginationDirection,
-        itemsByPage + paginationDirection * itemsByPage
-        )
-         pageGnomes.map(gnome => (
-          gnome => gnome.name
-        ))
-           const getFirstName = arr =>{
-            var arrCroped = [];
-              for(var a=0; a<arr.length; a++){
-                 var corte = arr[a].indexOf(" ");
-                arrCroped[a] = arr[a].substr(0, corte);
-              }
-              function removeDuplicates(array) {
-                return array.filter((a, b) => array.indexOf(a) === b)
-              };
-              return removeDuplicates(arrCroped);
-          }
-           const justRenderedPageNames = getFirstName(pageGnomes);
-           const parseToService = arrToFormat =>{
-            var arrayFormated = [];
-               for(var b=0; b<arrToFormat.length; b++){
-                arrayFormated[b] = "name[]="+arrToFormat[b];
-              }
-               return arrayFormated;
-           }
-           format = parseToService(justRenderedPageNames).toString().replace(/,/g, "&");
-   }*/
-
-  if (btnName === nextButtonValue.toLowerCase()) {
-    const nextPage = page + 1;
-
-    if (page !== maxPages) {
-      updateGlobalState(nextPage); //setDirection("next")
-      //callGender(format);
-    }
-  } else if (btnName === previousButtonValue.toLowerCase()) {
-    const previousPage = page - 1;
-
-    if (page > 0) {
-      updateGlobalState(previousPage); //setDirection("previous")
-      //callGender(format);
-    }
-  }
-};
-
-Pagination.defaultProps = {
-  page: false
-};
-/* harmony default export */ __webpack_exports__["default"] = (Pagination);
-
-/***/ }),
-
-/***/ "./side/Pagination/PaginationStyled.jsx":
-/*!**********************************************!*\
-  !*** ./side/Pagination/PaginationStyled.jsx ***!
-  \**********************************************/
-/*! exports provided: PaginationWrapper, PaginationBtn */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PaginationWrapper", function() { return PaginationWrapper; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PaginationBtn", function() { return PaginationBtn; });
-/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! styled-components */ "styled-components");
-/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_0__);
-
-const PaginationWrapper = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.div`
-  align-items: center;
-  display: flex;
-  justify-content: space-between;
-  position: relative;
-  left: 40px;
-  max-width: 820px;
-  width: 90%;
-
-  & .current-page {
-    font-size: 0.95rem;
-    font-weight: bold;
-    text-align: center;
-    color: #80cf86;
-  }
-`;
-const PaginationBtn = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.button`
-  background: ${({
-  disableStyle
-}) => disableStyle ? "none" : "#80cf86"}
-  color: ${({
-  disableStyle
-}) => disableStyle ? "transparent" : "#fff"};
-  cursor: ${({
-  disableStyle
-}) => disableStyle ? "context-menu" : "pointer"};
-  font-size: 0.9rem;
-  width: 80%;
-  max-width: 140px;
-  padding: 6px 0;
-  text-align: center;
-
-  &:hover {
-    background: ${({
-  disableStyle
-}) => disableStyle ? "transparent" : "##e74142"}
-  }
-  &:focus {
-    outline:none;
-  }
-`;
 
 /***/ }),
 
