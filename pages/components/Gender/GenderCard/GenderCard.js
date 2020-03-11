@@ -19,8 +19,8 @@ const GenderCard = (props) => {
     return isFemale;
   }
 
-  if(props.gender.length > 0){
-      if(props.gender[0].gender){
+  if(props.gender && props.gender.length > 0){
+      if(props.gender && props.gender[0].gender){
       return(
         <GenderResult>
           <div className="column">

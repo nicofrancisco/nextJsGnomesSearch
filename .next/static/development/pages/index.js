@@ -27057,8 +27057,8 @@ var GenderCard = function GenderCard(props) {
     return isFemale;
   };
 
-  if (props.gender.length > 0) {
-    if (props.gender[0].gender) {
+  if (props.gender && props.gender.length > 0) {
+    if (props.gender && props.gender[0].gender) {
       return __jsx(_GenderCardStyles__WEBPACK_IMPORTED_MODULE_1__["default"], {
         __source: {
           fileName: _jsxFileName,
