@@ -27,7 +27,7 @@ npm run dev
 visit http://localhost:3000 in browser
 
 ## How to use
-Visit..
+https://testgnomes.herokuapp.com/
 
 ## Stack
 - NexJS
