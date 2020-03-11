@@ -13,10 +13,10 @@ const Select = ({
 }) => (
   <SelectComponent maxWidth={maxWidth}>
     <select
-      value={state[stateName] && state[stateName]}
+      value={state && state[stateName] && state[stateName]}
       onChange={Select.onChange(updateState, updateCurrentPage)}
     >
-      {[defaultValue, ...items].map(item => (
+      {defaultValue && [defaultValue, ...items].map(item => (
         <option
           value={item}
           key={item}

@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 3);
+/******/ 	return __webpack_require__(__webpack_require__.s = 4);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -3431,7 +3431,7 @@ const Card = ({
     lineNumber: 23
   },
   __self: undefined
-}, gnome.professions.length > 0 ? gnome.professions.join(" • ") : "No Profession")), !hideFriendButton ? __jsx(_Modal_Modal_js__WEBPACK_IMPORTED_MODULE_2__["default"], {
+}, gnome && gnome.professions.length > 0 ? gnome.professions.join(" • ") : "No Profession")), !hideFriendButton ? __jsx(_Modal_Modal_js__WEBPACK_IMPORTED_MODULE_2__["default"], {
   label: "View Friends",
   gnomes: gnome,
   to: to,
@@ -3802,7 +3802,7 @@ const DetailsInfo = ({
     lineNumber: 19
   },
   __self: undefined
-}, gnome.professions.length > 0 ? gnome.professions.join(" || ") : "No Profession")), __jsx(_InfoStyles__WEBPACK_IMPORTED_MODULE_4__["default"], {
+}, gnome && gnome.professions.length > 0 ? gnome.professions.join(" || ") : "No Profession")), __jsx(_InfoStyles__WEBPACK_IMPORTED_MODULE_4__["default"], {
   __source: {
     fileName: _jsxFileName,
     lineNumber: 25
@@ -5364,14 +5364,14 @@ const Select = ({
   },
   __self: undefined
 }, __jsx("select", {
-  value: state[stateName] && state[stateName],
+  value: state && state[stateName] && state[stateName],
   onChange: Select.onChange(updateState, updateCurrentPage),
   __source: {
     fileName: _jsxFileName,
     lineNumber: 15
   },
   __self: undefined
-}, [defaultValue, ...items].map(item => __jsx("option", {
+}, defaultValue && [defaultValue, ...items].map(item => __jsx("option", {
   value: item,
   key: item,
   defaultChecked: state[stateName] === item,
@@ -6932,7 +6932,7 @@ function filterGnomesBy(array, orderByFilter) {
 
 /***/ }),
 
-/***/ 3:
+/***/ 4:
 /*!******************************!*\
   !*** multi ./pages/index.js ***!
   \******************************/

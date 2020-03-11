@@ -17,7 +17,7 @@ const DetailsInfo = ({ gnome }) => (
     <header className="description">
       <h2>{gnome && gnome.name}</h2>
       <div>
-        {gnome.professions.length > 0
+        {gnome && gnome.professions.length > 0
           ? gnome.professions.join(" || ")
           : "No Profession"}
       </div>

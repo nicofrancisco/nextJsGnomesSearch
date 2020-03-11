@@ -26194,7 +26194,7 @@ var Card = function Card(_ref) {
       lineNumber: 23
     },
     __self: this
-  }, gnome.professions.length > 0 ? gnome.professions.join(" • ") : "No Profession")), !hideFriendButton ? __jsx(_Modal_Modal_js__WEBPACK_IMPORTED_MODULE_2__["default"], {
+  }, gnome && gnome.professions.length > 0 ? gnome.professions.join(" • ") : "No Profession")), !hideFriendButton ? __jsx(_Modal_Modal_js__WEBPACK_IMPORTED_MODULE_2__["default"], {
     label: "View Friends",
     gnomes: gnome,
     to: to,
@@ -26513,7 +26513,7 @@ var DetailsInfo = function DetailsInfo(_ref) {
       lineNumber: 19
     },
     __self: this
-  }, gnome.professions.length > 0 ? gnome.professions.join(" || ") : "No Profession")), __jsx(_InfoStyles__WEBPACK_IMPORTED_MODULE_4__["default"], {
+  }, gnome && gnome.professions.length > 0 ? gnome.professions.join(" || ") : "No Profession")), __jsx(_InfoStyles__WEBPACK_IMPORTED_MODULE_4__["default"], {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 25
@@ -27879,14 +27879,14 @@ var Select = function Select(_ref) {
     },
     __self: this
   }, __jsx("select", {
-    value: state[stateName] && state[stateName],
+    value: state && state[stateName] && state[stateName],
     onChange: Select.onChange(updateState, updateCurrentPage),
     __source: {
       fileName: _jsxFileName,
       lineNumber: 15
     },
     __self: this
-  }, [defaultValue].concat(Object(_babel_runtime_corejs2_helpers_esm_toConsumableArray__WEBPACK_IMPORTED_MODULE_0__["default"])(items)).map(function (item) {
+  }, defaultValue && [defaultValue].concat(Object(_babel_runtime_corejs2_helpers_esm_toConsumableArray__WEBPACK_IMPORTED_MODULE_0__["default"])(items)).map(function (item) {
     return __jsx("option", {
       value: item,
       key: item,
@@ -29500,7 +29500,7 @@ function filterGnomesBy(array, orderByFilter) {
 
 /***/ }),
 
-/***/ 1:
+/***/ 2:
 /*!************************************************************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2F&absolutePagePath=%2FUsers%2Fnicolasfbergues%2FDesktop%2FNico%2FTrabajo%2FFrontEnd%2FnextJsGnomeSearch%2Fpages%2Findex.js ***!
   \************************************************************************************************************************************************************************/
@@ -29523,5 +29523,5 @@ module.exports = dll_7f5f45f4949be37212eb;
 
 /***/ })
 
-},[[1,"static/runtime/webpack.js"]]]);
+},[[2,"static/runtime/webpack.js"]]]);
 //# sourceMappingURL=index.js.map
