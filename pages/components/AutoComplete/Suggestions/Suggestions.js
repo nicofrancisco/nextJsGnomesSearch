@@ -17,7 +17,7 @@ const Suggestions = ({
     maxWidth={maxWidth}
   >
     <ul className="suggestions-list">
-      {suggestedItems.map(autoCompleteItem => (
+      {suggestedItems ? suggestedItems.map( autoCompleteItem => (
         <Suggestion
           key={autoCompleteItem}
           onClick={Suggestions.selectCompletion(
@@ -35,7 +35,7 @@ const Suggestions = ({
         >
           {autoCompleteItem}
         </Suggestion>
-      ))}
+      )) : <div></div>}
     </ul>
   </ItemSuggestions>
 );
