@@ -6,14 +6,14 @@ import Filters from "./../Filters/Filters";
 import Card from "./../../components/Card/Card";
 import * as actions from "./../../../redux/actions/actions";
 import { HomeRow, HomeWrapper } from "./HomeStyled";
-import Pagination from "./../../components/Pagination/Pagination";
+import Pagination from "./../../../side/Pagination/Pagination";
 import { filterGnomesBy, itemsByPage} from "./../../../utils";
 
 
 const Home = (props) => {
 
   const { searchTerm, gnomes, orderByFilter, currentPage} = props;
-  
+
 
   const searchFilters = filterGnomesBy(gnomes, orderByFilter)
     .filter(gnome => {

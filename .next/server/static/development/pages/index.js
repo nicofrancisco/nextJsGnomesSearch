@@ -4994,186 +4994,6 @@ const OrderButton = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.but
 
 /***/ }),
 
-/***/ "./pages/components/Pagination/Pagination.jsx":
-/*!****************************************************!*\
-  !*** ./pages/components/Pagination/Pagination.jsx ***!
-  \****************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _PaginationStyled__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./PaginationStyled */ "./pages/components/Pagination/PaginationStyled.jsx");
-var _jsxFileName = "/Users/nicolasfbergues/Desktop/Nico/Trabajo/FrontEnd/nextJsGnomeSearch/pages/components/Pagination/Pagination.jsx";
-var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
-
- //import { itemsByPage, getCurrentPageGenderFormat } from "./../../utils";
-
-const nextButtonValue = "Next";
-const previousButtonValue = "Previous";
-
-const Pagination = ({
-  page,
-  updateGlobalState,
-  maxPages
-}) => //const callGenderLocal = callGender;
-//const propsGenderLocal = propsGender;
-__jsx(_PaginationStyled__WEBPACK_IMPORTED_MODULE_1__["PaginationWrapper"], {
-  __source: {
-    fileName: _jsxFileName,
-    lineNumber: 12
-  },
-  __self: undefined
-}, __jsx(_PaginationStyled__WEBPACK_IMPORTED_MODULE_1__["PaginationBtn"], {
-  disableStyle: page <= 0,
-  page: page,
-  onClick: Pagination.onClick(page, updateGlobalState, maxPages),
-  __source: {
-    fileName: _jsxFileName,
-    lineNumber: 13
-  },
-  __self: undefined
-}, "Previous"), __jsx("span", {
-  className: "current-page",
-  __source: {
-    fileName: _jsxFileName,
-    lineNumber: 20
-  },
-  __self: undefined
-}, "Page: ", page + 1, " / ", maxPages + 1), __jsx(_PaginationStyled__WEBPACK_IMPORTED_MODULE_1__["PaginationBtn"], {
-  disableStyle: page >= maxPages,
-  page: page,
-  onClick: Pagination.onClick(page, updateGlobalState, maxPages),
-  __source: {
-    fileName: _jsxFileName,
-    lineNumber: 21
-  },
-  __self: undefined
-}, "Next"));
-
-Pagination.onClick = (page, updateGlobalState, maxPages) => (event = event.currentTarget) => {
-  event.preventDefault();
-  window.scroll(null, 0);
-  const btnName = event.currentTarget.textContent.toLowerCase();
-  /*let format;
-   const setDirection = (direction) =>{
-         let updatedPageNext = page + 1;
-        let updatedPagePrevious = page  - 1;
-        const paginationDirection = direction == "next" ? updatedPageNext : updatedPagePrevious;
-         const gnomeNames = gnomes.map(gnome => gnome.name)
-        const pageGnomes = gnomeNames.slice(
-        itemsByPage * paginationDirection,
-        itemsByPage + paginationDirection * itemsByPage
-        )
-         pageGnomes.map(gnome => (
-          gnome => gnome.name
-        ))
-           const getFirstName = arr =>{
-            var arrCroped = [];
-              for(var a=0; a<arr.length; a++){
-                 var corte = arr[a].indexOf(" ");
-                arrCroped[a] = arr[a].substr(0, corte);
-              }
-              function removeDuplicates(array) {
-                return array.filter((a, b) => array.indexOf(a) === b)
-              };
-              return removeDuplicates(arrCroped);
-          }
-           const justRenderedPageNames = getFirstName(pageGnomes);
-           const parseToService = arrToFormat =>{
-            var arrayFormated = [];
-               for(var b=0; b<arrToFormat.length; b++){
-                arrayFormated[b] = "name[]="+arrToFormat[b];
-              }
-               return arrayFormated;
-           }
-           format = parseToService(justRenderedPageNames).toString().replace(/,/g, "&");
-   }*/
-
-  if (btnName === nextButtonValue.toLowerCase()) {
-    const nextPage = page + 1;
-
-    if (page !== maxPages) {
-      updateGlobalState(nextPage); //setDirection("next")
-      //callGender(format);
-    }
-  } else if (btnName === previousButtonValue.toLowerCase()) {
-    const previousPage = page - 1;
-
-    if (page > 0) {
-      updateGlobalState(previousPage); //setDirection("previous")
-      //callGender(format);
-    }
-  }
-};
-
-Pagination.defaultProps = {
-  page: false
-};
-/* harmony default export */ __webpack_exports__["default"] = (Pagination);
-
-/***/ }),
-
-/***/ "./pages/components/Pagination/PaginationStyled.jsx":
-/*!**********************************************************!*\
-  !*** ./pages/components/Pagination/PaginationStyled.jsx ***!
-  \**********************************************************/
-/*! exports provided: PaginationWrapper, PaginationBtn */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PaginationWrapper", function() { return PaginationWrapper; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PaginationBtn", function() { return PaginationBtn; });
-/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! styled-components */ "styled-components");
-/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_0__);
-
-const PaginationWrapper = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.div`
-  align-items: center;
-  display: flex;
-  justify-content: space-between;
-  position: relative;
-  left: 40px;
-  max-width: 820px;
-  width: 90%;
-
-  & .current-page {
-    font-size: 0.95rem;
-    font-weight: bold;
-    text-align: center;
-    color: #80cf86;
-  }
-`;
-const PaginationBtn = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.button`
-  background: ${({
-  disableStyle
-}) => disableStyle ? "none" : "#80cf86"}
-  color: ${({
-  disableStyle
-}) => disableStyle ? "transparent" : "#fff"};
-  cursor: ${({
-  disableStyle
-}) => disableStyle ? "context-menu" : "pointer"};
-  font-size: 0.9rem;
-  width: 80%;
-  max-width: 140px;
-  padding: 6px 0;
-  text-align: center;
-
-  &:hover {
-    background: ${({
-  disableStyle
-}) => disableStyle ? "transparent" : "##e74142"}
-  }
-  &:focus {
-    outline:none;
-  }
-`;
-
-/***/ }),
-
 /***/ "./pages/components/Select/Select.jsx":
 /*!********************************************!*\
   !*** ./pages/components/Select/Select.jsx ***!
@@ -5441,10 +5261,10 @@ const FriendsRow = DetailsRow.extend`
 
 /***/ }),
 
-/***/ "./pages/containers/Filters/Filters.jsx":
-/*!**********************************************!*\
-  !*** ./pages/containers/Filters/Filters.jsx ***!
-  \**********************************************/
+/***/ "./pages/containers/Filters/Filters.js":
+/*!*********************************************!*\
+  !*** ./pages/containers/Filters/Filters.js ***!
+  \*********************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -5454,12 +5274,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-redux */ "react-redux");
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_redux__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _FiltersStyled__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./FiltersStyled */ "./pages/containers/Filters/FiltersStyled.jsx");
+/* harmony import */ var _FiltersStyled__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./FiltersStyled */ "./pages/containers/Filters/FiltersStyled.js");
 /* harmony import */ var _redux_actions_actions__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./../../../redux/actions/actions */ "./redux/actions/actions.js");
 /* harmony import */ var _components_AutoComplete_AutoComplete__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./../../components/AutoComplete/AutoComplete */ "./pages/components/AutoComplete/AutoComplete.jsx");
 /* harmony import */ var _components_Select_Select__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./../../components/Select/Select */ "./pages/components/Select/Select.jsx");
 /* harmony import */ var _components_OrderBy_OrderBy_js__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./../../components/OrderBy/OrderBy.js */ "./pages/components/OrderBy/OrderBy.js");
-var _jsxFileName = "/Users/nicolasfbergues/Desktop/Nico/Trabajo/FrontEnd/nextJsGnomeSearch/pages/containers/Filters/Filters.jsx";
+var _jsxFileName = "/Users/nicolasfbergues/Desktop/Nico/Trabajo/FrontEnd/nextJsGnomeSearch/pages/containers/Filters/Filters.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
@@ -5607,10 +5427,10 @@ function mapStateToProps(state) {
 
 /***/ }),
 
-/***/ "./pages/containers/Filters/FiltersStyled.jsx":
-/*!****************************************************!*\
-  !*** ./pages/containers/Filters/FiltersStyled.jsx ***!
-  \****************************************************/
+/***/ "./pages/containers/Filters/FiltersStyled.js":
+/*!***************************************************!*\
+  !*** ./pages/containers/Filters/FiltersStyled.js ***!
+  \***************************************************/
 /*! exports provided: FormSearch, FormRow */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -5765,11 +5585,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_transition_group__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react_transition_group__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-redux */ "react-redux");
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_3___default = /*#__PURE__*/__webpack_require__.n(react_redux__WEBPACK_IMPORTED_MODULE_3__);
-/* harmony import */ var _Filters_Filters__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./../Filters/Filters */ "./pages/containers/Filters/Filters.jsx");
+/* harmony import */ var _Filters_Filters__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./../Filters/Filters */ "./pages/containers/Filters/Filters.js");
 /* harmony import */ var _components_Card_Card__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./../../components/Card/Card */ "./pages/components/Card/Card.jsx");
 /* harmony import */ var _redux_actions_actions__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./../../../redux/actions/actions */ "./redux/actions/actions.js");
 /* harmony import */ var _HomeStyled__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./HomeStyled */ "./pages/containers/Home/HomeStyled.jsx");
-/* harmony import */ var _components_Pagination_Pagination__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./../../components/Pagination/Pagination */ "./pages/components/Pagination/Pagination.jsx");
+/* harmony import */ var _side_Pagination_Pagination__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./../../../side/Pagination/Pagination */ "./side/Pagination/Pagination.jsx");
 /* harmony import */ var _utils__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./../../../utils */ "./utils.js");
 var _jsxFileName = "/Users/nicolasfbergues/Desktop/Nico/Trabajo/FrontEnd/nextJsGnomeSearch/pages/containers/Home/Home.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
@@ -5845,7 +5665,7 @@ const Home = props => {
       lineNumber: 49
     },
     __self: undefined
-  })), __jsx(_components_Pagination_Pagination__WEBPACK_IMPORTED_MODULE_8__["default"], {
+  })), __jsx(_side_Pagination_Pagination__WEBPACK_IMPORTED_MODULE_8__["default"], {
     page: currentPage,
     updateGlobalState: props.getCurrentPage,
     maxPages: Math.floor(searchFilters.length / _utils__WEBPACK_IMPORTED_MODULE_9__["itemsByPage"]),
@@ -5901,7 +5721,7 @@ const Home = props => {
       lineNumber: 74
     },
     __self: undefined
-  }, searchFilters.length, " no gnomes founded for current search")))), __jsx(_components_Pagination_Pagination__WEBPACK_IMPORTED_MODULE_8__["default"], {
+  }, searchFilters.length, " no gnomes founded for current search")))), __jsx(_side_Pagination_Pagination__WEBPACK_IMPORTED_MODULE_8__["default"], {
     page: currentPage,
     updateGlobalState: props.getCurrentPage,
     maxPages: Math.floor(searchFilters.length / _utils__WEBPACK_IMPORTED_MODULE_9__["itemsByPage"]),
@@ -6539,6 +6359,186 @@ const configure = (initialState = initialValues) => {
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (configure);
+
+/***/ }),
+
+/***/ "./side/Pagination/Pagination.jsx":
+/*!****************************************!*\
+  !*** ./side/Pagination/Pagination.jsx ***!
+  \****************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _PaginationStyled__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./PaginationStyled */ "./side/Pagination/PaginationStyled.jsx");
+var _jsxFileName = "/Users/nicolasfbergues/Desktop/Nico/Trabajo/FrontEnd/nextJsGnomeSearch/side/Pagination/Pagination.jsx";
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
+ //import { itemsByPage, getCurrentPageGenderFormat } from "./../../utils";
+
+const nextButtonValue = "Next";
+const previousButtonValue = "Previous";
+
+const Pagination = ({
+  page,
+  updateGlobalState,
+  maxPages
+}) => //const callGenderLocal = callGender;
+//const propsGenderLocal = propsGender;
+__jsx(_PaginationStyled__WEBPACK_IMPORTED_MODULE_1__["PaginationWrapper"], {
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 12
+  },
+  __self: undefined
+}, __jsx(_PaginationStyled__WEBPACK_IMPORTED_MODULE_1__["PaginationBtn"], {
+  disableStyle: page <= 0,
+  page: page,
+  onClick: Pagination.onClick(page, updateGlobalState, maxPages),
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 13
+  },
+  __self: undefined
+}, "Previous"), __jsx("span", {
+  className: "current-page",
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 20
+  },
+  __self: undefined
+}, "Page: ", page + 1, " / ", maxPages + 1), __jsx(_PaginationStyled__WEBPACK_IMPORTED_MODULE_1__["PaginationBtn"], {
+  disableStyle: page >= maxPages,
+  page: page,
+  onClick: Pagination.onClick(page, updateGlobalState, maxPages),
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 21
+  },
+  __self: undefined
+}, "Next"));
+
+Pagination.onClick = (page, updateGlobalState, maxPages) => (event = event.currentTarget) => {
+  event.preventDefault();
+  window.scroll(null, 0);
+  const btnName = event.currentTarget.textContent.toLowerCase();
+  /*let format;
+   const setDirection = (direction) =>{
+         let updatedPageNext = page + 1;
+        let updatedPagePrevious = page  - 1;
+        const paginationDirection = direction == "next" ? updatedPageNext : updatedPagePrevious;
+         const gnomeNames = gnomes.map(gnome => gnome.name)
+        const pageGnomes = gnomeNames.slice(
+        itemsByPage * paginationDirection,
+        itemsByPage + paginationDirection * itemsByPage
+        )
+         pageGnomes.map(gnome => (
+          gnome => gnome.name
+        ))
+           const getFirstName = arr =>{
+            var arrCroped = [];
+              for(var a=0; a<arr.length; a++){
+                 var corte = arr[a].indexOf(" ");
+                arrCroped[a] = arr[a].substr(0, corte);
+              }
+              function removeDuplicates(array) {
+                return array.filter((a, b) => array.indexOf(a) === b)
+              };
+              return removeDuplicates(arrCroped);
+          }
+           const justRenderedPageNames = getFirstName(pageGnomes);
+           const parseToService = arrToFormat =>{
+            var arrayFormated = [];
+               for(var b=0; b<arrToFormat.length; b++){
+                arrayFormated[b] = "name[]="+arrToFormat[b];
+              }
+               return arrayFormated;
+           }
+           format = parseToService(justRenderedPageNames).toString().replace(/,/g, "&");
+   }*/
+
+  if (btnName === nextButtonValue.toLowerCase()) {
+    const nextPage = page + 1;
+
+    if (page !== maxPages) {
+      updateGlobalState(nextPage); //setDirection("next")
+      //callGender(format);
+    }
+  } else if (btnName === previousButtonValue.toLowerCase()) {
+    const previousPage = page - 1;
+
+    if (page > 0) {
+      updateGlobalState(previousPage); //setDirection("previous")
+      //callGender(format);
+    }
+  }
+};
+
+Pagination.defaultProps = {
+  page: false
+};
+/* harmony default export */ __webpack_exports__["default"] = (Pagination);
+
+/***/ }),
+
+/***/ "./side/Pagination/PaginationStyled.jsx":
+/*!**********************************************!*\
+  !*** ./side/Pagination/PaginationStyled.jsx ***!
+  \**********************************************/
+/*! exports provided: PaginationWrapper, PaginationBtn */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PaginationWrapper", function() { return PaginationWrapper; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PaginationBtn", function() { return PaginationBtn; });
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! styled-components */ "styled-components");
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_0__);
+
+const PaginationWrapper = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.div`
+  align-items: center;
+  display: flex;
+  justify-content: space-between;
+  position: relative;
+  left: 40px;
+  max-width: 820px;
+  width: 90%;
+
+  & .current-page {
+    font-size: 0.95rem;
+    font-weight: bold;
+    text-align: center;
+    color: #80cf86;
+  }
+`;
+const PaginationBtn = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.button`
+  background: ${({
+  disableStyle
+}) => disableStyle ? "none" : "#80cf86"}
+  color: ${({
+  disableStyle
+}) => disableStyle ? "transparent" : "#fff"};
+  cursor: ${({
+  disableStyle
+}) => disableStyle ? "context-menu" : "pointer"};
+  font-size: 0.9rem;
+  width: 80%;
+  max-width: 140px;
+  padding: 6px 0;
+  text-align: center;
+
+  &:hover {
+    background: ${({
+  disableStyle
+}) => disableStyle ? "transparent" : "##e74142"}
+  }
+  &:focus {
+    outline:none;
+  }
+`;
 
 /***/ }),
 

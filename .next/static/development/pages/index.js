@@ -27484,186 +27484,6 @@ var OrderButton = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].butt
 
 /***/ }),
 
-/***/ "./pages/components/Pagination/Pagination.jsx":
-/*!****************************************************!*\
-  !*** ./pages/components/Pagination/Pagination.jsx ***!
-  \****************************************************/
-/*! exports provided: default */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
-/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _PaginationStyled__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./PaginationStyled */ "./pages/components/Pagination/PaginationStyled.jsx");
-var _jsxFileName = "/Users/nicolasfbergues/Desktop/Nico/Trabajo/FrontEnd/nextJsGnomeSearch/pages/components/Pagination/Pagination.jsx";
-var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
-
- //import { itemsByPage, getCurrentPageGenderFormat } from "./../../utils";
-
-var nextButtonValue = "Next";
-var previousButtonValue = "Previous";
-
-var Pagination = function Pagination(_ref) {
-  var page = _ref.page,
-      updateGlobalState = _ref.updateGlobalState,
-      maxPages = _ref.maxPages;
-  return (//const callGenderLocal = callGender;
-    //const propsGenderLocal = propsGender;
-    __jsx(_PaginationStyled__WEBPACK_IMPORTED_MODULE_1__["PaginationWrapper"], {
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 12
-      },
-      __self: this
-    }, __jsx(_PaginationStyled__WEBPACK_IMPORTED_MODULE_1__["PaginationBtn"], {
-      disableStyle: page <= 0,
-      page: page,
-      onClick: Pagination.onClick(page, updateGlobalState, maxPages),
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 13
-      },
-      __self: this
-    }, "Previous"), __jsx("span", {
-      className: "current-page",
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 20
-      },
-      __self: this
-    }, "Page: ", page + 1, " / ", maxPages + 1), __jsx(_PaginationStyled__WEBPACK_IMPORTED_MODULE_1__["PaginationBtn"], {
-      disableStyle: page >= maxPages,
-      page: page,
-      onClick: Pagination.onClick(page, updateGlobalState, maxPages),
-      __source: {
-        fileName: _jsxFileName,
-        lineNumber: 21
-      },
-      __self: this
-    }, "Next"))
-  );
-};
-
-Pagination.onClick = function (page, updateGlobalState, maxPages) {
-  return function () {
-    var event = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : event.currentTarget;
-    event.preventDefault();
-    window.scroll(null, 0);
-    var btnName = event.currentTarget.textContent.toLowerCase();
-    /*let format;
-     const setDirection = (direction) =>{
-           let updatedPageNext = page + 1;
-          let updatedPagePrevious = page  - 1;
-          const paginationDirection = direction == "next" ? updatedPageNext : updatedPagePrevious;
-           const gnomeNames = gnomes.map(gnome => gnome.name)
-          const pageGnomes = gnomeNames.slice(
-          itemsByPage * paginationDirection,
-          itemsByPage + paginationDirection * itemsByPage
-          )
-           pageGnomes.map(gnome => (
-            gnome => gnome.name
-          ))
-             const getFirstName = arr =>{
-              var arrCroped = [];
-                for(var a=0; a<arr.length; a++){
-                   var corte = arr[a].indexOf(" ");
-                  arrCroped[a] = arr[a].substr(0, corte);
-                }
-                function removeDuplicates(array) {
-                  return array.filter((a, b) => array.indexOf(a) === b)
-                };
-                return removeDuplicates(arrCroped);
-            }
-             const justRenderedPageNames = getFirstName(pageGnomes);
-             const parseToService = arrToFormat =>{
-              var arrayFormated = [];
-                 for(var b=0; b<arrToFormat.length; b++){
-                  arrayFormated[b] = "name[]="+arrToFormat[b];
-                }
-                 return arrayFormated;
-             }
-             format = parseToService(justRenderedPageNames).toString().replace(/,/g, "&");
-     }*/
-
-    if (btnName === nextButtonValue.toLowerCase()) {
-      var nextPage = page + 1;
-
-      if (page !== maxPages) {
-        updateGlobalState(nextPage); //setDirection("next")
-        //callGender(format);
-      }
-    } else if (btnName === previousButtonValue.toLowerCase()) {
-      var previousPage = page - 1;
-
-      if (page > 0) {
-        updateGlobalState(previousPage); //setDirection("previous")
-        //callGender(format);
-      }
-    }
-  };
-};
-
-Pagination.defaultProps = {
-  page: false
-};
-/* harmony default export */ __webpack_exports__["default"] = (Pagination);
-
-/***/ }),
-
-/***/ "./pages/components/Pagination/PaginationStyled.jsx":
-/*!**********************************************************!*\
-  !*** ./pages/components/Pagination/PaginationStyled.jsx ***!
-  \**********************************************************/
-/*! exports provided: PaginationWrapper, PaginationBtn */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PaginationWrapper", function() { return PaginationWrapper; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PaginationBtn", function() { return PaginationBtn; });
-/* harmony import */ var _babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/taggedTemplateLiteral */ "./node_modules/@babel/runtime-corejs2/helpers/esm/taggedTemplateLiteral.js");
-/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
-
-
-function _templateObject2() {
-  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n  background: ", "\n  color: ", ";\n  cursor: ", ";\n  font-size: 0.9rem;\n  width: 80%;\n  max-width: 140px;\n  padding: 6px 0;\n  text-align: center;\n\n  &:hover {\n    background: ", "\n  }\n  &:focus {\n    outline:none;\n  }\n"]);
-
-  _templateObject2 = function _templateObject2() {
-    return data;
-  };
-
-  return data;
-}
-
-function _templateObject() {
-  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n  align-items: center;\n  display: flex;\n  justify-content: space-between;\n  position: relative;\n  left: 40px;\n  max-width: 820px;\n  width: 90%;\n\n  & .current-page {\n    font-size: 0.95rem;\n    font-weight: bold;\n    text-align: center;\n    color: #80cf86;\n  }\n"]);
-
-  _templateObject = function _templateObject() {
-    return data;
-  };
-
-  return data;
-}
-
-
-var PaginationWrapper = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div(_templateObject());
-var PaginationBtn = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].button(_templateObject2(), function (_ref) {
-  var disableStyle = _ref.disableStyle;
-  return disableStyle ? "none" : "#80cf86";
-}, function (_ref2) {
-  var disableStyle = _ref2.disableStyle;
-  return disableStyle ? "transparent" : "#fff";
-}, function (_ref3) {
-  var disableStyle = _ref3.disableStyle;
-  return disableStyle ? "context-menu" : "pointer";
-}, function (_ref4) {
-  var disableStyle = _ref4.disableStyle;
-  return disableStyle ? "transparent" : "##e74142";
-});
-
-/***/ }),
-
 /***/ "./pages/components/Select/Select.jsx":
 /*!********************************************!*\
   !*** ./pages/components/Select/Select.jsx ***!
@@ -27921,10 +27741,10 @@ var FriendsRow = DetailsRow.extend(_templateObject3());
 
 /***/ }),
 
-/***/ "./pages/containers/Filters/Filters.jsx":
-/*!**********************************************!*\
-  !*** ./pages/containers/Filters/Filters.jsx ***!
-  \**********************************************/
+/***/ "./pages/containers/Filters/Filters.js":
+/*!*********************************************!*\
+  !*** ./pages/containers/Filters/Filters.js ***!
+  \*********************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -27937,14 +27757,14 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
-/* harmony import */ var _FiltersStyled__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./FiltersStyled */ "./pages/containers/Filters/FiltersStyled.jsx");
+/* harmony import */ var _FiltersStyled__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./FiltersStyled */ "./pages/containers/Filters/FiltersStyled.js");
 /* harmony import */ var _redux_actions_actions__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./../../../redux/actions/actions */ "./redux/actions/actions.js");
 /* harmony import */ var _components_AutoComplete_AutoComplete__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./../../components/AutoComplete/AutoComplete */ "./pages/components/AutoComplete/AutoComplete.jsx");
 /* harmony import */ var _components_Select_Select__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./../../components/Select/Select */ "./pages/components/Select/Select.jsx");
 /* harmony import */ var _components_OrderBy_OrderBy_js__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./../../components/OrderBy/OrderBy.js */ "./pages/components/OrderBy/OrderBy.js");
 
 
-var _jsxFileName = "/Users/nicolasfbergues/Desktop/Nico/Trabajo/FrontEnd/nextJsGnomeSearch/pages/containers/Filters/Filters.jsx";
+var _jsxFileName = "/Users/nicolasfbergues/Desktop/Nico/Trabajo/FrontEnd/nextJsGnomeSearch/pages/containers/Filters/Filters.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement;
 
 
@@ -28095,10 +27915,10 @@ function mapStateToProps(state) {
 
 /***/ }),
 
-/***/ "./pages/containers/Filters/FiltersStyled.jsx":
-/*!****************************************************!*\
-  !*** ./pages/containers/Filters/FiltersStyled.jsx ***!
-  \****************************************************/
+/***/ "./pages/containers/Filters/FiltersStyled.js":
+/*!***************************************************!*\
+  !*** ./pages/containers/Filters/FiltersStyled.js ***!
+  \***************************************************/
 /*! exports provided: FormSearch, FormRow */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -28231,11 +28051,11 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_helmet__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_helmet__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var react_transition_group__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-transition-group */ "./node_modules/react-transition-group/esm/index.js");
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
-/* harmony import */ var _Filters_Filters__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./../Filters/Filters */ "./pages/containers/Filters/Filters.jsx");
+/* harmony import */ var _Filters_Filters__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./../Filters/Filters */ "./pages/containers/Filters/Filters.js");
 /* harmony import */ var _components_Card_Card__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./../../components/Card/Card */ "./pages/components/Card/Card.jsx");
 /* harmony import */ var _redux_actions_actions__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./../../../redux/actions/actions */ "./redux/actions/actions.js");
 /* harmony import */ var _HomeStyled__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./HomeStyled */ "./pages/containers/Home/HomeStyled.jsx");
-/* harmony import */ var _components_Pagination_Pagination__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./../../components/Pagination/Pagination */ "./pages/components/Pagination/Pagination.jsx");
+/* harmony import */ var _side_Pagination_Pagination__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./../../../side/Pagination/Pagination */ "./side/Pagination/Pagination.jsx");
 /* harmony import */ var _utils__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./../../../utils */ "./utils.js");
 var _jsxFileName = "/Users/nicolasfbergues/Desktop/Nico/Trabajo/FrontEnd/nextJsGnomeSearch/pages/containers/Home/Home.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
@@ -28313,7 +28133,7 @@ var Home = function Home(props) {
       lineNumber: 49
     },
     __self: this
-  })), __jsx(_components_Pagination_Pagination__WEBPACK_IMPORTED_MODULE_8__["default"], {
+  })), __jsx(_side_Pagination_Pagination__WEBPACK_IMPORTED_MODULE_8__["default"], {
     page: currentPage,
     updateGlobalState: props.getCurrentPage,
     maxPages: Math.floor(searchFilters.length / _utils__WEBPACK_IMPORTED_MODULE_9__["itemsByPage"]),
@@ -28371,7 +28191,7 @@ var Home = function Home(props) {
       lineNumber: 74
     },
     __self: this
-  }, searchFilters.length, " no gnomes founded for current search")))), __jsx(_components_Pagination_Pagination__WEBPACK_IMPORTED_MODULE_8__["default"], {
+  }, searchFilters.length, " no gnomes founded for current search")))), __jsx(_side_Pagination_Pagination__WEBPACK_IMPORTED_MODULE_8__["default"], {
     page: currentPage,
     updateGlobalState: props.getCurrentPage,
     maxPages: Math.floor(searchFilters.length / _utils__WEBPACK_IMPORTED_MODULE_9__["itemsByPage"]),
@@ -29060,6 +28880,186 @@ var configure = function configure() {
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (configure);
+
+/***/ }),
+
+/***/ "./side/Pagination/Pagination.jsx":
+/*!****************************************!*\
+  !*** ./side/Pagination/Pagination.jsx ***!
+  \****************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
+/* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _PaginationStyled__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./PaginationStyled */ "./side/Pagination/PaginationStyled.jsx");
+var _jsxFileName = "/Users/nicolasfbergues/Desktop/Nico/Trabajo/FrontEnd/nextJsGnomeSearch/side/Pagination/Pagination.jsx";
+var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
+
+ //import { itemsByPage, getCurrentPageGenderFormat } from "./../../utils";
+
+var nextButtonValue = "Next";
+var previousButtonValue = "Previous";
+
+var Pagination = function Pagination(_ref) {
+  var page = _ref.page,
+      updateGlobalState = _ref.updateGlobalState,
+      maxPages = _ref.maxPages;
+  return (//const callGenderLocal = callGender;
+    //const propsGenderLocal = propsGender;
+    __jsx(_PaginationStyled__WEBPACK_IMPORTED_MODULE_1__["PaginationWrapper"], {
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 12
+      },
+      __self: this
+    }, __jsx(_PaginationStyled__WEBPACK_IMPORTED_MODULE_1__["PaginationBtn"], {
+      disableStyle: page <= 0,
+      page: page,
+      onClick: Pagination.onClick(page, updateGlobalState, maxPages),
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 13
+      },
+      __self: this
+    }, "Previous"), __jsx("span", {
+      className: "current-page",
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 20
+      },
+      __self: this
+    }, "Page: ", page + 1, " / ", maxPages + 1), __jsx(_PaginationStyled__WEBPACK_IMPORTED_MODULE_1__["PaginationBtn"], {
+      disableStyle: page >= maxPages,
+      page: page,
+      onClick: Pagination.onClick(page, updateGlobalState, maxPages),
+      __source: {
+        fileName: _jsxFileName,
+        lineNumber: 21
+      },
+      __self: this
+    }, "Next"))
+  );
+};
+
+Pagination.onClick = function (page, updateGlobalState, maxPages) {
+  return function () {
+    var event = arguments.length > 0 && arguments[0] !== undefined ? arguments[0] : event.currentTarget;
+    event.preventDefault();
+    window.scroll(null, 0);
+    var btnName = event.currentTarget.textContent.toLowerCase();
+    /*let format;
+     const setDirection = (direction) =>{
+           let updatedPageNext = page + 1;
+          let updatedPagePrevious = page  - 1;
+          const paginationDirection = direction == "next" ? updatedPageNext : updatedPagePrevious;
+           const gnomeNames = gnomes.map(gnome => gnome.name)
+          const pageGnomes = gnomeNames.slice(
+          itemsByPage * paginationDirection,
+          itemsByPage + paginationDirection * itemsByPage
+          )
+           pageGnomes.map(gnome => (
+            gnome => gnome.name
+          ))
+             const getFirstName = arr =>{
+              var arrCroped = [];
+                for(var a=0; a<arr.length; a++){
+                   var corte = arr[a].indexOf(" ");
+                  arrCroped[a] = arr[a].substr(0, corte);
+                }
+                function removeDuplicates(array) {
+                  return array.filter((a, b) => array.indexOf(a) === b)
+                };
+                return removeDuplicates(arrCroped);
+            }
+             const justRenderedPageNames = getFirstName(pageGnomes);
+             const parseToService = arrToFormat =>{
+              var arrayFormated = [];
+                 for(var b=0; b<arrToFormat.length; b++){
+                  arrayFormated[b] = "name[]="+arrToFormat[b];
+                }
+                 return arrayFormated;
+             }
+             format = parseToService(justRenderedPageNames).toString().replace(/,/g, "&");
+     }*/
+
+    if (btnName === nextButtonValue.toLowerCase()) {
+      var nextPage = page + 1;
+
+      if (page !== maxPages) {
+        updateGlobalState(nextPage); //setDirection("next")
+        //callGender(format);
+      }
+    } else if (btnName === previousButtonValue.toLowerCase()) {
+      var previousPage = page - 1;
+
+      if (page > 0) {
+        updateGlobalState(previousPage); //setDirection("previous")
+        //callGender(format);
+      }
+    }
+  };
+};
+
+Pagination.defaultProps = {
+  page: false
+};
+/* harmony default export */ __webpack_exports__["default"] = (Pagination);
+
+/***/ }),
+
+/***/ "./side/Pagination/PaginationStyled.jsx":
+/*!**********************************************!*\
+  !*** ./side/Pagination/PaginationStyled.jsx ***!
+  \**********************************************/
+/*! exports provided: PaginationWrapper, PaginationBtn */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PaginationWrapper", function() { return PaginationWrapper; });
+/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "PaginationBtn", function() { return PaginationBtn; });
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/taggedTemplateLiteral */ "./node_modules/@babel/runtime-corejs2/helpers/esm/taggedTemplateLiteral.js");
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
+
+
+function _templateObject2() {
+  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n  background: ", "\n  color: ", ";\n  cursor: ", ";\n  font-size: 0.9rem;\n  width: 80%;\n  max-width: 140px;\n  padding: 6px 0;\n  text-align: center;\n\n  &:hover {\n    background: ", "\n  }\n  &:focus {\n    outline:none;\n  }\n"]);
+
+  _templateObject2 = function _templateObject2() {
+    return data;
+  };
+
+  return data;
+}
+
+function _templateObject() {
+  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n  align-items: center;\n  display: flex;\n  justify-content: space-between;\n  position: relative;\n  left: 40px;\n  max-width: 820px;\n  width: 90%;\n\n  & .current-page {\n    font-size: 0.95rem;\n    font-weight: bold;\n    text-align: center;\n    color: #80cf86;\n  }\n"]);
+
+  _templateObject = function _templateObject() {
+    return data;
+  };
+
+  return data;
+}
+
+
+var PaginationWrapper = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div(_templateObject());
+var PaginationBtn = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].button(_templateObject2(), function (_ref) {
+  var disableStyle = _ref.disableStyle;
+  return disableStyle ? "none" : "#80cf86";
+}, function (_ref2) {
+  var disableStyle = _ref2.disableStyle;
+  return disableStyle ? "transparent" : "#fff";
+}, function (_ref3) {
+  var disableStyle = _ref3.disableStyle;
+  return disableStyle ? "context-menu" : "pointer";
+}, function (_ref4) {
+  var disableStyle = _ref4.disableStyle;
+  return disableStyle ? "transparent" : "##e74142";
+});
 
 /***/ }),
 
