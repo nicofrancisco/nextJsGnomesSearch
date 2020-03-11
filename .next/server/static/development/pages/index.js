@@ -4191,8 +4191,8 @@ const Gender = props => {
     to,
     gnome
   } = props;
-  const cut = gnome.name.indexOf(" ");
-  const name = gnome.name.substr(0, cut);
+  const cut = gnome ? gnome.name.indexOf(" ") : 0;
+  const name = gnome ? gnome.name.substr(0, cut) : "";
   const {
     0: gender,
     1: setGender
@@ -4214,21 +4214,21 @@ const Gender = props => {
     to: to,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 36
+      lineNumber: 38
     },
     __self: undefined
   }, __jsx("div", {
     className: "banner",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 37
+      lineNumber: 39
     },
     __self: undefined
   }), __jsx(_AvatarStyles__WEBPACK_IMPORTED_MODULE_6__["default"], {
     src: gnome && gnome.thumbnail,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 39
+      lineNumber: 41
     },
     __self: undefined
   }, __jsx("img", {
@@ -4236,117 +4236,117 @@ const Gender = props => {
     alt: `avatar ${gnome && gnome.name}`,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 40
+      lineNumber: 42
     },
     __self: undefined
   })), __jsx("header", {
     className: "headerBox",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 45
+      lineNumber: 47
     },
     __self: undefined
   }, __jsx("h2", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 46
+      lineNumber: 48
     },
     __self: undefined
   }, gnome && gnome.name), __jsx("div", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 47
+      lineNumber: 49
     },
     __self: undefined
   }, gnome.professions.length > 0 ? gnome.professions.join(" • ") : "No Profession")), __jsx(_GenderCard_GenderCard__WEBPACK_IMPORTED_MODULE_4__["default"], {
     gender: gender,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 53
+      lineNumber: 55
     },
     __self: undefined
   }), __jsx(_InfoStyles__WEBPACK_IMPORTED_MODULE_7__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 54
+      lineNumber: 56
     },
     __self: undefined
   }, __jsx(_InfoListStyles__WEBPACK_IMPORTED_MODULE_8__["default"], {
     hairColor: gnome && Object(_utils__WEBPACK_IMPORTED_MODULE_3__["convertColors"])(gnome.hair_color),
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 55
+      lineNumber: 57
     },
     __self: undefined
   }, __jsx("span", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 56
+      lineNumber: 58
     },
     __self: undefined
   }, "Age"), __jsx("span", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 57
+      lineNumber: 59
     },
     __self: undefined
   }, gnome && gnome.age)), __jsx(_InfoListStyles__WEBPACK_IMPORTED_MODULE_8__["default"], {
     hairColor: gnome && Object(_utils__WEBPACK_IMPORTED_MODULE_3__["convertColors"])(gnome.hair_color),
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 59
+      lineNumber: 61
     },
     __self: undefined
   }, __jsx("span", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 60
+      lineNumber: 62
     },
     __self: undefined
   }, "Weight"), __jsx("span", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 61
+      lineNumber: 63
     },
     __self: undefined
   }, gnome && Math.ceil(gnome.weight), " ", __jsx("span", {
     className: "unit",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 62
+      lineNumber: 64
     },
     __self: undefined
   }, "KG"))), __jsx(_InfoListStyles__WEBPACK_IMPORTED_MODULE_8__["default"], {
     hairColor: gnome && Object(_utils__WEBPACK_IMPORTED_MODULE_3__["convertColors"])(gnome.hair_color),
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 65
+      lineNumber: 67
     },
     __self: undefined
   }, __jsx("span", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 66
+      lineNumber: 68
     },
     __self: undefined
   }, "Height"), __jsx("span", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 67
+      lineNumber: 69
     },
     __self: undefined
   }, gnome && Math.ceil(gnome.height), " ", __jsx("span", {
     className: "unit",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 68
+      lineNumber: 70
     },
     __self: undefined
   }, "CM")))), __jsx("div", {
     className: "banner-footer",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 72
+      lineNumber: 74
     },
     __self: undefined
   }));
@@ -5484,7 +5484,7 @@ const Details = ({
   gnomeURL,
   gnomes
 }) => {
-  window.scroll(null, 0);
+  //window.scroll(null, 0);
   const selectedGnome = gnomes && gnomes.find(gnome => gnomeURL === `${gnome.id}-${gnome.name.split(" ").join("-")}`);
   const friends = selectedGnome && selectedGnome.friends.map(friend => friend.toLowerCase());
   const renderFriends = gnomes && gnomes.filter(gnome => friends.some(friend => gnome.name.toLowerCase() === friend));

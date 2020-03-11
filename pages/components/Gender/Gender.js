@@ -11,14 +11,10 @@ import  InfoList from "./InfoListStyles";
 const Gender = (props) => {
 
   const { to,  gnome} = props;
-  const cut;
-  const name
-  if(gnome){
-    cut = gnome.name.indexOf(" ");
-    name = gnome.name.substr(0, cut);
-  }
 
 
+  const cut = gnome ? gnome.name.indexOf(" ") : 0;
+  const name = gnome ? gnome.name.substr(0, cut) : "";
 
   const[gender, setGender] = useState([]);
 
