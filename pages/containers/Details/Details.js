@@ -9,7 +9,7 @@ import FriendsRow from "./FriendsRowStyled";
 
 const Details = ({ gnomeURL, gnomes }) => {
 
-  window.scroll(null, 0);
+  //window.scroll(null, 0);
   const selectedGnome =
     gnomes &&
     gnomes.find(
