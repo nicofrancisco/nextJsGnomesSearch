@@ -4,7 +4,7 @@ import { Transition, CSSTransition, TransitionGroup } from "react-transition-gro
 import { connect } from "react-redux";
 import Filters from "./../Filters/Filters";
 import Card from "./../../components/Card/Card";
-import * as actions from "./../../../redux/actions/actions";
+import * as actions from "./../../../src/actions/actions";
 import Pagination from "./../../components/Pagination/Pagination";
 import { filterGnomesBy, itemsByPage} from "./../../../utils";
 import HomeRow from "./HomeRowStyled";
@@ -15,6 +15,9 @@ const Home = (props) => {
 
   const { searchTerm, gnomes, orderByFilter, currentPage} = props;
 
+  console.log("HOME")
+  console.log(props)
+  console.log(currentPage)
 
   const searchFilters = filterGnomesBy(gnomes, orderByFilter)
     .filter(gnome => {
@@ -36,6 +39,7 @@ const Home = (props) => {
       return search;
     });
 
+console.log(searchFilters)
   return (
     <HomeWrapper>
       <Helmet>

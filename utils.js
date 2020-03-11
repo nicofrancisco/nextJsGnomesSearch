@@ -116,9 +116,11 @@ export function convertColors(color) {
 
 export function filterGnomesBy(array, orderByFilter) {
   if (!Array.isArray(array)) {
+    console.log("es nulo")
     return null;
   }
-
+  console.log("aca")
+  console.log(orderByFilter)
   if (orderByFilter.toLowerCase() === "Oldest".toLowerCase()) {
     return array.sort((a, b) => b.age - a.age);
   }
@@ -137,6 +139,6 @@ export function filterGnomesBy(array, orderByFilter) {
   else if (orderByFilter.toLowerCase() === "Less Friendly".toLowerCase()) {
     return array.sort((a, b) => a.friends.length - b.friends.length);
   }
-
+  console.log(array)
   return array;
 }

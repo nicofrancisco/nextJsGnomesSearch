@@ -10,6 +10,8 @@ import FormRow  from "./FormRowStyled";
 
 const Filters = (props) => {
 
+  console.log("Filters")
+  console.log(props)
   const gnomeNames = props.gnomes.map(gnome => gnome.name);
 
   let getJobs = [];

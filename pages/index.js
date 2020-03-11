@@ -1,12 +1,26 @@
 import React from "react";
 import Link from 'next/link';
-import { Provider } from "react-redux";
+//import { Provider } from "react-redux";
 import { ThemeProvider } from "styled-components";
-import configure from "./../redux/store/configureStore";
+//import configure from "./../redux/store/configureStore";
 import Main from './containers/Main.js'
 import theme from "./../MainStyled";
 
 
+
+
+const Index = () => (
+  <div>
+
+      <ThemeProvider theme={theme}>
+        <Main></Main>
+      </ThemeProvider>
+
+
+  </div>
+)
+
+/*
 const store = configure();
 
 const Index = () => (
@@ -19,6 +33,6 @@ const Index = () => (
     </Provider>
 
   </div>
-)
+)*/
 
 export default Index
