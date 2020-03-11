@@ -4258,7 +4258,7 @@ const Gender = props => {
       lineNumber: 49
     },
     __self: undefined
-  }, gnome.professions.length > 0 ? gnome.professions.join(" • ") : "No Profession")), __jsx(_GenderCard_GenderCard__WEBPACK_IMPORTED_MODULE_4__["default"], {
+  }, gnome && gnome.professions.length > 0 ? gnome.professions.join(" • ") : "No Profession")), __jsx(_GenderCard_GenderCard__WEBPACK_IMPORTED_MODULE_4__["default"], {
     gender: gender,
     __source: {
       fileName: _jsxFileName,

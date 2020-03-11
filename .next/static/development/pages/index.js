@@ -26884,7 +26884,7 @@ var Gender = function Gender(props) {
       lineNumber: 49
     },
     __self: this
-  }, gnome.professions.length > 0 ? gnome.professions.join(" • ") : "No Profession")), __jsx(_GenderCard_GenderCard__WEBPACK_IMPORTED_MODULE_4__["default"], {
+  }, gnome && gnome.professions.length > 0 ? gnome.professions.join(" • ") : "No Profession")), __jsx(_GenderCard_GenderCard__WEBPACK_IMPORTED_MODULE_4__["default"], {
     gender: gender,
     __source: {
       fileName: _jsxFileName,
@@ -29446,7 +29446,7 @@ function filterGnomesBy(array, orderByFilter) {
 
 /***/ }),
 
-/***/ 1:
+/***/ 2:
 /*!************************************************************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2F&absolutePagePath=%2FUsers%2Fnicolasfbergues%2FDesktop%2FNico%2FTrabajo%2FFrontEnd%2FnextJsGnomeSearch%2Fpages%2Findex.js ***!
   \************************************************************************************************************************************************************************/
@@ -29469,5 +29469,5 @@ module.exports = dll_7f5f45f4949be37212eb;
 
 /***/ })
 
-},[[1,"static/runtime/webpack.js"]]]);
+},[[2,"static/runtime/webpack.js"]]]);
 //# sourceMappingURL=index.js.map
