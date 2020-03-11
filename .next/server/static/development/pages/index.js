@@ -88,7 +88,7 @@ module.exports =
 /******/
 /******/
 /******/ 	// Load entry module and return exports
-/******/ 	return __webpack_require__(__webpack_require__.s = 4);
+/******/ 	return __webpack_require__(__webpack_require__.s = 3);
 /******/ })
 /************************************************************************/
 /******/ ({
@@ -2906,7 +2906,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-dom */ "react-dom");
 /* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react_dom__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var _Suggestions_Suggestions__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Suggestions/Suggestions */ "./pages/components/AutoComplete/Suggestions/Suggestions.jsx");
+/* harmony import */ var _Suggestions_Suggestions__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./Suggestions/Suggestions */ "./pages/components/AutoComplete/Suggestions/Suggestions.js");
 /* harmony import */ var _ContainerInputStyles__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./ContainerInputStyles */ "./pages/components/AutoComplete/ContainerInputStyles.jsx");
 /* harmony import */ var _InputSearchStyles__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./InputSearchStyles */ "./pages/components/AutoComplete/InputSearchStyles.jsx");
 var _jsxFileName = "/Users/nicolasfbergues/Desktop/Nico/Trabajo/FrontEnd/nextJsGnomeSearch/pages/components/AutoComplete/AutoComplete.js";
@@ -3198,10 +3198,10 @@ const ItemSuggestions = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a
 
 /***/ }),
 
-/***/ "./pages/components/AutoComplete/Suggestions/Suggestions.jsx":
-/*!*******************************************************************!*\
-  !*** ./pages/components/AutoComplete/Suggestions/Suggestions.jsx ***!
-  \*******************************************************************/
+/***/ "./pages/components/AutoComplete/Suggestions/Suggestions.js":
+/*!******************************************************************!*\
+  !*** ./pages/components/AutoComplete/Suggestions/Suggestions.js ***!
+  \******************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -3211,7 +3211,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _SuggestionsStyled__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./SuggestionsStyled */ "./pages/components/AutoComplete/Suggestions/SuggestionsStyled.jsx");
 /* harmony import */ var _ItemSuggestionsStyles__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./ItemSuggestionsStyles */ "./pages/components/AutoComplete/Suggestions/ItemSuggestionsStyles.jsx");
-var _jsxFileName = "/Users/nicolasfbergues/Desktop/Nico/Trabajo/FrontEnd/nextJsGnomeSearch/pages/components/AutoComplete/Suggestions/Suggestions.jsx";
+var _jsxFileName = "/Users/nicolasfbergues/Desktop/Nico/Trabajo/FrontEnd/nextJsGnomeSearch/pages/components/AutoComplete/Suggestions/Suggestions.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
@@ -3240,7 +3240,7 @@ const Suggestions = ({
     lineNumber: 19
   },
   __self: undefined
-}, suggestedItems.map(autoCompleteItem => __jsx(_SuggestionsStyled__WEBPACK_IMPORTED_MODULE_1__["default"], {
+}, suggestedItems ? suggestedItems.map(autoCompleteItem => __jsx(_SuggestionsStyled__WEBPACK_IMPORTED_MODULE_1__["default"], {
   key: autoCompleteItem,
   onClick: Suggestions.selectCompletion(updateLocalState, updateParentState),
   onMouseOver: Suggestions.mouseOverSuggestion(updateLocalState, suggestedItems.indexOf(autoCompleteItem)),
@@ -3253,7 +3253,13 @@ const Suggestions = ({
     lineNumber: 21
   },
   __self: undefined
-}, autoCompleteItem))));
+}, autoCompleteItem)) : __jsx("div", {
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 38
+  },
+  __self: undefined
+})));
 
 Suggestions.selectCompletion = (updateLocalState, updateParentState) => event => {
   event.preventDefault();
@@ -6867,36 +6873,40 @@ function getFirstNames(gnomes, currentPage) {
   return onlyNames;
 }
 function convertColors(color) {
-  const colorName = color.toLowerCase();
-  var hex = "";
+  if (color !== undefined) {
+    const colorName = color.toLowerCase();
+    var hex = "";
 
-  switch (colorName) {
-    case "red":
-      hex = "#f66969";
-      break;
+    switch (colorName) {
+      case "red":
+        hex = "#f66969";
+        break;
 
-    case "pink":
-      hex = "#f6a2c0";
-      break;
+      case "pink":
+        hex = "#f6a2c0";
+        break;
 
-    case "green":
-      hex = "#80e8d4";
-      break;
+      case "green":
+        hex = "#80e8d4";
+        break;
 
-    case "black":
-      hex = "#4d5253";
-      break;
+      case "black":
+        hex = "#4d5253";
+        break;
 
-    case "gray":
-      hex = "#8d9395";
-      break;
+      case "gray":
+        hex = "#8d9395";
+        break;
 
-    default:
-      hex = "#000";
-      break;
+      default:
+        hex = "#000";
+        break;
+    }
+
+    return hex;
+  } else {
+    return "#8d9395";
   }
-
-  return hex;
 }
 function filterGnomesBy(array, orderByFilter) {
   if (!Array.isArray(array)) {
@@ -6922,7 +6932,7 @@ function filterGnomesBy(array, orderByFilter) {
 
 /***/ }),
 
-/***/ 4:
+/***/ 3:
 /*!******************************!*\
   !*** multi ./pages/index.js ***!
   \******************************/

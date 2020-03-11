@@ -25626,7 +25626,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_8___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_8__);
 /* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! react-dom */ "./node_modules/react-dom/index.js");
 /* harmony import */ var react_dom__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(react_dom__WEBPACK_IMPORTED_MODULE_9__);
-/* harmony import */ var _Suggestions_Suggestions__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./Suggestions/Suggestions */ "./pages/components/AutoComplete/Suggestions/Suggestions.jsx");
+/* harmony import */ var _Suggestions_Suggestions__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ./Suggestions/Suggestions */ "./pages/components/AutoComplete/Suggestions/Suggestions.js");
 /* harmony import */ var _ContainerInputStyles__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ./ContainerInputStyles */ "./pages/components/AutoComplete/ContainerInputStyles.jsx");
 /* harmony import */ var _InputSearchStyles__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./InputSearchStyles */ "./pages/components/AutoComplete/InputSearchStyles.jsx");
 
@@ -25943,10 +25943,10 @@ var ItemSuggestions = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].
 
 /***/ }),
 
-/***/ "./pages/components/AutoComplete/Suggestions/Suggestions.jsx":
-/*!*******************************************************************!*\
-  !*** ./pages/components/AutoComplete/Suggestions/Suggestions.jsx ***!
-  \*******************************************************************/
+/***/ "./pages/components/AutoComplete/Suggestions/Suggestions.js":
+/*!******************************************************************!*\
+  !*** ./pages/components/AutoComplete/Suggestions/Suggestions.js ***!
+  \******************************************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -25956,7 +25956,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var _SuggestionsStyled__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./SuggestionsStyled */ "./pages/components/AutoComplete/Suggestions/SuggestionsStyled.jsx");
 /* harmony import */ var _ItemSuggestionsStyles__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./ItemSuggestionsStyles */ "./pages/components/AutoComplete/Suggestions/ItemSuggestionsStyles.jsx");
-var _jsxFileName = "/Users/nicolasfbergues/Desktop/Nico/Trabajo/FrontEnd/nextJsGnomeSearch/pages/components/AutoComplete/Suggestions/Suggestions.jsx";
+var _jsxFileName = "/Users/nicolasfbergues/Desktop/Nico/Trabajo/FrontEnd/nextJsGnomeSearch/pages/components/AutoComplete/Suggestions/Suggestions.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
@@ -25985,7 +25985,7 @@ var Suggestions = function Suggestions(_ref) {
       lineNumber: 19
     },
     __self: this
-  }, suggestedItems.map(function (autoCompleteItem) {
+  }, suggestedItems ? suggestedItems.map(function (autoCompleteItem) {
     return __jsx(_SuggestionsStyled__WEBPACK_IMPORTED_MODULE_1__["default"], {
       key: autoCompleteItem,
       onClick: Suggestions.selectCompletion(updateLocalState, updateParentState),
@@ -26000,6 +26000,12 @@ var Suggestions = function Suggestions(_ref) {
       },
       __self: this
     }, autoCompleteItem);
+  }) : __jsx("div", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 38
+    },
+    __self: this
   })));
 };
 
@@ -29423,36 +29429,40 @@ function getFirstNames(gnomes, currentPage) {
   return onlyNames;
 }
 function convertColors(color) {
-  var colorName = color.toLowerCase();
-  var hex = "";
+  if (color !== undefined) {
+    var colorName = color.toLowerCase();
+    var hex = "";
 
-  switch (colorName) {
-    case "red":
-      hex = "#f66969";
-      break;
+    switch (colorName) {
+      case "red":
+        hex = "#f66969";
+        break;
 
-    case "pink":
-      hex = "#f6a2c0";
-      break;
+      case "pink":
+        hex = "#f6a2c0";
+        break;
 
-    case "green":
-      hex = "#80e8d4";
-      break;
+      case "green":
+        hex = "#80e8d4";
+        break;
 
-    case "black":
-      hex = "#4d5253";
-      break;
+      case "black":
+        hex = "#4d5253";
+        break;
 
-    case "gray":
-      hex = "#8d9395";
-      break;
+      case "gray":
+        hex = "#8d9395";
+        break;
 
-    default:
-      hex = "#000";
-      break;
+      default:
+        hex = "#000";
+        break;
+    }
+
+    return hex;
+  } else {
+    return "#8d9395";
   }
-
-  return hex;
 }
 function filterGnomesBy(array, orderByFilter) {
   if (!_babel_runtime_corejs2_core_js_array_is_array__WEBPACK_IMPORTED_MODULE_0___default()(array)) {
@@ -29490,7 +29500,7 @@ function filterGnomesBy(array, orderByFilter) {
 
 /***/ }),
 
-/***/ 2:
+/***/ 1:
 /*!************************************************************************************************************************************************************************!*\
   !*** multi next-client-pages-loader?page=%2F&absolutePagePath=%2FUsers%2Fnicolasfbergues%2FDesktop%2FNico%2FTrabajo%2FFrontEnd%2FnextJsGnomeSearch%2Fpages%2Findex.js ***!
   \************************************************************************************************************************************************************************/
@@ -29513,5 +29523,5 @@ module.exports = dll_7f5f45f4949be37212eb;
 
 /***/ })
 
-},[[2,"static/runtime/webpack.js"]]]);
+},[[1,"static/runtime/webpack.js"]]]);
 //# sourceMappingURL=index.js.map

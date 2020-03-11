@@ -83,29 +83,35 @@ export function getFirstNames (gnomes, currentPage){
 
 export function convertColors(color) {
 
-  const colorName = color.toLowerCase();
-  var hex = "";
-  switch (colorName) {
-    case "red":
-      hex = "#f66969";
-      break;
-    case "pink":
-      hex = "#f6a2c0";
-      break;
-    case "green":
-      hex = "#80e8d4";
-      break;
-    case "black":
-      hex = "#4d5253";
-      break;
-    case "gray":
-      hex = "#8d9395";
-      break;
-    default:
-      hex = "#000";
-      break;
+  if(color !== undefined){
+
+    const colorName = color.toLowerCase();
+    var hex = "";
+    switch (colorName) {
+      case "red":
+        hex = "#f66969";
+        break;
+      case "pink":
+        hex = "#f6a2c0";
+        break;
+      case "green":
+        hex = "#80e8d4";
+        break;
+      case "black":
+        hex = "#4d5253";
+        break;
+      case "gray":
+        hex = "#8d9395";
+        break;
+      default:
+        hex = "#000";
+        break;
+    }
+    return hex;
+
+  }else{
+    return "#8d9395";
   }
-  return hex;
 }
 
 export function filterGnomesBy(array, orderByFilter) {
