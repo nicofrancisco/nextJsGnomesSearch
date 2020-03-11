@@ -1,5 +1,5 @@
 import React from "react";
-import { convertColors } from "./../../utils";
+import { convertColors } from "./../../../utils";
 import {
   Details,
   Avatar,

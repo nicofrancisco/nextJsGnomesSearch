@@ -1,5 +1,5 @@
 import React from "react";
-import { convertColors } from "./../../utils";
+import { convertColors } from "./../../../utils";
 import Modal from "./../Modal/Modal.js";
 import { GnomeCard, Avatar, GnomeInfo, GnomeInfoList } from "./CardStyled";
 

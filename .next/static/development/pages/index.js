@@ -26049,7 +26049,7 @@ var Suggestion = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].li(_t
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _utils__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./../../utils */ "./pages/utils.js");
+/* harmony import */ var _utils__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./../../../utils */ "./utils.js");
 /* harmony import */ var _Modal_Modal_js__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./../Modal/Modal.js */ "./pages/components/Modal/Modal.js");
 /* harmony import */ var _CardStyled__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./CardStyled */ "./pages/components/Card/CardStyled.jsx");
 var _jsxFileName = "/Users/nicolasfbergues/Desktop/Nico/Trabajo/FrontEnd/nextJsGnomeSearch/pages/components/Card/Card.jsx";
@@ -26320,7 +26320,7 @@ var GnomeInfoList = styled_components__WEBPACK_IMPORTED_MODULE_2__["default"].li
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _utils__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./../../utils */ "./pages/utils.js");
+/* harmony import */ var _utils__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./../../../utils */ "./utils.js");
 /* harmony import */ var _DetailsInfoStyled__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./DetailsInfoStyled */ "./pages/components/DetailsInfo/DetailsInfoStyled.jsx");
 var _jsxFileName = "/Users/nicolasfbergues/Desktop/Nico/Trabajo/FrontEnd/nextJsGnomeSearch/pages/components/DetailsInfo/DetailsInfo.jsx";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
@@ -26643,8 +26643,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
-/* harmony import */ var _redux_actions_actions__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../redux/actions/actions */ "./pages/redux/actions/actions.js");
-/* harmony import */ var _utils__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./../../utils */ "./pages/utils.js");
+/* harmony import */ var _redux_actions_actions__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../redux/actions/actions */ "./redux/actions/actions.js");
+/* harmony import */ var _utils__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./../../../utils */ "./utils.js");
 /* harmony import */ var _GenderCard_GenderCard__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./GenderCard/GenderCard */ "./pages/components/Gender/GenderCard/GenderCard.js");
 /* harmony import */ var _GenderStyled__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./GenderStyled */ "./pages/components/Gender/GenderStyled.jsx");
 var _jsxFileName = "/Users/nicolasfbergues/Desktop/Nico/Trabajo/FrontEnd/nextJsGnomeSearch/pages/components/Gender/Gender.js";
@@ -27384,7 +27384,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
-/* harmony import */ var _redux_actions_actions__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./../../redux/actions/actions */ "./pages/redux/actions/actions.js");
+/* harmony import */ var _redux_actions_actions__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./../../../redux/actions/actions */ "./redux/actions/actions.js");
 /* harmony import */ var _OrderByStyles__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./OrderByStyles */ "./pages/components/OrderBy/OrderByStyles.jsx");
 
 var _jsxFileName = "/Users/nicolasfbergues/Desktop/Nico/Trabajo/FrontEnd/nextJsGnomeSearch/pages/components/OrderBy/OrderBy.js";
@@ -27938,7 +27938,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
 /* harmony import */ var _FiltersStyled__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./FiltersStyled */ "./pages/containers/Filters/FiltersStyled.jsx");
-/* harmony import */ var _redux_actions_actions__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./../../redux/actions/actions */ "./pages/redux/actions/actions.js");
+/* harmony import */ var _redux_actions_actions__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./../../../redux/actions/actions */ "./redux/actions/actions.js");
 /* harmony import */ var _components_AutoComplete_AutoComplete__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./../../components/AutoComplete/AutoComplete */ "./pages/components/AutoComplete/AutoComplete.jsx");
 /* harmony import */ var _components_Select_Select__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./../../components/Select/Select */ "./pages/components/Select/Select.jsx");
 /* harmony import */ var _components_OrderBy_OrderBy_js__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./../../components/OrderBy/OrderBy.js */ "./pages/components/OrderBy/OrderBy.js");
@@ -28233,10 +28233,10 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
 /* harmony import */ var _Filters_Filters__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./../Filters/Filters */ "./pages/containers/Filters/Filters.jsx");
 /* harmony import */ var _components_Card_Card__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./../../components/Card/Card */ "./pages/components/Card/Card.jsx");
-/* harmony import */ var _redux_actions_actions__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./../../redux/actions/actions */ "./pages/redux/actions/actions.js");
+/* harmony import */ var _redux_actions_actions__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./../../../redux/actions/actions */ "./redux/actions/actions.js");
 /* harmony import */ var _HomeStyled__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./HomeStyled */ "./pages/containers/Home/HomeStyled.jsx");
 /* harmony import */ var _components_Pagination_Pagination__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./../../components/Pagination/Pagination */ "./pages/components/Pagination/Pagination.jsx");
-/* harmony import */ var _utils__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./../../utils */ "./pages/utils.js");
+/* harmony import */ var _utils__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./../../../utils */ "./utils.js");
 var _jsxFileName = "/Users/nicolasfbergues/Desktop/Nico/Trabajo/FrontEnd/nextJsGnomeSearch/pages/containers/Home/Home.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
@@ -28255,12 +28255,6 @@ var Home = function Home(props) {
       gnomes = props.gnomes,
       orderByFilter = props.orderByFilter,
       currentPage = props.currentPage;
-  /*useEffect(() => {
-    props.fetchGender(format).then(response =>{ JSON.stringify(response); console.log(response)})
-   }, [])
-  const format = getCurrentPageGenderFormat(gnomes, props.getCurrentPage(currentPage).payload)
-  const names = getFirstNames(gnomes, props.getCurrentPage(currentPage).payload);*/
-
   var searchFilters = Object(_utils__WEBPACK_IMPORTED_MODULE_9__["filterGnomesBy"])(gnomes, orderByFilter).filter(function (gnome) {
     var isJob = gnome.professions.find(function (profession) {
       return profession === props.filterBy;
@@ -28276,19 +28270,19 @@ var Home = function Home(props) {
   return __jsx(_HomeStyled__WEBPACK_IMPORTED_MODULE_7__["HomeWrapper"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 46
+      lineNumber: 39
     },
     __self: this
   }, __jsx(react_helmet__WEBPACK_IMPORTED_MODULE_1__["Helmet"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 47
+      lineNumber: 40
     },
     __self: this
   }, __jsx("title", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 48
+      lineNumber: 41
     },
     __self: this
   }, "Nicolas Bergues"), __jsx("link", {
@@ -28296,7 +28290,7 @@ var Home = function Home(props) {
     href: "favicon.ico",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 49
+      lineNumber: 42
     },
     __self: this
   }), __jsx("meta", {
@@ -28304,19 +28298,19 @@ var Home = function Home(props) {
     content: "Assesment App",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 50
+      lineNumber: 43
     },
     __self: this
   })), __jsx(_HomeStyled__WEBPACK_IMPORTED_MODULE_7__["HomeRow"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 55
+      lineNumber: 48
     },
     __self: this
   }, __jsx(_Filters_Filters__WEBPACK_IMPORTED_MODULE_4__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 56
+      lineNumber: 49
     },
     __self: this
   })), __jsx(_components_Pagination_Pagination__WEBPACK_IMPORTED_MODULE_8__["default"], {
@@ -28325,13 +28319,13 @@ var Home = function Home(props) {
     maxPages: Math.floor(searchFilters.length / _utils__WEBPACK_IMPORTED_MODULE_9__["itemsByPage"]),
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 58
+      lineNumber: 51
     },
     __self: this
   }), __jsx(_HomeStyled__WEBPACK_IMPORTED_MODULE_7__["HomeRow"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 63
+      lineNumber: 56
     },
     __self: this
   }, __jsx(react_transition_group__WEBPACK_IMPORTED_MODULE_2__["TransitionGroup"], {
@@ -28339,7 +28333,7 @@ var Home = function Home(props) {
     "in": true,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 64
+      lineNumber: 57
     },
     __self: this
   }, searchFilters.length > 0 ? searchFilters.slice(_utils__WEBPACK_IMPORTED_MODULE_9__["itemsByPage"] * currentPage, _utils__WEBPACK_IMPORTED_MODULE_9__["itemsByPage"] + currentPage * _utils__WEBPACK_IMPORTED_MODULE_9__["itemsByPage"]).map(function (gnome) {
@@ -28349,7 +28343,7 @@ var Home = function Home(props) {
       classNames: "item",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 72
+        lineNumber: 65
       },
       __self: this
     }, __jsx(_components_Card_Card__WEBPACK_IMPORTED_MODULE_5__["default"], {
@@ -28358,7 +28352,7 @@ var Home = function Home(props) {
       to: "".concat(gnome.id, "-").concat(gnome.name.split(" ").join("-")),
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 73
+        lineNumber: 66
       },
       __self: this
     }));
@@ -28367,14 +28361,14 @@ var Home = function Home(props) {
     classNames: "item",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 80
+      lineNumber: 73
     },
     __self: this
   }, __jsx("div", {
     className: "notFound",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 81
+      lineNumber: 74
     },
     __self: this
   }, searchFilters.length, " no gnomes founded for current search")))), __jsx(_components_Pagination_Pagination__WEBPACK_IMPORTED_MODULE_8__["default"], {
@@ -28383,7 +28377,7 @@ var Home = function Home(props) {
     maxPages: Math.floor(searchFilters.length / _utils__WEBPACK_IMPORTED_MODULE_9__["itemsByPage"]),
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 87
+      lineNumber: 80
     },
     __self: this
   }));
@@ -28465,7 +28459,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
 /* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! next/link */ "./node_modules/next/link.js");
 /* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_9___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_9__);
-/* harmony import */ var _redux_actions_actions__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../redux/actions/actions */ "./pages/redux/actions/actions.js");
+/* harmony import */ var _redux_actions_actions__WEBPACK_IMPORTED_MODULE_10__ = __webpack_require__(/*! ../../redux/actions/actions */ "./redux/actions/actions.js");
 /* harmony import */ var _components_Loader_Loader_js__WEBPACK_IMPORTED_MODULE_11__ = __webpack_require__(/*! ../components/Loader/Loader.js */ "./pages/components/Loader/Loader.js");
 /* harmony import */ var _Home_Home_js__WEBPACK_IMPORTED_MODULE_12__ = __webpack_require__(/*! ./Home/Home.js */ "./pages/containers/Home/Home.js");
 /* harmony import */ var _Header_Header_js__WEBPACK_IMPORTED_MODULE_13__ = __webpack_require__(/*! ./Header/Header.js */ "./pages/containers/Header/Header.js");
@@ -28595,7 +28589,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var next_link__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(next_link__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
-/* harmony import */ var _redux_store_configureStore__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./redux/store/configureStore */ "./pages/redux/store/configureStore.js");
+/* harmony import */ var _redux_store_configureStore__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./../redux/store/configureStore */ "./redux/store/configureStore.js");
 /* harmony import */ var _containers_Main_js__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./containers/Main.js */ "./pages/containers/Main.js");
 /* harmony import */ var _MainStyled__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./../MainStyled */ "./MainStyled.jsx");
 var _jsxFileName = "/Users/nicolasfbergues/Desktop/Nico/Trabajo/FrontEnd/nextJsGnomeSearch/pages/index.js";
@@ -28644,10 +28638,10 @@ var Index = function Index() {
 
 /***/ }),
 
-/***/ "./pages/redux/actions/actions.js":
-/*!****************************************!*\
-  !*** ./pages/redux/actions/actions.js ***!
-  \****************************************/
+/***/ "./redux/actions/actions.js":
+/*!**********************************!*\
+  !*** ./redux/actions/actions.js ***!
+  \**********************************/
 /*! exports provided: getGnomes, fetchGnomes, fetchGender, getGender, getSearchText, filterByJob, updateOrderBy, getCurrentPage */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -28667,8 +28661,8 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var _babel_runtime_corejs2_core_js_json_stringify__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_corejs2_core_js_json_stringify__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
 /* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _utils__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./../../utils */ "./pages/utils.js");
-/* harmony import */ var _types__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./types */ "./pages/redux/actions/types.js");
+/* harmony import */ var _utils__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./../../utils */ "./utils.js");
+/* harmony import */ var _types__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./types */ "./redux/actions/types.js");
 
 
 
@@ -28801,10 +28795,10 @@ var getCurrentPage = function getCurrentPage(page) {
 
 /***/ }),
 
-/***/ "./pages/redux/actions/types.js":
-/*!**************************************!*\
-  !*** ./pages/redux/actions/types.js ***!
-  \**************************************/
+/***/ "./redux/actions/types.js":
+/*!********************************!*\
+  !*** ./redux/actions/types.js ***!
+  \********************************/
 /*! exports provided: REQUEST_GNOMES, REQUEST_GENDER, SEARCH_TERM, FILTER_BY_JOB, ORDER_BY_FILTER, CURRENT_PAGE */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -28825,16 +28819,16 @@ var CURRENT_PAGE = "CURRENT_PAGE";
 
 /***/ }),
 
-/***/ "./pages/redux/reducers/genderReducer.js":
-/*!***********************************************!*\
-  !*** ./pages/redux/reducers/genderReducer.js ***!
-  \***********************************************/
+/***/ "./redux/reducers/genderReducer.js":
+/*!*****************************************!*\
+  !*** ./redux/reducers/genderReducer.js ***!
+  \*****************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _actions_types__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./../actions/types */ "./pages/redux/actions/types.js");
+/* harmony import */ var _actions_types__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./../actions/types */ "./redux/actions/types.js");
 
 
 function genderReducer() {
@@ -28854,16 +28848,16 @@ function genderReducer() {
 
 /***/ }),
 
-/***/ "./pages/redux/reducers/gnomesReducer.js":
-/*!***********************************************!*\
-  !*** ./pages/redux/reducers/gnomesReducer.js ***!
-  \***********************************************/
+/***/ "./redux/reducers/gnomesReducer.js":
+/*!*****************************************!*\
+  !*** ./redux/reducers/gnomesReducer.js ***!
+  \*****************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _actions_types__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./../actions/types */ "./pages/redux/actions/types.js");
+/* harmony import */ var _actions_types__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./../actions/types */ "./redux/actions/types.js");
 
 
 function gnomesReducer() {
@@ -28883,16 +28877,16 @@ function gnomesReducer() {
 
 /***/ }),
 
-/***/ "./pages/redux/reducers/orderByReducer.jsx":
-/*!*************************************************!*\
-  !*** ./pages/redux/reducers/orderByReducer.jsx ***!
-  \*************************************************/
+/***/ "./redux/reducers/orderByReducer.jsx":
+/*!*******************************************!*\
+  !*** ./redux/reducers/orderByReducer.jsx ***!
+  \*******************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _actions_types__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./../actions/types */ "./pages/redux/actions/types.js");
+/* harmony import */ var _actions_types__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./../actions/types */ "./redux/actions/types.js");
 
 
 function orderByReducer() {
@@ -28912,16 +28906,16 @@ function orderByReducer() {
 
 /***/ }),
 
-/***/ "./pages/redux/reducers/paginationReducer.jsx":
-/*!****************************************************!*\
-  !*** ./pages/redux/reducers/paginationReducer.jsx ***!
-  \****************************************************/
+/***/ "./redux/reducers/paginationReducer.jsx":
+/*!**********************************************!*\
+  !*** ./redux/reducers/paginationReducer.jsx ***!
+  \**********************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _actions_types__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./../actions/types */ "./pages/redux/actions/types.js");
+/* harmony import */ var _actions_types__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./../actions/types */ "./redux/actions/types.js");
 
 
 function paginationReducer() {
@@ -28941,16 +28935,16 @@ function paginationReducer() {
 
 /***/ }),
 
-/***/ "./pages/redux/reducers/professionsReducer.jsx":
-/*!*****************************************************!*\
-  !*** ./pages/redux/reducers/professionsReducer.jsx ***!
-  \*****************************************************/
+/***/ "./redux/reducers/professionsReducer.jsx":
+/*!***********************************************!*\
+  !*** ./redux/reducers/professionsReducer.jsx ***!
+  \***********************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _actions_types__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./../actions/types */ "./pages/redux/actions/types.js");
+/* harmony import */ var _actions_types__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./../actions/types */ "./redux/actions/types.js");
 
 
 function professionsReducer() {
@@ -28970,22 +28964,22 @@ function professionsReducer() {
 
 /***/ }),
 
-/***/ "./pages/redux/reducers/reducers.js":
-/*!******************************************!*\
-  !*** ./pages/redux/reducers/reducers.js ***!
-  \******************************************/
+/***/ "./redux/reducers/reducers.js":
+/*!************************************!*\
+  !*** ./redux/reducers/reducers.js ***!
+  \************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var redux__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! redux */ "./node_modules/redux/es/index.js");
-/* harmony import */ var _gnomesReducer__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./gnomesReducer */ "./pages/redux/reducers/gnomesReducer.js");
-/* harmony import */ var _genderReducer__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./genderReducer */ "./pages/redux/reducers/genderReducer.js");
-/* harmony import */ var _searchReducer__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./searchReducer */ "./pages/redux/reducers/searchReducer.jsx");
-/* harmony import */ var _professionsReducer__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./professionsReducer */ "./pages/redux/reducers/professionsReducer.jsx");
-/* harmony import */ var _orderByReducer__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./orderByReducer */ "./pages/redux/reducers/orderByReducer.jsx");
-/* harmony import */ var _paginationReducer__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./paginationReducer */ "./pages/redux/reducers/paginationReducer.jsx");
+/* harmony import */ var _gnomesReducer__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./gnomesReducer */ "./redux/reducers/gnomesReducer.js");
+/* harmony import */ var _genderReducer__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./genderReducer */ "./redux/reducers/genderReducer.js");
+/* harmony import */ var _searchReducer__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./searchReducer */ "./redux/reducers/searchReducer.jsx");
+/* harmony import */ var _professionsReducer__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./professionsReducer */ "./redux/reducers/professionsReducer.jsx");
+/* harmony import */ var _orderByReducer__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./orderByReducer */ "./redux/reducers/orderByReducer.jsx");
+/* harmony import */ var _paginationReducer__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./paginationReducer */ "./redux/reducers/paginationReducer.jsx");
 
 
 
@@ -29005,16 +28999,16 @@ var reducer = Object(redux__WEBPACK_IMPORTED_MODULE_0__["combineReducers"])({
 
 /***/ }),
 
-/***/ "./pages/redux/reducers/searchReducer.jsx":
-/*!************************************************!*\
-  !*** ./pages/redux/reducers/searchReducer.jsx ***!
-  \************************************************/
+/***/ "./redux/reducers/searchReducer.jsx":
+/*!******************************************!*\
+  !*** ./redux/reducers/searchReducer.jsx ***!
+  \******************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
 "use strict";
 __webpack_require__.r(__webpack_exports__);
-/* harmony import */ var _actions_types__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./../actions/types */ "./pages/redux/actions/types.js");
+/* harmony import */ var _actions_types__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! ./../actions/types */ "./redux/actions/types.js");
 
 
 function searchReducer() {
@@ -29034,10 +29028,10 @@ function searchReducer() {
 
 /***/ }),
 
-/***/ "./pages/redux/store/configureStore.js":
-/*!*********************************************!*\
-  !*** ./pages/redux/store/configureStore.js ***!
-  \*********************************************/
+/***/ "./redux/store/configureStore.js":
+/*!***************************************!*\
+  !*** ./redux/store/configureStore.js ***!
+  \***************************************/
 /*! exports provided: default */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 
@@ -29045,7 +29039,7 @@ function searchReducer() {
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var redux__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! redux */ "./node_modules/redux/es/index.js");
 /* harmony import */ var redux_thunk__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! redux-thunk */ "./node_modules/redux-thunk/es/index.js");
-/* harmony import */ var _reducers_reducers__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./../reducers/reducers */ "./pages/redux/reducers/reducers.js");
+/* harmony import */ var _reducers_reducers__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ./../reducers/reducers */ "./redux/reducers/reducers.js");
 
 
 
@@ -29069,10 +29063,10 @@ var configure = function configure() {
 
 /***/ }),
 
-/***/ "./pages/utils.js":
-/*!************************!*\
-  !*** ./pages/utils.js ***!
-  \************************/
+/***/ "./utils.js":
+/*!******************!*\
+  !*** ./utils.js ***!
+  \******************/
 /*! exports provided: itemsByPage, gnomesAPI, genderGuessingAPI, getFirstNames, convertColors, filterGnomesBy */
 /***/ (function(module, __webpack_exports__, __webpack_require__) {
 

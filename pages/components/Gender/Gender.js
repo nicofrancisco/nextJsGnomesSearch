@@ -1,7 +1,7 @@
 import React, { useEffect, useState } from 'react';
 import { connect } from "react-redux";
-import * as actions from "../../redux/actions/actions";
-import { convertColors } from "./../../utils";
+import * as actions from "../../../redux/actions/actions";
+import { convertColors } from "./../../../utils";
 import  GenderCard  from "./GenderCard/GenderCard";
 import { GnomeCard, Avatar, GnomeInfo, GnomeInfoList } from "./GenderStyled";
 

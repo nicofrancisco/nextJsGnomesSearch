@@ -1,7 +1,7 @@
 import React from "react";
 import { connect } from "react-redux";
 import { FormSearch, FormRow } from "./FiltersStyled";
-import * as actions from "./../../redux/actions/actions";
+import * as actions from "./../../../redux/actions/actions";
 import AutoComplete from "./../../components/AutoComplete/AutoComplete";
 import Select from "./../../components/Select/Select";
 import OrderBy from "./../../components/OrderBy/OrderBy.js";

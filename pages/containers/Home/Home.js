@@ -4,23 +4,16 @@ import { Transition, CSSTransition, TransitionGroup } from "react-transition-gro
 import { connect } from "react-redux";
 import Filters from "./../Filters/Filters";
 import Card from "./../../components/Card/Card";
-import * as actions from "./../../redux/actions/actions";
+import * as actions from "./../../../redux/actions/actions";
 import { HomeRow, HomeWrapper } from "./HomeStyled";
 import Pagination from "./../../components/Pagination/Pagination";
-import { filterGnomesBy, itemsByPage} from "./../../utils";
+import { filterGnomesBy, itemsByPage} from "./../../../utils";
 
 
 const Home = (props) => {
 
   const { searchTerm, gnomes, orderByFilter, currentPage} = props;
-
-  /*useEffect(() => {
-    props.fetchGender(format).then(response =>{ JSON.stringify(response); console.log(response)})
-
-  }, [])
-  const format = getCurrentPageGenderFormat(gnomes, props.getCurrentPage(currentPage).payload)
-  const names = getFirstNames(gnomes, props.getCurrentPage(currentPage).payload);*/
-
+  
 
   const searchFilters = filterGnomesBy(gnomes, orderByFilter)
     .filter(gnome => {

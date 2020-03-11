@@ -1,7 +1,7 @@
 import React, { Component } from "react";
 import { connect } from "react-redux";
 import Link from 'next/link';
-import * as actions from "../redux/actions/actions";
+import * as actions from "../../redux/actions/actions";
 import Loader from "../components/Loader/Loader.js";
 import Home from './Home/Home.js'
 import Header from "./Header/Header.js";
