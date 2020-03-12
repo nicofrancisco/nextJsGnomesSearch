@@ -1,6 +1,6 @@
 import React, { useEffect, useState } from 'react';
 import { connect } from "react-redux";
-import * as actions from "../../../redux/actions/actions";
+import * as actions from "../../../src/actions/actions";
 import { convertColors } from "./../../../utils";
 import  GenderCard  from "./GenderCard/GenderCard";
 import  GenderCardStyle from "./GenderStyled"
@@ -21,17 +21,12 @@ const Gender = (props) => {
     useEffect(() => {
 
       props.fetchGender( "name[]="+ name ).then(response =>{
-        console.log(response)
+
         setGender(response)
-        console.log(gender)
+
       })
     }, []);
 
-    /*useEffect(() => {
-       if (gender.length > 0) {
-            //renderGenderData(gender);
-       }
-    },[gender]);*/
 
   return(
 

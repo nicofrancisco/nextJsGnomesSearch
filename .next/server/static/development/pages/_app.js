@@ -139,19 +139,17 @@ const withRedux = (PageComponent, {
         props = _objectWithoutProperties(_ref, ["initialReduxState"]);
 
     const store = getOrInitializeStore(initialReduxState);
-    console.log("store");
-    console.log(store);
     return __jsx(react_redux__WEBPACK_IMPORTED_MODULE_1__["Provider"], {
       store: store,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 12
+        lineNumber: 11
       },
       __self: undefined
     }, __jsx(PageComponent, _extends({}, props, {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 13
+        lineNumber: 12
       },
       __self: undefined
     })));
@@ -203,8 +201,6 @@ const getOrInitializeStore = initialState => {
     reduxStore = Object(_src_store__WEBPACK_IMPORTED_MODULE_2__["default"])(initialState);
   }
 
-  console.log("reduxStore");
-  console.log(reduxStore);
   return reduxStore;
 };
 
@@ -532,7 +528,6 @@ function _extends() { _extends = Object.assign || function (target) { for (var i
 
 class MyApp extends next_app__WEBPACK_IMPORTED_MODULE_0___default.a {
   render() {
-    console.log("_app");
     const {
       Component,
       pageProps
@@ -608,7 +603,7 @@ function Layout({
       lineNumber: 5
     },
     __self: this
-  }, "hola", children);
+  }, children);
 }
 
 /* harmony default export */ __webpack_exports__["default"] = (Object(_lib_with_redux_store__WEBPACK_IMPORTED_MODULE_1__["withRedux"])(Layout));
@@ -656,7 +651,6 @@ __webpack_require__.r(__webpack_exports__);
 function gnomesReducer(state = [], action) {
   switch (action.type) {
     case _actions_types__WEBPACK_IMPORTED_MODULE_0__["REQUEST_GNOMES"]:
-      console.log(action.payload);
       return action.payload;
 
     default:
@@ -700,16 +694,6 @@ __webpack_require__.r(__webpack_exports__);
   orderBy: _orderByReducer__WEBPACK_IMPORTED_MODULE_5__["default"],
   currentPage: _paginationReducer__WEBPACK_IMPORTED_MODULE_6__["default"]
 }));
-/*const reducer = combineReducers({
-  gnomes: gnomesReducer,
-  gender: genderReducer,
-  searchTerm: searchReducer,
-  filterBy: professionsReducer,
-  orderBy: orderByReducer,
-  currentPage: paginationReducer
-});
-export default reducer;
-*/
 
 /***/ }),
 
@@ -838,7 +822,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-const initialValues = {
+const initialState = {
   gnomes: [],
   gender: [],
   searchTerm: "",
@@ -846,10 +830,8 @@ const initialValues = {
   orderBy: "",
   currentPage: 0
 };
-function initializeStore(initialValues) {
-  console.log("rootReducer");
-  console.log(_src_reducers__WEBPACK_IMPORTED_MODULE_3__["default"]);
-  return Object(redux__WEBPACK_IMPORTED_MODULE_0__["createStore"])(_src_reducers__WEBPACK_IMPORTED_MODULE_3__["default"], initialValues, Object(redux_devtools_extension__WEBPACK_IMPORTED_MODULE_1__["composeWithDevTools"])(Object(redux__WEBPACK_IMPORTED_MODULE_0__["applyMiddleware"])(redux_thunk__WEBPACK_IMPORTED_MODULE_2___default.a)));
+function initializeStore(initialState) {
+  return Object(redux__WEBPACK_IMPORTED_MODULE_0__["createStore"])(_src_reducers__WEBPACK_IMPORTED_MODULE_3__["default"], initialState, Object(redux_devtools_extension__WEBPACK_IMPORTED_MODULE_1__["composeWithDevTools"])(Object(redux__WEBPACK_IMPORTED_MODULE_0__["applyMiddleware"])(redux_thunk__WEBPACK_IMPORTED_MODULE_2___default.a)));
 }
 
 /***/ }),

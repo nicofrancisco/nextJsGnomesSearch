@@ -1,20 +1,19 @@
-# Test Assesment - NexJS
+# - NextJS App with SSR and Redux - Gnomes Searcher
 
-React assessment App
+Assessment App
 
 ## Table of contents
 
 - [Installation](#installation)
 - [How to use](#how-to-use)
 - [Stack used](#tech-stack)
-- [Software used](#software-used)
 
 
 ## Installation
 
-First step clone this repo
+Clone it
 ```
-$git clone https://github.com/nicofrancisco/nextJsGnomesSearch
+$git clone https://github.com/nicofrancisco/nextJsGnomesSearch.git
 ```
 
 ```
@@ -30,10 +29,13 @@ visit http://localhost:3000 in browser
 https://testgnomes.herokuapp.com/
 
 ## Stack
-- NexJS
+- NexJS with SSR and Redux
 - Redux
   - Redux Thunk
+- next-redux-wrapper
 - Axios
+- react-transition-group
 - styled-components
 - genderize.io
+- heroku
 - git

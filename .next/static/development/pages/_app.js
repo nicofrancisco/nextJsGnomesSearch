@@ -64,19 +64,17 @@ var withRedux = function withRedux(PageComponent) {
         props = Object(_babel_runtime_corejs2_helpers_esm_objectWithoutProperties__WEBPACK_IMPORTED_MODULE_9__["default"])(_ref2, ["initialReduxState"]);
 
     var store = getOrInitializeStore(initialReduxState);
-    console.log("store");
-    console.log(store);
     return __jsx(react_redux__WEBPACK_IMPORTED_MODULE_11__["Provider"], {
       store: store,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 12
+        lineNumber: 11
       },
       __self: this
     }, __jsx(PageComponent, Object(_babel_runtime_corejs2_helpers_esm_extends__WEBPACK_IMPORTED_MODULE_8__["default"])({}, props, {
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 13
+        lineNumber: 12
       },
       __self: this
     })));
@@ -154,8 +152,6 @@ var getOrInitializeStore = function getOrInitializeStore(initialState) {
     reduxStore = Object(_src_store__WEBPACK_IMPORTED_MODULE_12__["default"])(initialState);
   }
 
-  console.log("reduxStore");
-  console.log(reduxStore);
   return reduxStore;
 };
 
@@ -12506,7 +12502,6 @@ var MyApp = /*#__PURE__*/function (_App) {
   Object(_babel_runtime_corejs2_helpers_esm_createClass__WEBPACK_IMPORTED_MODULE_2__["default"])(MyApp, [{
     key: "render",
     value: function render() {
-      console.log("_app");
       var _this$props = this.props,
           Component = _this$props.Component,
           pageProps = _this$props.pageProps;
@@ -12582,7 +12577,7 @@ function Layout(_ref) {
       lineNumber: 5
     },
     __self: this
-  }, "hola", children);
+  }, children);
 }
 
 /* harmony default export */ __webpack_exports__["default"] = (Object(_lib_with_redux_store__WEBPACK_IMPORTED_MODULE_1__["withRedux"])(Layout));
@@ -12636,7 +12631,6 @@ function gnomesReducer() {
 
   switch (action.type) {
     case _actions_types__WEBPACK_IMPORTED_MODULE_0__["REQUEST_GNOMES"]:
-      console.log(action.payload);
       return action.payload;
 
     default:
@@ -12679,16 +12673,6 @@ __webpack_require__.r(__webpack_exports__);
   orderBy: _orderByReducer__WEBPACK_IMPORTED_MODULE_5__["default"],
   currentPage: _paginationReducer__WEBPACK_IMPORTED_MODULE_6__["default"]
 }));
-/*const reducer = combineReducers({
-  gnomes: gnomesReducer,
-  gender: genderReducer,
-  searchTerm: searchReducer,
-  filterBy: professionsReducer,
-  orderBy: orderByReducer,
-  currentPage: paginationReducer
-});
-export default reducer;
-*/
 
 /***/ }),
 
@@ -12827,7 +12811,7 @@ __webpack_require__.r(__webpack_exports__);
 
 
 
-var initialValues = {
+var initialState = {
   gnomes: [],
   gender: [],
   searchTerm: "",
@@ -12835,10 +12819,8 @@ var initialValues = {
   orderBy: "",
   currentPage: 0
 };
-function initializeStore(initialValues) {
-  console.log("rootReducer");
-  console.log(_src_reducers__WEBPACK_IMPORTED_MODULE_3__["default"]);
-  return Object(redux__WEBPACK_IMPORTED_MODULE_0__["createStore"])(_src_reducers__WEBPACK_IMPORTED_MODULE_3__["default"], initialValues, Object(redux_devtools_extension__WEBPACK_IMPORTED_MODULE_1__["composeWithDevTools"])(Object(redux__WEBPACK_IMPORTED_MODULE_0__["applyMiddleware"])(redux_thunk__WEBPACK_IMPORTED_MODULE_2__["default"])));
+function initializeStore(initialState) {
+  return Object(redux__WEBPACK_IMPORTED_MODULE_0__["createStore"])(_src_reducers__WEBPACK_IMPORTED_MODULE_3__["default"], initialState, Object(redux_devtools_extension__WEBPACK_IMPORTED_MODULE_1__["composeWithDevTools"])(Object(redux__WEBPACK_IMPORTED_MODULE_0__["applyMiddleware"])(redux_thunk__WEBPACK_IMPORTED_MODULE_2__["default"])));
 }
 
 /***/ }),

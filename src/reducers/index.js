@@ -14,13 +14,3 @@ export default combineReducers({
   orderBy: orderByReducer,
   currentPage: paginationReducer
 });
-/*const reducer = combineReducers({
-  gnomes: gnomesReducer,
-  gender: genderReducer,
-  searchTerm: searchReducer,
-  filterBy: professionsReducer,
-  orderBy: orderByReducer,
-  currentPage: paginationReducer
-});
-export default reducer;
-*/

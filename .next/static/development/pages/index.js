@@ -26794,7 +26794,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
-/* harmony import */ var _redux_actions_actions__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../redux/actions/actions */ "./redux/actions/actions.js");
+/* harmony import */ var _src_actions_actions__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! ../../../src/actions/actions */ "./src/actions/actions.js");
 /* harmony import */ var _utils__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./../../../utils */ "./utils.js");
 /* harmony import */ var _GenderCard_GenderCard__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./GenderCard/GenderCard */ "./pages/components/Gender/GenderCard/GenderCard.js");
 /* harmony import */ var _GenderStyled__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./GenderStyled */ "./pages/components/Gender/GenderStyled.jsx");
@@ -26825,36 +26825,28 @@ var Gender = function Gender(props) {
 
   Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(function () {
     props.fetchGender("name[]=" + name).then(function (response) {
-      console.log(response);
       setGender(response);
-      console.log(gender);
     });
   }, []);
-  /*useEffect(() => {
-     if (gender.length > 0) {
-          //renderGenderData(gender);
-     }
-  },[gender]);*/
-
   return __jsx(_GenderStyled__WEBPACK_IMPORTED_MODULE_5__["default"], {
     to: to,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 38
+      lineNumber: 33
     },
     __self: this
   }, __jsx("div", {
     className: "banner",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 39
+      lineNumber: 34
     },
     __self: this
   }), __jsx(_AvatarStyles__WEBPACK_IMPORTED_MODULE_6__["default"], {
     src: gnome && gnome.thumbnail,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 41
+      lineNumber: 36
     },
     __self: this
   }, __jsx("img", {
@@ -26862,117 +26854,117 @@ var Gender = function Gender(props) {
     alt: "avatar ".concat(gnome && gnome.name),
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 42
+      lineNumber: 37
     },
     __self: this
   })), __jsx("header", {
     className: "headerBox",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 47
+      lineNumber: 42
     },
     __self: this
   }, __jsx("h2", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 48
+      lineNumber: 43
     },
     __self: this
   }, gnome && gnome.name), __jsx("div", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 49
+      lineNumber: 44
     },
     __self: this
   }, gnome && gnome.professions.length > 0 ? gnome.professions.join(" • ") : "No Profession")), __jsx(_GenderCard_GenderCard__WEBPACK_IMPORTED_MODULE_4__["default"], {
     gender: gender,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 55
+      lineNumber: 50
     },
     __self: this
   }), __jsx(_InfoStyles__WEBPACK_IMPORTED_MODULE_7__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 56
+      lineNumber: 51
     },
     __self: this
   }, __jsx(_InfoListStyles__WEBPACK_IMPORTED_MODULE_8__["default"], {
     hairColor: gnome && Object(_utils__WEBPACK_IMPORTED_MODULE_3__["convertColors"])(gnome.hair_color),
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 57
+      lineNumber: 52
     },
     __self: this
   }, __jsx("span", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 58
+      lineNumber: 53
     },
     __self: this
   }, "Age"), __jsx("span", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 59
+      lineNumber: 54
     },
     __self: this
   }, gnome && gnome.age)), __jsx(_InfoListStyles__WEBPACK_IMPORTED_MODULE_8__["default"], {
     hairColor: gnome && Object(_utils__WEBPACK_IMPORTED_MODULE_3__["convertColors"])(gnome.hair_color),
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 61
+      lineNumber: 56
     },
     __self: this
   }, __jsx("span", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 62
+      lineNumber: 57
     },
     __self: this
   }, "Weight"), __jsx("span", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 63
+      lineNumber: 58
     },
     __self: this
   }, gnome && Math.ceil(gnome.weight), " ", __jsx("span", {
     className: "unit",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 64
+      lineNumber: 59
     },
     __self: this
   }, "KG"))), __jsx(_InfoListStyles__WEBPACK_IMPORTED_MODULE_8__["default"], {
     hairColor: gnome && Object(_utils__WEBPACK_IMPORTED_MODULE_3__["convertColors"])(gnome.hair_color),
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 67
+      lineNumber: 62
     },
     __self: this
   }, __jsx("span", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 68
+      lineNumber: 63
     },
     __self: this
   }, "Height"), __jsx("span", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 69
+      lineNumber: 64
     },
     __self: this
   }, gnome && Math.ceil(gnome.height), " ", __jsx("span", {
     className: "unit",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 70
+      lineNumber: 65
     },
     __self: this
   }, "CM")))), __jsx("div", {
     className: "banner-footer",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 74
+      lineNumber: 69
     },
     __self: this
   }));
@@ -26984,7 +26976,7 @@ var mapStateToProps = function mapStateToProps(state) {
   };
 };
 
-/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_1__["connect"])(mapStateToProps, _redux_actions_actions__WEBPACK_IMPORTED_MODULE_2__)(Gender));
+/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_1__["connect"])(mapStateToProps, _src_actions_actions__WEBPACK_IMPORTED_MODULE_2__)(Gender));
 
 /***/ }),
 
@@ -27514,7 +27506,7 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_1__);
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
-/* harmony import */ var _redux_actions_actions__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./../../../redux/actions/actions */ "./redux/actions/actions.js");
+/* harmony import */ var _src_actions_actions__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./../../../src/actions/actions */ "./src/actions/actions.js");
 /* harmony import */ var _OrderByStyles__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./OrderByStyles */ "./pages/components/OrderBy/OrderByStyles.jsx");
 
 var _jsxFileName = "/Users/nicolasfbergues/Desktop/Nico/Trabajo/FrontEnd/nextJsGnomeSearch/pages/components/OrderBy/OrderBy.js";
@@ -27556,7 +27548,7 @@ function mapStateToProps(state) {
   };
 }
 
-/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_2__["connect"])(mapStateToProps, _redux_actions_actions__WEBPACK_IMPORTED_MODULE_3__)(OrderBy));
+/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_2__["connect"])(mapStateToProps, _src_actions_actions__WEBPACK_IMPORTED_MODULE_3__)(OrderBy));
 
 /***/ }),
 
@@ -27945,7 +27937,6 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 var Details = function Details(_ref) {
   var gnomeURL = _ref.gnomeURL,
       gnomes = _ref.gnomes;
-  //window.scroll(null, 0);
   var selectedGnome = gnomes && gnomes.find(function (gnome) {
     return gnomeURL === "".concat(gnome.id, "-").concat(gnome.name.split(" ").join("-"));
   });
@@ -27960,19 +27951,19 @@ var Details = function Details(_ref) {
   return __jsx(_DetailsWrapperStyled__WEBPACK_IMPORTED_MODULE_5__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 29
+      lineNumber: 28
     },
     __self: this
   }, __jsx(_DetailsRowStyled__WEBPACK_IMPORTED_MODULE_4__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 30
+      lineNumber: 29
     },
     __self: this
   }), __jsx(_FriendsRowStyled__WEBPACK_IMPORTED_MODULE_6__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 32
+      lineNumber: 31
     },
     __self: this
   }, renderFriends.length > 0 ? renderFriends.map(function (friend) {
@@ -27980,7 +27971,7 @@ var Details = function Details(_ref) {
       key: "".concat(friend.id),
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 35
+        lineNumber: 34
       },
       __self: this
     }, __jsx(_components_Card_Card__WEBPACK_IMPORTED_MODULE_3__["default"], {
@@ -27990,7 +27981,7 @@ var Details = function Details(_ref) {
       hideFriendButton: true,
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 37
+        lineNumber: 36
       },
       __self: this
     }));
@@ -27998,7 +27989,7 @@ var Details = function Details(_ref) {
     className: "notFound",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 46
+      lineNumber: 45
     },
     __self: this
   }, "...seems to have no friends")));
@@ -28131,12 +28122,12 @@ __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_2__);
 /* harmony import */ var react_redux__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! react-redux */ "./node_modules/react-redux/es/index.js");
-/* harmony import */ var _redux_actions_actions__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./../../../redux/actions/actions */ "./redux/actions/actions.js");
-/* harmony import */ var _components_AutoComplete_AutoComplete__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./../../components/AutoComplete/AutoComplete */ "./pages/components/AutoComplete/AutoComplete.js");
-/* harmony import */ var _components_Select_Select__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./../../components/Select/Select */ "./pages/components/Select/Select.jsx");
-/* harmony import */ var _components_OrderBy_OrderBy_js__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./../../components/OrderBy/OrderBy.js */ "./pages/components/OrderBy/OrderBy.js");
-/* harmony import */ var _FormSearchStyled__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./FormSearchStyled */ "./pages/containers/Filters/FormSearchStyled.jsx");
-/* harmony import */ var _FormRowStyled__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./FormRowStyled */ "./pages/containers/Filters/FormRowStyled.jsx");
+/* harmony import */ var _FormRowStyled__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./FormRowStyled */ "./pages/containers/Filters/FormRowStyled.jsx");
+/* harmony import */ var _FormSearchStyled__WEBPACK_IMPORTED_MODULE_5__ = __webpack_require__(/*! ./FormSearchStyled */ "./pages/containers/Filters/FormSearchStyled.jsx");
+/* harmony import */ var _src_actions_actions__WEBPACK_IMPORTED_MODULE_6__ = __webpack_require__(/*! ./../../../src/actions/actions */ "./src/actions/actions.js");
+/* harmony import */ var _components_AutoComplete_AutoComplete__WEBPACK_IMPORTED_MODULE_7__ = __webpack_require__(/*! ./../../components/AutoComplete/AutoComplete */ "./pages/components/AutoComplete/AutoComplete.js");
+/* harmony import */ var _components_Select_Select__WEBPACK_IMPORTED_MODULE_8__ = __webpack_require__(/*! ./../../components/Select/Select */ "./pages/components/Select/Select.jsx");
+/* harmony import */ var _components_OrderBy_OrderBy_js__WEBPACK_IMPORTED_MODULE_9__ = __webpack_require__(/*! ./../../components/OrderBy/OrderBy.js */ "./pages/components/OrderBy/OrderBy.js");
 
 
 var _jsxFileName = "/Users/nicolasfbergues/Desktop/Nico/Trabajo/FrontEnd/nextJsGnomeSearch/pages/containers/Filters/Filters.js";
@@ -28151,8 +28142,6 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_2___default.a.createElement;
 
 
 var Filters = function Filters(props) {
-  console.log("Filters");
-  console.log(props);
   var gnomeNames = props.gnomes.map(function (gnome) {
     return gnome.name;
   });
@@ -28164,95 +28153,95 @@ var Filters = function Filters(props) {
 
   var jobs = _babel_runtime_corejs2_core_js_array_from__WEBPACK_IMPORTED_MODULE_1___default()(new _babel_runtime_corejs2_core_js_set__WEBPACK_IMPORTED_MODULE_0___default.a(getJobs));
 
-  return __jsx(_FormSearchStyled__WEBPACK_IMPORTED_MODULE_8__["default"], {
+  return __jsx(_FormSearchStyled__WEBPACK_IMPORTED_MODULE_5__["default"], {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 24
+    },
+    __self: this
+  }, __jsx(_FormRowStyled__WEBPACK_IMPORTED_MODULE_4__["default"], {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 25
+    },
+    __self: this
+  }, __jsx(_components_OrderBy_OrderBy_js__WEBPACK_IMPORTED_MODULE_9__["default"], {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 26
     },
     __self: this
-  }, __jsx(_FormRowStyled__WEBPACK_IMPORTED_MODULE_9__["default"], {
+  }, "Most Friendly"), __jsx(_components_OrderBy_OrderBy_js__WEBPACK_IMPORTED_MODULE_9__["default"], {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 27
     },
     __self: this
-  }, __jsx(_components_OrderBy_OrderBy_js__WEBPACK_IMPORTED_MODULE_7__["default"], {
+  }, "Less Friendly"), __jsx(_components_OrderBy_OrderBy_js__WEBPACK_IMPORTED_MODULE_9__["default"], {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 28
     },
     __self: this
-  }, "Most Friendly"), __jsx(_components_OrderBy_OrderBy_js__WEBPACK_IMPORTED_MODULE_7__["default"], {
+  }, "Youngest"), __jsx(_components_OrderBy_OrderBy_js__WEBPACK_IMPORTED_MODULE_9__["default"], {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 29
     },
     __self: this
-  }, "Less Friendly"), __jsx(_components_OrderBy_OrderBy_js__WEBPACK_IMPORTED_MODULE_7__["default"], {
+  }, "Oldest"), __jsx(_components_OrderBy_OrderBy_js__WEBPACK_IMPORTED_MODULE_9__["default"], {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 30
     },
     __self: this
-  }, "Youngest"), __jsx(_components_OrderBy_OrderBy_js__WEBPACK_IMPORTED_MODULE_7__["default"], {
+  }, "Lightest"), __jsx(_components_OrderBy_OrderBy_js__WEBPACK_IMPORTED_MODULE_9__["default"], {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 31
     },
     __self: this
-  }, "Oldest"), __jsx(_components_OrderBy_OrderBy_js__WEBPACK_IMPORTED_MODULE_7__["default"], {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 32
-    },
-    __self: this
-  }, "Lightest"), __jsx(_components_OrderBy_OrderBy_js__WEBPACK_IMPORTED_MODULE_7__["default"], {
+  }, "Heaviest")), __jsx(_FormRowStyled__WEBPACK_IMPORTED_MODULE_4__["default"], {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 33
-    },
-    __self: this
-  }, "Heaviest")), __jsx(_FormRowStyled__WEBPACK_IMPORTED_MODULE_9__["default"], {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 35
     },
     __self: this
   }), __jsx("div", {
     className: "filterWrappTitles",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 37
+      lineNumber: 35
     },
     __self: this
   }, __jsx("div", {
     className: "profession",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 38
+      lineNumber: 36
     },
     __self: this
   }, "Search by Name"), __jsx("div", {
     className: "profession",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 39
+      lineNumber: 37
     },
     __self: this
-  }, "Search by Profession")), __jsx(_FormRowStyled__WEBPACK_IMPORTED_MODULE_9__["default"], {
+  }, "Search by Profession")), __jsx(_FormRowStyled__WEBPACK_IMPORTED_MODULE_4__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 41
+      lineNumber: 39
     },
     __self: this
   }, __jsx("div", {
     className: "filterWrapp",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 42
+      lineNumber: 40
     },
     __self: this
-  }, __jsx(_components_AutoComplete_AutoComplete__WEBPACK_IMPORTED_MODULE_5__["default"], {
+  }, __jsx(_components_AutoComplete_AutoComplete__WEBPACK_IMPORTED_MODULE_7__["default"], {
     stateName: "searchTerm",
     updateCurrentPage: props.getCurrentPage,
     parentUpdateState: props.getSearchText,
@@ -28264,10 +28253,10 @@ var Filters = function Filters(props) {
     includeSearchTerm: true,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 43
+      lineNumber: 41
     },
     __self: this
-  }), __jsx(_components_Select_Select__WEBPACK_IMPORTED_MODULE_6__["default"], {
+  }), __jsx(_components_Select_Select__WEBPACK_IMPORTED_MODULE_8__["default"], {
     items: jobs && jobs,
     defaultValue: "All Professions",
     stateName: "filteBy",
@@ -28277,7 +28266,7 @@ var Filters = function Filters(props) {
     state: props,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 55
+      lineNumber: 53
     },
     __self: this
   }))));
@@ -28289,7 +28278,7 @@ function mapStateToProps(state) {
   };
 }
 
-/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_3__["connect"])(mapStateToProps, _redux_actions_actions__WEBPACK_IMPORTED_MODULE_4__)(Filters));
+/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_3__["connect"])(mapStateToProps, _src_actions_actions__WEBPACK_IMPORTED_MODULE_6__)(Filters));
 
 /***/ }),
 
@@ -28471,39 +28460,39 @@ var Home = function Home(props) {
   var searchTerm = props.searchTerm,
       gnomes = props.gnomes,
       orderByFilter = props.orderByFilter,
-      currentPage = props.currentPage;
-  console.log("HOME");
-  console.log(props);
-  console.log(currentPage);
+      currentPage = props.currentPage,
+      filterBy = props.filterBy,
+      filterByJob = props.filterByJob;
+  if (filterBy == "") filterBy = "All";
   var searchFilters = Object(_utils__WEBPACK_IMPORTED_MODULE_8__["filterGnomesBy"])(gnomes, orderByFilter).filter(function (gnome) {
     var isJob = gnome.professions.find(function (profession) {
-      return profession === props.filterBy;
+      return profession === filterBy;
     });
     var hasProfession = gnome.professions.some(function (profession) {
       return profession === isJob;
     });
-    return props.filterBy === "All" ? gnome : hasProfession;
+    return filterBy === "All" ? gnome : hasProfession;
   }).filter(function (gnome) {
     var search = gnome.name.toLowerCase().indexOf(searchTerm.toLowerCase()) >= 0;
     return search;
   });
-  console.log(searchFilters);
+  if (filterBy == "All Professions") searchFilters = gnomes;
   return __jsx(_HomeWrapperStyled__WEBPACK_IMPORTED_MODULE_10__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 44
+      lineNumber: 42
     },
     __self: this
   }, __jsx(react_helmet__WEBPACK_IMPORTED_MODULE_1__["Helmet"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 45
+      lineNumber: 43
     },
     __self: this
   }, __jsx("title", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 46
+      lineNumber: 44
     },
     __self: this
   }, "Nicolas Bergues"), __jsx("link", {
@@ -28511,7 +28500,7 @@ var Home = function Home(props) {
     href: "favicon.ico",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 47
+      lineNumber: 45
     },
     __self: this
   }), __jsx("meta", {
@@ -28519,19 +28508,20 @@ var Home = function Home(props) {
     content: "Assesment App",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 48
+      lineNumber: 46
     },
     __self: this
   })), __jsx(_HomeRowStyled__WEBPACK_IMPORTED_MODULE_9__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 53
+      lineNumber: 51
     },
     __self: this
   }, __jsx(_Filters_Filters__WEBPACK_IMPORTED_MODULE_4__["default"], {
+    data: props,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 54
+      lineNumber: 52
     },
     __self: this
   })), __jsx(_components_Pagination_Pagination__WEBPACK_IMPORTED_MODULE_7__["default"], {
@@ -28540,13 +28530,13 @@ var Home = function Home(props) {
     maxPages: Math.floor(searchFilters.length / _utils__WEBPACK_IMPORTED_MODULE_8__["itemsByPage"]),
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 56
+      lineNumber: 54
     },
     __self: this
   }), __jsx(_HomeRowStyled__WEBPACK_IMPORTED_MODULE_9__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 61
+      lineNumber: 59
     },
     __self: this
   }, __jsx(react_transition_group__WEBPACK_IMPORTED_MODULE_2__["TransitionGroup"], {
@@ -28554,7 +28544,7 @@ var Home = function Home(props) {
     "in": true,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 62
+      lineNumber: 60
     },
     __self: this
   }, searchFilters.length > 0 ? searchFilters.slice(_utils__WEBPACK_IMPORTED_MODULE_8__["itemsByPage"] * currentPage, _utils__WEBPACK_IMPORTED_MODULE_8__["itemsByPage"] + currentPage * _utils__WEBPACK_IMPORTED_MODULE_8__["itemsByPage"]).map(function (gnome) {
@@ -28564,7 +28554,7 @@ var Home = function Home(props) {
       classNames: "item",
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 70
+        lineNumber: 68
       },
       __self: this
     }, __jsx(_components_Card_Card__WEBPACK_IMPORTED_MODULE_5__["default"], {
@@ -28573,7 +28563,7 @@ var Home = function Home(props) {
       to: "".concat(gnome.id, "-").concat(gnome.name.split(" ").join("-")),
       __source: {
         fileName: _jsxFileName,
-        lineNumber: 71
+        lineNumber: 69
       },
       __self: this
     }));
@@ -28582,14 +28572,14 @@ var Home = function Home(props) {
     classNames: "item",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 78
+      lineNumber: 76
     },
     __self: this
   }, __jsx("div", {
     className: "notFound",
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 79
+      lineNumber: 77
     },
     __self: this
   }, searchFilters.length, " no gnomes founded for current search")))), __jsx(_components_Pagination_Pagination__WEBPACK_IMPORTED_MODULE_7__["default"], {
@@ -28598,7 +28588,7 @@ var Home = function Home(props) {
     maxPages: Math.floor(searchFilters.length / _utils__WEBPACK_IMPORTED_MODULE_8__["itemsByPage"]),
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 85
+      lineNumber: 83
     },
     __self: this
   }));
@@ -28608,6 +28598,7 @@ function mapStateToProps(state) {
   return {
     searchTerm: state.searchTerm,
     gnomes: state.gnomes,
+    gender: state.gender,
     filterBy: state.filterBy,
     orderByFilter: state.orderBy,
     currentPage: state.currentPage
@@ -28699,7 +28690,6 @@ var _jsxFileName = "/Users/nicolasfbergues/Desktop/Nico/Trabajo/FrontEnd/nextJsG
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
- //import * as actions from "../redux/actions/actions";
 
 
 
@@ -28708,9 +28698,6 @@ var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
 var Main = function Main(props) {
-  //const { to,  gnome} = props;
-  //const cut = gnome.name.indexOf(" ");
-  //const name = gnome.name.substr(0, cut);
   var _useState = Object(react__WEBPACK_IMPORTED_MODULE_0__["useState"])([]),
       gnomes = _useState[0],
       setGnomes = _useState[1];
@@ -28719,35 +28706,9 @@ var Main = function Main(props) {
     document.addEventListener('keydown', handleFirstTab);
     document.addEventListener('click', handleClick);
     props.fetchGnomes().then(function (response) {
-      console.log(response);
       setGnomes(response);
-      console.log(gnomes);
     });
-  }, []);
-  Object(react__WEBPACK_IMPORTED_MODULE_0__["useEffect"])(function () {
-    if (gnomes.length > 0) {
-      //renderGenderData(gender);
-      //setGnomes(gnomes)
-      console.log(gnomes);
-    }
-  }, [gnomes]);
-  /*gnomes;
-  fetchGnomes;
-   constructor({gnomes, currentPage, gender, fetchGnomes, searchTerm, filterBy, OrderBy}){
-    //super({gnomes, currentPage, gender, fetchGnomes, searchTerm, filterBy, OrderBy});
-    //this.state = {};
-     this.gnomes = this.props.gnomes;
-    this.fetchGnomes = this.props.fetchGnomes;;
-  }*/
-
-  /*componentDidMount() {
-    //prevent ugly glow on button selected
-    document.addEventListener('keydown', this.handleFirstTab);
-    document.addEventListener('click', this.handleClick);
-     this.fetchGnomes();
-    console.log(this.gnomes)
-      console.log(this.props)
-  }*/
+  }, []); //prevent ugly button glow on selected while not loosing tab nab
 
   var handleFirstTab = function handleFirstTab(e) {
     if (e.keyCode === 9) {
@@ -28764,48 +28725,42 @@ var Main = function Main(props) {
   return __jsx("div", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 75
+      lineNumber: 37
     },
     __self: this
-  }, gnomes.length === 0 ? __jsx(_components_Loader_Loader_js__WEBPACK_IMPORTED_MODULE_4__["default"], {
+  }, gnomes && gnomes.length === 0 ? __jsx(_components_Loader_Loader_js__WEBPACK_IMPORTED_MODULE_4__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 77
+      lineNumber: 39
     },
     __self: this
   }) : __jsx("div", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 79
+      lineNumber: 41
     },
     __self: this
   }, __jsx(_Header_Header_js__WEBPACK_IMPORTED_MODULE_6__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 81
+      lineNumber: 42
     },
     __self: this
   }), __jsx(_Home_Home_js__WEBPACK_IMPORTED_MODULE_5__["default"], {
     data: props,
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 83
+      lineNumber: 43
     },
     __self: this
   }), __jsx(_components_Footer_Footer_js__WEBPACK_IMPORTED_MODULE_7__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 84
+      lineNumber: 44
     },
     __self: this
   })));
 };
-/*function mapStateToProps(state) {
-  return {
-    gnomes: state.gnomes
-  };
-}*/
-
 
 var mapStateToProps = function mapStateToProps(state) {
   return {
@@ -28817,14 +28772,6 @@ var mapStateToProps = function mapStateToProps(state) {
     currentPage: state.currentPage
   };
 };
-/*const mapDispatchToProps = dispatch => {
-  return {
-    increment: () => dispatch(increment()),
-    decrement: () => dispatch(decrement()),
-    reset: () => dispatch(reset())
-  };
-};*/
-
 
 var mapDispatchToProps = function mapDispatchToProps(dispatch) {
   return {
@@ -28834,7 +28781,7 @@ var mapDispatchToProps = function mapDispatchToProps(dispatch) {
   };
 };
 
-/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_1__["connect"])(mapStateToProps, mapDispatchToProps)(Main)); //export default connect(mapStateToProps, actions)(Main);
+/* harmony default export */ __webpack_exports__["default"] = (Object(react_redux__WEBPACK_IMPORTED_MODULE_1__["connect"])(mapStateToProps, mapDispatchToProps)(Main));
 
 /***/ }),
 
@@ -28857,9 +28804,7 @@ __webpack_require__.r(__webpack_exports__);
 var _jsxFileName = "/Users/nicolasfbergues/Desktop/Nico/Trabajo/FrontEnd/nextJsGnomeSearch/pages/index.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
- //import { Provider } from "react-redux";
 
- //import configure from "./../redux/store/configureStore";
 
 
 
@@ -28868,222 +28813,26 @@ var Index = function Index() {
   return __jsx("div", {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 13
+      lineNumber: 8
     },
     __self: this
   }, __jsx(styled_components__WEBPACK_IMPORTED_MODULE_2__["ThemeProvider"], {
     theme: _MainStyled__WEBPACK_IMPORTED_MODULE_4__["default"],
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 15
+      lineNumber: 9
     },
     __self: this
   }, __jsx(_containers_Main_js__WEBPACK_IMPORTED_MODULE_3__["default"], {
     __source: {
       fileName: _jsxFileName,
-      lineNumber: 16
+      lineNumber: 10
     },
     __self: this
   })));
 };
-/*
-const store = configure();
-
-const Index = () => (
-  <div>
-    <Provider store={store}>
-      <ThemeProvider theme={theme}>
-        <Main store={store}>
-        </Main>
-      </ThemeProvider>
-    </Provider>
-
-  </div>
-)*/
-
 
 /* harmony default export */ __webpack_exports__["default"] = (Index);
-
-/***/ }),
-
-/***/ "./redux/actions/actions.js":
-/*!**********************************!*\
-  !*** ./redux/actions/actions.js ***!
-  \**********************************/
-/*! exports provided: getGnomes, fetchGnomes, fetchGender, getGender, getSearchText, filterByJob, updateOrderBy, getCurrentPage */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getGnomes", function() { return getGnomes; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "fetchGnomes", function() { return fetchGnomes; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "fetchGender", function() { return fetchGender; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getGender", function() { return getGender; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getSearchText", function() { return getSearchText; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "filterByJob", function() { return filterByJob; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "updateOrderBy", function() { return updateOrderBy; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "getCurrentPage", function() { return getCurrentPage; });
-/* harmony import */ var _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/regenerator */ "./node_modules/@babel/runtime-corejs2/regenerator/index.js");
-/* harmony import */ var _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0__);
-/* harmony import */ var _babel_runtime_corejs2_core_js_json_stringify__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! @babel/runtime-corejs2/core-js/json/stringify */ "./node_modules/@babel/runtime-corejs2/core-js/json/stringify.js");
-/* harmony import */ var _babel_runtime_corejs2_core_js_json_stringify__WEBPACK_IMPORTED_MODULE_1___default = /*#__PURE__*/__webpack_require__.n(_babel_runtime_corejs2_core_js_json_stringify__WEBPACK_IMPORTED_MODULE_1__);
-/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_2__ = __webpack_require__(/*! axios */ "./node_modules/axios/index.js");
-/* harmony import */ var axios__WEBPACK_IMPORTED_MODULE_2___default = /*#__PURE__*/__webpack_require__.n(axios__WEBPACK_IMPORTED_MODULE_2__);
-/* harmony import */ var _utils__WEBPACK_IMPORTED_MODULE_3__ = __webpack_require__(/*! ./../../utils */ "./utils.js");
-/* harmony import */ var _types__WEBPACK_IMPORTED_MODULE_4__ = __webpack_require__(/*! ./types */ "./redux/actions/types.js");
-
-
-
-
-
-var getGnomes = function getGnomes(gnomes) {
-  return {
-    type: _types__WEBPACK_IMPORTED_MODULE_4__["REQUEST_GNOMES"],
-    payload: gnomes
-  };
-};
-var fetchGnomes = function fetchGnomes() {
-  return function _callee(dispatch) {
-    var offlineGnomes, gnomes, _ref, _gnomes, gnomesToJSON;
-
-    return _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.async(function _callee$(_context) {
-      while (1) {
-        switch (_context.prev = _context.next) {
-          case 0:
-            offlineGnomes = localStorage.getItem("gnomes");
-
-            if (!offlineGnomes) {
-              _context.next = 4;
-              break;
-            }
-
-            gnomes = JSON.parse(offlineGnomes);
-            return _context.abrupt("return", dispatch(getGnomes(gnomes)));
-
-          case 4:
-            _context.prev = 4;
-            _context.next = 7;
-            return _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.awrap(axios__WEBPACK_IMPORTED_MODULE_2___default.a.get(_utils__WEBPACK_IMPORTED_MODULE_3__["gnomesAPI"]));
-
-          case 7:
-            _ref = _context.sent;
-            _gnomes = _ref.data.Brastlewark;
-            gnomesToJSON = _babel_runtime_corejs2_core_js_json_stringify__WEBPACK_IMPORTED_MODULE_1___default()(_gnomes);
-            localStorage.setItem("gnomes", gnomesToJSON);
-            dispatch(getGnomes(_gnomes));
-            _context.next = 17;
-            break;
-
-          case 14:
-            _context.prev = 14;
-            _context.t0 = _context["catch"](4);
-            throw new Error(_context.t0);
-
-          case 17:
-          case "end":
-            return _context.stop();
-        }
-      }
-    }, null, null, [[4, 14]]);
-  };
-};
-var fetchGender = function fetchGender(params) {
-  return function _callee2(dispatch) {
-    var offlineGender, gender, _ref2, data;
-
-    return _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.async(function _callee2$(_context2) {
-      while (1) {
-        switch (_context2.prev = _context2.next) {
-          case 0:
-            offlineGender = localStorage.getItem("gender");
-
-            if (!offlineGender) {
-              _context2.next = 4;
-              break;
-            }
-
-            gender = JSON.parse(offlineGender);
-            return _context2.abrupt("return", dispatch(getGender(gender)));
-
-          case 4:
-            _context2.prev = 4;
-            _context2.next = 7;
-            return _babel_runtime_corejs2_regenerator__WEBPACK_IMPORTED_MODULE_0___default.a.awrap(axios__WEBPACK_IMPORTED_MODULE_2___default.a.get(_utils__WEBPACK_IMPORTED_MODULE_3__["genderGuessingAPI"] + params));
-
-          case 7:
-            _ref2 = _context2.sent;
-            data = _ref2.data;
-            //localStorage.setItem("gender", genderToJSON);
-            dispatch(getGender(data));
-            return _context2.abrupt("return", data);
-
-          case 13:
-            _context2.prev = 13;
-            _context2.t0 = _context2["catch"](4);
-            throw new Error(_context2.t0);
-
-          case 16:
-          case "end":
-            return _context2.stop();
-        }
-      }
-    }, null, null, [[4, 13]]);
-  };
-};
-var getGender = function getGender(gender) {
-  return {
-    type: _types__WEBPACK_IMPORTED_MODULE_4__["REQUEST_GENDER"],
-    payload: gender
-  };
-};
-var getSearchText = function getSearchText(searchTerm) {
-  return {
-    type: _types__WEBPACK_IMPORTED_MODULE_4__["SEARCH_TERM"],
-    payload: searchTerm
-  };
-};
-var filterByJob = function filterByJob(job) {
-  return {
-    type: _types__WEBPACK_IMPORTED_MODULE_4__["FILTER_BY_JOB"],
-    payload: job
-  };
-};
-var updateOrderBy = function updateOrderBy(order) {
-  return {
-    type: _types__WEBPACK_IMPORTED_MODULE_4__["ORDER_BY_FILTER"],
-    payload: order
-  };
-};
-var getCurrentPage = function getCurrentPage(page) {
-  return {
-    type: _types__WEBPACK_IMPORTED_MODULE_4__["CURRENT_PAGE"],
-    payload: page
-  };
-};
-
-/***/ }),
-
-/***/ "./redux/actions/types.js":
-/*!********************************!*\
-  !*** ./redux/actions/types.js ***!
-  \********************************/
-/*! exports provided: REQUEST_GNOMES, REQUEST_GENDER, SEARCH_TERM, FILTER_BY_JOB, ORDER_BY_FILTER, CURRENT_PAGE */
-/***/ (function(module, __webpack_exports__, __webpack_require__) {
-
-"use strict";
-__webpack_require__.r(__webpack_exports__);
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "REQUEST_GNOMES", function() { return REQUEST_GNOMES; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "REQUEST_GENDER", function() { return REQUEST_GENDER; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "SEARCH_TERM", function() { return SEARCH_TERM; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "FILTER_BY_JOB", function() { return FILTER_BY_JOB; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "ORDER_BY_FILTER", function() { return ORDER_BY_FILTER; });
-/* harmony export (binding) */ __webpack_require__.d(__webpack_exports__, "CURRENT_PAGE", function() { return CURRENT_PAGE; });
-var REQUEST_GNOMES = "REQUEST_GNOMES";
-var REQUEST_GENDER = "REQUEST_GENDER";
-var SEARCH_TERM = "SEARCH_TERM";
-var FILTER_BY_JOB = "FILTER_BY_JOB";
-var ORDER_BY_FILTER = "ORDER_BY_FILTER";
-var CURRENT_PAGE = "CURRENT_PAGE";
 
 /***/ }),
 
@@ -29407,14 +29156,13 @@ function convertColors(color) {
 }
 function filterGnomesBy(array, orderByFilter) {
   if (!_babel_runtime_corejs2_core_js_array_is_array__WEBPACK_IMPORTED_MODULE_0___default()(array)) {
-    console.log("es nulo");
     return null;
   }
 
-  console.log("aca");
-  console.log(orderByFilter);
-
   if (orderByFilter.toLowerCase() === "Oldest".toLowerCase()) {
+    console.log(array.sort(function (a, b) {
+      return b.age - a.age;
+    }));
     return array.sort(function (a, b) {
       return b.age - a.age;
     });
@@ -29440,7 +29188,6 @@ function filterGnomesBy(array, orderByFilter) {
     });
   }
 
-  console.log(array);
   return array;
 }
 

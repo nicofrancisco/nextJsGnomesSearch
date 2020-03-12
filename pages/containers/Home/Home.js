@@ -13,24 +13,22 @@ import HomeWrapper from "./HomeWrapperStyled";
 
 const Home = (props) => {
 
-  const { searchTerm, gnomes, orderByFilter, currentPage} = props;
+  let { searchTerm, gnomes, orderByFilter, currentPage, filterBy, filterByJob} = props;
 
-  console.log("HOME")
-  console.log(props)
-  console.log(currentPage)
+  if(filterBy == "") filterBy = "All";
 
-  const searchFilters = filterGnomesBy(gnomes, orderByFilter)
+  let searchFilters = filterGnomesBy(gnomes, orderByFilter)
     .filter(gnome => {
 
       const isJob = gnome.professions.find(
-        profession => profession === props.filterBy
+        profession => profession === filterBy
       );
 
       const hasProfession = gnome.professions.some(
         profession => profession === isJob
       );
 
-      return props.filterBy === "All" ? gnome : hasProfession;
+      return filterBy === "All" ? gnome : hasProfession;
     })
     .filter(gnome => {
 
@@ -38,8 +36,8 @@ const Home = (props) => {
         gnome.name.toLowerCase().indexOf(searchTerm.toLowerCase()) >= 0;
       return search;
     });
+    if(filterBy == "All Professions") searchFilters = gnomes;
 
-console.log(searchFilters)
   return (
     <HomeWrapper>
       <Helmet>
@@ -51,7 +49,7 @@ console.log(searchFilters)
         />
       </Helmet>
       <HomeRow>
-        <Filters />
+        <Filters data={props} />
       </HomeRow>
       <Pagination
         page={currentPage}
@@ -96,6 +94,7 @@ function mapStateToProps(state) {
   return {
     searchTerm: state.searchTerm,
     gnomes: state.gnomes,
+    gender: state.gender,
     filterBy: state.filterBy,
     orderByFilter: state.orderBy,
     currentPage: state.currentPage

@@ -41,7 +41,6 @@ export const fetchGender = (params) => async (dispatch) => {
 
   try {
     const {data} = await axios.get(genderGuessingAPI+params);
-
     //localStorage.setItem("gender", genderToJSON);
     dispatch(getGender(data));
     return data;

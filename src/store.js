@@ -3,7 +3,7 @@ import { composeWithDevTools } from "redux-devtools-extension";
 import thunk from "redux-thunk";
 import rootReducer from "../src/reducers";
 
-const initialValues = {
+const initialState = {
   gnomes: [],
   gender: [],
   searchTerm: "",
@@ -12,12 +12,10 @@ const initialValues = {
   currentPage: 0
 };
 
-export default function initializeStore(initialValues) {
-  console.log("rootReducer")
-  console.log(rootReducer)
+export default function initializeStore(initialState) {
   return createStore(
     rootReducer,
-    initialValues,
+    initialState,
     composeWithDevTools(applyMiddleware(thunk))
   );
 }

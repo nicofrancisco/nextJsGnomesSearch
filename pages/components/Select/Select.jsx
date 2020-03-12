@@ -34,9 +34,7 @@ Select.onChange = (updateState, updateCurrentPage) => (
   event
 ) => {
   event.preventDefault();
-
   updateState(event.currentTarget.value);
-
   updateCurrentPage(0);
 };
 

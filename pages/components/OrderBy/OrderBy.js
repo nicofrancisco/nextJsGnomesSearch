@@ -1,6 +1,6 @@
 import * as React from "react";
 import { connect } from "react-redux";
-import * as actions from "./../../../redux/actions/actions";
+import * as actions from "./../../../src/actions/actions";
 import OrderButton from "./OrderByStyles";
 
 

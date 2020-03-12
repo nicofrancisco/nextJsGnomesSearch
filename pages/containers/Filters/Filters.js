@@ -1,17 +1,15 @@
 import React from "react";
 import { connect } from "react-redux";
-import * as actions from "./../../../redux/actions/actions";
+import FormRow from "./FormRowStyled";
+import FormSearch from "./FormSearchStyled";
+import * as actions from "./../../../src/actions/actions";
 import AutoComplete from "./../../components/AutoComplete/AutoComplete";
 import Select from "./../../components/Select/Select";
 import OrderBy from "./../../components/OrderBy/OrderBy.js";
-import FormSearch from "./FormSearchStyled";
-import FormRow  from "./FormRowStyled";
 
 
 const Filters = (props) => {
 
-  console.log("Filters")
-  console.log(props)
   const gnomeNames = props.gnomes.map(gnome => gnome.name);
 
   let getJobs = [];
