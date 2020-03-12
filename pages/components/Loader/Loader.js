@@ -1,9 +1,12 @@
 import React from "react";
+import LoadingStyled from "./LoaderStyles";
 
 const Loader = () => (
-    <div>
-      <h1>Loading...</h1>
-    </div>
+  <LoadingStyled>
+     <div className="label">
+      <h1>Loading gnomes ...</h1>
+     </div>
+  </LoadingStyled>
 );
 
 export default Loader;
