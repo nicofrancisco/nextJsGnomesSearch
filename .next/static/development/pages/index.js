@@ -23,6 +23,7 @@ function _templateObject() {
   return data;
 }
 
+ //testing injectGlobal
 
 var mainColor = "#37c3db";
 var buttonNav = "#87dee9";
@@ -30,7 +31,6 @@ var lightColor = "#fbffff";
 var darkColor = "#889db1";
 var darkGray = "#666";
 Object(styled_components__WEBPACK_IMPORTED_MODULE_1__["injectGlobal"])(_templateObject());
-/* eslint-enable */
 
 var theme = function theme() {
   return {
@@ -27265,27 +27265,65 @@ var Info = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].ul(_templat
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "./node_modules/react/index.js");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _LoaderStyles__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./LoaderStyles */ "./pages/components/Loader/LoaderStyles.jsx");
 var _jsxFileName = "/Users/nicolasfbergues/Desktop/Nico/Trabajo/FrontEnd/nextJsGnomeSearch/pages/components/Loader/Loader.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
+
 var Loader = function Loader() {
-  return __jsx("div", {
-    __source: {
-      fileName: _jsxFileName,
-      lineNumber: 4
-    },
-    __self: this
-  }, __jsx("h1", {
+  return __jsx(_LoaderStyles__WEBPACK_IMPORTED_MODULE_1__["default"], {
     __source: {
       fileName: _jsxFileName,
       lineNumber: 5
     },
     __self: this
-  }, "Loading..."));
+  }, __jsx("div", {
+    className: "label",
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 6
+    },
+    __self: this
+  }, __jsx("h1", {
+    __source: {
+      fileName: _jsxFileName,
+      lineNumber: 7
+    },
+    __self: this
+  }, "Loading gnomes ...")));
 };
 
 /* harmony default export */ __webpack_exports__["default"] = (Loader);
+
+/***/ }),
+
+/***/ "./pages/components/Loader/LoaderStyles.jsx":
+/*!**************************************************!*\
+  !*** ./pages/components/Loader/LoaderStyles.jsx ***!
+  \**************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var _babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! @babel/runtime-corejs2/helpers/esm/taggedTemplateLiteral */ "./node_modules/@babel/runtime-corejs2/helpers/esm/taggedTemplateLiteral.js");
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! styled-components */ "./node_modules/styled-components/dist/styled-components.browser.esm.js");
+
+
+function _templateObject() {
+  var data = Object(_babel_runtime_corejs2_helpers_esm_taggedTemplateLiteral__WEBPACK_IMPORTED_MODULE_0__["default"])(["\n  margin-left: auto;\n  margin-right: auto;\n  height: 100vh;\n  width: 100vw;\n  display: flex;\n  justify-content: center;\n  align-items: center;\n  background: #fff;\n\n  div.label{\n    font-size: 2.3rem;\n    margin-left: auto;\n    margin-right: auto;\n  }\n\n  @media screen and (min-width: 400px) {\n    & > div.label {\n      h1 {\n        font-size: 1.5rem;\n        margin-left: auto;\n        margin-right: auto;\n      }\n    }\n  }\n"]);
+
+  _templateObject = function _templateObject() {
+    return data;
+  };
+
+  return data;
+}
+
+
+var LoadingStyled = styled_components__WEBPACK_IMPORTED_MODULE_1__["default"].div(_templateObject());
+/* harmony default export */ __webpack_exports__["default"] = (LoadingStyled);
 
 /***/ }),
 

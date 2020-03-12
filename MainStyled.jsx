@@ -1,5 +1,7 @@
 import { injectGlobal } from "styled-components";
 
+//testing injectGlobal
+
 const mainColor = "#37c3db";
 const buttonNav = "#87dee9";
 const lightColor = "#fbffff";
@@ -39,7 +41,6 @@ body:not(.user-is-tabbing) textarea:focus {
 }
 
 `;
-/* eslint-enable */
 
 const theme = () => ({
   mainColor,

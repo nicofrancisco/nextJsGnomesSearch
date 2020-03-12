@@ -104,6 +104,7 @@ module.exports =
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! styled-components */ "styled-components");
 /* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_0__);
+ //testing injectGlobal
 
 const mainColor = "#37c3db";
 const buttonNav = "#87dee9";
@@ -143,7 +144,6 @@ body:not(.user-is-tabbing) textarea:focus {
 }
 
 `;
-/* eslint-enable */
 
 const theme = () => ({
   mainColor,
@@ -4708,25 +4708,76 @@ const Info = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.ul`
 __webpack_require__.r(__webpack_exports__);
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! react */ "react");
 /* harmony import */ var react__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(react__WEBPACK_IMPORTED_MODULE_0__);
+/* harmony import */ var _LoaderStyles__WEBPACK_IMPORTED_MODULE_1__ = __webpack_require__(/*! ./LoaderStyles */ "./pages/components/Loader/LoaderStyles.jsx");
 var _jsxFileName = "/Users/nicolasfbergues/Desktop/Nico/Trabajo/FrontEnd/nextJsGnomeSearch/pages/components/Loader/Loader.js";
 var __jsx = react__WEBPACK_IMPORTED_MODULE_0___default.a.createElement;
 
 
-const Loader = () => __jsx("div", {
-  __source: {
-    fileName: _jsxFileName,
-    lineNumber: 4
-  },
-  __self: undefined
-}, __jsx("h1", {
+
+const Loader = () => __jsx(_LoaderStyles__WEBPACK_IMPORTED_MODULE_1__["default"], {
   __source: {
     fileName: _jsxFileName,
     lineNumber: 5
   },
   __self: undefined
-}, "Loading..."));
+}, __jsx("div", {
+  className: "label",
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 6
+  },
+  __self: undefined
+}, __jsx("h1", {
+  __source: {
+    fileName: _jsxFileName,
+    lineNumber: 7
+  },
+  __self: undefined
+}, "Loading gnomes ...")));
 
 /* harmony default export */ __webpack_exports__["default"] = (Loader);
+
+/***/ }),
+
+/***/ "./pages/components/Loader/LoaderStyles.jsx":
+/*!**************************************************!*\
+  !*** ./pages/components/Loader/LoaderStyles.jsx ***!
+  \**************************************************/
+/*! exports provided: default */
+/***/ (function(module, __webpack_exports__, __webpack_require__) {
+
+"use strict";
+__webpack_require__.r(__webpack_exports__);
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_0__ = __webpack_require__(/*! styled-components */ "styled-components");
+/* harmony import */ var styled_components__WEBPACK_IMPORTED_MODULE_0___default = /*#__PURE__*/__webpack_require__.n(styled_components__WEBPACK_IMPORTED_MODULE_0__);
+
+const LoadingStyled = styled_components__WEBPACK_IMPORTED_MODULE_0___default.a.div`
+  margin-left: auto;
+  margin-right: auto;
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: #fff;
+
+  div.label{
+    font-size: 2.3rem;
+    margin-left: auto;
+    margin-right: auto;
+  }
+
+  @media screen and (min-width: 400px) {
+    & > div.label {
+      h1 {
+        font-size: 1.5rem;
+        margin-left: auto;
+        margin-right: auto;
+      }
+    }
+  }
+`;
+/* harmony default export */ __webpack_exports__["default"] = (LoadingStyled);
 
 /***/ }),
 
